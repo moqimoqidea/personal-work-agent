@@ -1,0 +1,52 @@
+# IDE and editor settings
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+credentials.local.*
+
+# Local research cache and private agent state
+.research-cache/
+.agent-state/
+.local/
+.cache/
+tmp/
+temp/
+*.log
+
+# JavaScript / TypeScript dependencies and generated files
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+coverage/
+*.tsbuildinfo
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
