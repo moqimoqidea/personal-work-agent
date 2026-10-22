@@ -1,6 +1,8 @@
-# Personal Agent 深度调研：商业产品、创业公司与开源生态
+# Personal Agent 深度调研：商业产品与同类开源替代
 
 > 核验日期：**2026-10-22，Asia/Shanghai**。这是公开资料研究与产品设计分析，未登录各产品完成统一实测，也未审计完整源码。文中的“支持”表示一手资料已公开描述该能力，不表示本研究已验证其成功率。价格、地区、预览资格和配额均为查询时快照。
+>
+> 研究范围：主表比较面向用户的个人 Agent 与直接对标应用；通用运行时、工作流、记忆库和浏览器组件单列构建附录。
 >
 > 配套文档：[来源索引、仓库提交快照与核验记录](sources-2026-10-22.md)。本文引用编号可直接打开原始来源；开源仓库引用尽量固定到本次查询的提交。
 
@@ -10,7 +12,7 @@
 2. [研究范围与判断标准](#2-研究范围与判断标准)
 3. [商业产品与创业公司](#3-商业产品与创业公司)
 4. [横向比较](#4-横向比较)
-5. [开源产品与可自托管组件](#5-开源产品与可自托管组件)
+5. [同类开源产品、复刻与替代](#5-同类开源产品复刻与替代)
 6. [技术架构与关键设计](#6-技术架构与关键设计)
 7. [商业模式与竞争判断](#7-商业模式与竞争判断)
 8. [本项目的选型与产品建议](#8-本项目的选型与产品建议)
@@ -28,7 +30,7 @@
 3. **云端电脑正在成为重要的执行底座。** 本次六个核心样本都公开提到电脑或云端执行能力，但各家的隔离和可接管程度不同。不能把“有一台电脑”当成“能可靠完成所有网站任务”。登录失效、验证码、站点限制和任务语义仍会决定结果。[S01]、[S06]、[S14]、[S17]、[S19]、[S23]
 4. **授权和结果可核验程度会影响用户愿意交出多少责任。** Muse 公开了独立 Sentinel、凭据隔离和出站控制；Dots 区分只读主动研究与获授权任务；Duet 明确了敏感动作确认。公开说明的完整程度可以比较，实际防护效果仍需测试。[S07]、[S13]、[S15]、[S17]
 5. **商业产品的入口成本低，持续使用成本与权限边界需要单独看。** Grok Bot 的新套餐共享周额度；Duet 的后台检查占用 Claude 配额；Dots 的委派任务计入 Work/Codex；“24 小时在线”不等于“24 小时持续推理且不限量”。[S03]、[S04]、[S12]、[S18]
-6. **开源生态已经提供多条可行起点。** OpenClaw 偏多渠道控制面，Hermes 偏长期学习与技能，NanoClaw 偏容器隔离和可定制性，QwenPaw 偏中文渠道与本地模型，nanobot 偏 Python 小核心，nanoMuse 偏跨设备完整体验。选择应先看目标用户与运维能力。[S32]、[S33]、[S34]、[S35]、[S36]、[S38]
+6. **同类开源应用已经有明确参照。** Muse 路线优先看 CopilotKit/openmuse、nanoMuse 和 chyroc/open-muse；Grok Bot 路线看 wolfqing/OpenGrokBot、CopilotKit/OpenBot；Dots 路线看 CopilotKit/OpenDots；Instinct 路线看 open-instinct。需要继续区分完整自托管、额外服务依赖和客户端开放范围。[R01]、[R05]、[R08]、[R11]、[R21]、[R27]、[S37]
 7. **现阶段不宜给所有产品打一个主观综合分。** 邀请制服务、刚发布的预览和自托管代码并非同等可用的样本。连接器数量、GitHub Star、融资额和厂商跑分也不能替代真实任务完成率。
 8. **对本项目，优先验证“个人工作跟进”这一条闭环。** 建议先做邮件、日历、项目资料、GitHub 的连续跟进：记住承诺，准备会前材料，形成可审查的草稿和变更，再根据授权执行。该范围比同时覆盖购物、订票、健康和家庭更容易验证净收益。
 
@@ -45,17 +47,19 @@
 | today | Today AI | 中国站为 `todayai.cn`，站内链接到国际站 `today.ai`；不采用应用商店中其他同名开发者的条目。[S19] |
 | Instinct | Instinct | 指 `instinct.com` 的个人助理；与开源复刻 open-instinct 分开研究。[S23]、[S37] |
 
-### 2.2 本文如何定义 Personal Agent
+### 2.2 本文如何定义与筛选同类产品
 
-本文采用工作定义：**一个以个人为责任主体，跨会话保存相关上下文，能在适当时机继续工作，并通过工具或电脑完成任务的系统。** 它需要让用户知道自己记住了什么、正在做什么，以及哪些动作需要用户决定。
+本文采用工作定义：**一个以个人为责任主体，跨会话保存相关上下文，能在适当时机继续工作，并通过工具或电脑完成任务的系统。** 同类比较要落实到用户实际拿到的应用，而不只比较其中一层技术。
 
-为避免混淆，将产品分成三层。分类用于选型，不代表高低排名。
+主样本至少需要明确的个人助理/AI coworker 产品定位、可使用的应用入口，以及对记忆、持续任务、实际执行、审批和结果的具体实现说明。缺失部分可以入研究，但必须标出，不能凭同名或一张界面图认定为完整替代。
 
-| 层次 | 主要责任 | 典型样本 | 不能默认具备的能力 |
-| --- | --- | --- | --- |
-| 个人 Agent 产品 | 长期服务一个人，处理跨应用责任 | Muse、Dots、Duet、Today、Instinct、Grok Bot | 无人监督下始终正确、全地区开放、无限使用 |
-| 工作执行与协作产品 | 在工作、团队或成果交付中持续执行 | Town、Lindy、Manus、Perplexity Computer、Gemini Spark | 全面的生活记忆或跨人关系授权 |
-| 自托管产品与构建组件 | 提供个人助理运行时，或其中一个技术层 | OpenClaw、Hermes、NanoClaw、LangGraph、Mem0 等 | 开箱即用的移动端、身份、支付、通知及售后 |
+| 层次 | 本轮如何处理 | 典型样本 |
+| --- | --- | --- |
+| 商业个人 Agent | 主比较对象 | Muse、Grok Bot、Dots、Duet、Today、Instinct |
+| 直接对标的开源应用或产品模板 | 开源主名单，比较产品流程与交付范围 | CopilotKit OpenMuse/OpenBot/OpenDots、wolfqing/OpenGrokBot、nanoMuse、open-instinct |
+| 托管后端上的开源客户端 | 形态相关，明确不能代表整套后端开源 | chyroc/open-muse；补充观察 diggerhq/openmuse、SiliconLabAI/OpenMuse |
+| 静态演示、缺少持续能力的原型、单一电脑执行应用 | 保留缺口与排除依据，不按完整替代计数 | aeiouvcode/open-muse、Anil-matcha/open-grok-bot、Celesto OpenMuse |
+| 通用运行时、库与应用构建平台 | 移至[构建附录](agent-building-blocks-2026-10-22.md)，不补充主产品数量 | OpenClaw、Hermes、LangGraph、Mem0、Browser Use、n8n、Dify 等 |
 
 ### 2.3 证据和边界
 
@@ -185,7 +189,8 @@
 | Duet | 研究预览包含在美国 Pro/Max 计划内，无单独预览费的描述。[S17]、[S18] | 与其他 Claude 使用共用限额；后台检查也消耗额度 | 美国 Pro/Max 候补；本次不能确认用户具体账号何时获邀 |
 | Today | 条款列 Free / Pro / Ultra，金额以购买前展示为准；中国站有注册赠送权益。[S19]、[S21] | 地区、设备、渠道和版本均可能影响功能与额度 | 免费博客、条款和支持页存在更新差异，需要按实际下载及订阅页复查 |
 | Instinct | 本次读取的公开官网未建立可复核的统一价目表 [S23] | 实际成本、配额、增购方式待体验 | 入口指向账号页面；未将第三方邀请描述当成明确的全球开放承诺 |
-| 自托管方案 | 通常无框架订阅门槛；托管、模型、搜索、浏览器、电话等另计 | 费用与空转检查、重试、长上下文及工具使用相关 | 可控制部署位置，但模型服务、通信渠道和第三方应用仍有地区与账户条件 |
+
+开源方案不合并成一个价格行：完整自托管应用、额外许可服务和商业后端客户端的成本结构不同，具体依赖见第 5 节。
 
 ### 4.3 四个容易被忽略的区别
 
@@ -195,101 +200,134 @@
 
 **第三，长期记忆应保存证据和有效期。** “用户通常周二锻炼”与“本周二会议改到晚上”不属于同一种事实。需要区分稳定偏好、临时安排、任务进度和已完成动作；否则记忆越积越多，错误也会越难追踪。
 
-**第四，开放源码、可自托管、本地推理与数据不外发互不等价。** 自托管 Agent 仍可能向远程模型、消息服务或托管浏览器发送内容；能读源码也不表示拥有全部云服务实现。Mem0 README 还明确提醒其托管基准含开源 SDK 没有的专有优化，不能直接套用。[S42]
+**第四，应用源码开放与整套服务可自托管互不等价。** chyroc/open-muse 使用托管 MA，CopilotKit 的应用模板依赖 Intelligence，SiliconLabAI/OpenMuse 使用 Manus API。即使界面在自己的机器上，线程、模型、电脑和工具结果也可能在所接服务上处理。每个项目都应画清这条边界。[R09]、[R21]、[R25]
 
-## 5. 开源产品与可自托管组件
+## 5. 同类开源产品、复刻与替代
 
-### 5.1 选型地图
+### 5.1 商业产品与开源项目如何对位
 
-下表前八项是接近个人 Agent 产品或运行时的路线，后五项是构建组件或应用平台。许可证以本次读取的根许可证和仓库信息为依据；第三方服务、插件、模型与企业模块另有条件。提交快照见来源文档。
+本节比较的是**交付给用户的个人 Agent 应用**：有可交互的助理身份、持续对话、任务与结果界面，并把记忆、后台工作、执行电脑和审批组合到一个产品里。提供模型调用、工作流或记忆能力的库，不进入这张对位表；通用运行时和组件保存在[构建附录](agent-building-blocks-2026-10-22.md)。
 
-| 项目 | 类型与公开重点 | 主要适配场景（研究判断） | 关键代价 / 核验点 | 根许可 |
-| --- | --- | --- | --- | --- |
-| OpenClaw | 多渠道 Gateway、工具/Skills/插件、设备节点，可替换模型与 harness [S32] | 构建连接现有通信渠道的个人助理 | 配置与扩展面较广；需要明确主机执行和沙箱边界 | MIT |
-| Hermes Agent | 记忆、会话检索、从经验创建/改进 Skills、多消息渠道、cron、多执行后端 [S33] | 开发者自己的长期工作 Agent | 学习出的技能质量、版本回退、长期运行成本 | MIT |
-| NanoClaw | 每 Agent 容器、按需渠道、可修改的个人 fork、Agent SDK [S34] | 希望理解和控制执行环境的开发者 | 容器挂载、凭据网关和工具权限需要逐项配置 | MIT |
-| nanobot | Python 小核心，WebUI、消息渠道、长期记忆、调度、MCP 和 API [S35] | 快速理解个人 Agent 内部流程、做定制原型 | 主分支能力与稳定发布可能不同，需固定版本 | MIT |
-| nanoMuse | 跨设备应用、持续目标、可编辑记忆、手机/电脑 Hands、可自托管 relay [S36] | 研究完整个人体验与设备协作 | 平台能力不同；运行时、relay、模型与设备在线条件均要检查 | GPL-3.0-or-later（README 声明） |
-| open-instinct | Pi 循环、消息身份、微型 VM、应用集成、信任层级、支付审批 [S37] | 研究短信入口、跨人 Agent 授权与支付链路 | 多家外部服务和资质依赖；维护者标为 beta | MIT |
-| QwenPaw（原 CoPaw 路径） | 本地/云端、多中文渠道、三层记忆、ReMe、插件与本地模型 [S38] | 中文工作环境与本地部署 | 需验证所选模型、插件与安全功能的具体组合 | Apache-2.0 |
-| Letta Code | 有状态 harness，记忆、身份、MemFS、Skills、cron、消息渠道 [S39]、[S40] | 研究可演化的长期 Agent 与记忆管理 | 旧 Letta 服务已迁移；本地与 Cloud 功能边界要分开 | Apache-2.0 |
-| LangGraph | 持久执行、状态、检查点、人类介入、可组合工作图 [S41] | 自建可恢复的任务控制面 | 仍需自己做产品入口、身份、权限、通知和运维 | MIT |
-| Mem0 | 个人化记忆层 [S42] | 将事实提取与检索接入自建 Agent | 记忆写入证据、删除传播和托管/开源差异 | Apache-2.0 |
-| Browser Use | 开源浏览器 Agent，并提供独立云浏览器/托管产品 [S43] | 无 API 服务的浏览器执行层 | 不直接提供完整个人记忆、授权与长期调度 | MIT |
-| n8n | 可自托管的可视化 Agent 与工作流平台 [S44] | 确定性自动化、连接器与事件管道 | 是 source-available / fair-code；商业再分发受许可条件约束 | Sustainable Use + 企业许可 |
-| Dify | Agent、工作流、知识检索和应用构建平台 [S45] | 做内部知识与业务工作流工具 | 缺少完整个人关系层；许可附带多租户与前端标识条件 | 修改版 Apache-2.0 |
+开源并不意味着与商业产品功能完全相同。下面分别标明应用代码、运行服务、外部依赖和原型边界；“有实现”只表示文档与抽查代码支持这一判断，仍未做独立端到端实测。
 
-**不能把最后两项无条件写成与 MIT 项目等价的开放许可。** n8n 根许可限制某些商业提供方式；Dify 在 Apache 2.0 基础上增加条件。若未来把本项目做成多租户服务，应先按目标交付方式核对原始许可。这里记录许可文本差异，不作具体法律适用结论。[S44]、[S45]
+| 商业参照 | 直接相关的开源项目 | 对位理由 | 主要差距 / 边界 |
+| --- | --- | --- | --- |
+| Meta Muse | **CopilotKit/openmuse** | 个人主对话、Ideas、Goals、Activity、记忆、审批、浏览器与文件成果 [R01] | Alpha 模板；真实模型与 Google 账户需配置，验证记录含模拟模型/虚构邮箱 [R02]、[R03] |
+| Meta Muse | **nano-muse/nanoMuse**，原 OpenMuseAgent/OpenMuse | 明确承接 Muse 式个人助理形态，包含用户应用、运行时、记忆、目标、Feed 和多设备执行 [R27]、[R29] | 设备能力不一致；默认 relay、模型和自托管选择要分别配置 |
+| Meta Muse / Today 的跨设备个人体验 | **chyroc/open-muse** | 个人身份、主/侧对话、Feed、Ideas、Goals、提醒，结合 iPhone 和 Mac 能力 [R21] | **开源客户端 + 托管 Managed Agents 后端**；不是完整后端开源替代 [R23] |
+| Grok Bot | **wolfqing/OpenGrokBot** | 多个命名 Bot、群聊、交接、持久规则、routine、每个 Bot 的电脑与接管 [R11] | 单个操作者的 Web 产品；缺少商业版的部分渠道与演示学习；审批不构成所有浏览器动作的强制拦截 [R12]、[R13] |
+| Grok Bot / 工作型 AI coworker | **CopilotKit/OpenBot** | 多 Bot、频道、独立电脑、连接器、任务责任、routine、审查与管理界面 [R05] | 明确定位为可改造模板；运行依赖 Intelligence，不能只按应用 MIT 许可理解整套服务 [R06] |
+| OpenAI Dots | **CopilotKit/OpenDots** | Specialist Dots、持续对话、Spaces/Pages、后台工作、电脑、审批、语音与 Slack 入口 [R08] | Alpha 模板；会话依赖 Intelligence，电脑/语音/渠道要另配，部分连接服务仍待验收 [R09] |
+| Instinct | **mariagorskikh/open-instinct** | 直接以 Instinct 为参照，组合短信/电话身份、电脑、记忆、计划、联系人授权与支付流程 [S37] | 独立复刻、beta，依赖 Inkbox、Maritime、Composio、Stripe 等服务 |
+| Today AI / Claude Duet 的完整直接复刻 | **本轮未确认** | 与上述产品在部分体验上可比较，但不能据此称为直接复刻 | 不用同名编程工具、提示词合集或开发框架补足名单 |
 
-### 5.2 OpenClaw：从现有通信渠道进入个人 Agent
+这里的七个主样本不是七个同等成熟的替代品。它们的**产品形态可比较，交付范围仍不同**：完整自托管应用、依赖额外服务的应用模板、托管后端客户端必须分别判断。
 
-OpenClaw 的核心是 Gateway：统一管理渠道、会话、工具和事件，CLI、控制界面及设备节点围绕它工作。README 说明支持本地或托管模型，并能通过工具、Skills 和插件扩展；数据保存在自己的硬件，不代表选用的模型和消息平台不处理这些内容。[S32]
+### 5.2 七个主样本的交付范围
 
-**适合借鉴：** 把“从哪里联系我”与“实际如何执行”解耦。用户可以保持既有消息习惯，而 Gateway 负责路由到同一个持续服务。
+| 项目 | 用户实际拿到什么 | 记忆与持续工作 | 电脑 / 工具执行 | 必须核对的外部依赖 | 本轮归类 |
+| --- | --- | --- | --- | --- | --- |
+| CopilotKit/openmuse | Web 与 React Native 应用、API、task worker、browser worker | 可编辑记忆、目标与持久任务；源码有 lease、checkpoint、取消与恢复 [R04] | Chromium、接管、可选 Linux 工作区 | Intelligence project key；真实模型、Google OAuth；电脑另配 | **个人 Agent 应用模板** |
+| nanoMuse | 手机/桌面/Web 应用、Agent runtime 与可自托管 relay | 个人记忆、目标推进、Feed、后台服务 | 浏览器、终端、MCP、手机/电脑 Hands | 自选模型；默认社区 relay 可由自托管配置替代 | **整套自托管个人 Agent** [R27]、[R28] |
+| wolfqing/OpenGrokBot | Web 工作台、Gateway、每 Bot 容器 | 显式记忆规则、cron、webhook、Bot 交接 | Chromium、noVNC、shell、文件 | 模型 API 或本地模型；需要自己运行电脑环境 | **整套自托管多 Bot 工作应用** [R11] |
+| CopilotKit/OpenBot | 应用、API、数据库、Bot endpoint、电脑 supervisor、worker | 持续责任、routine、Intelligence 中的线程与记忆 | 每 Bot 电脑、浏览器、文件、shell、MCP | Intelligence 托管或另行许可的部署；模型与集成 | **工作型 Agent 产品模板** [R05]、[R06] |
+| CopilotKit/OpenDots | 工作台、Pages/Spaces、Dot 配置、API 与后台 runner | 原对话中的后台执行，记忆/研究配置，学习服务接入 | 使用 OpenBot 的电脑服务 | Intelligence、模型；语音、Slack、Composio 等按需另配 | **Dots 式产品模板** [R08]、[R09] |
+| chyroc/open-muse | iPhone/Mac 等客户端、个人助理界面与配套服务 | MA 承担云端 Agent 与记忆；本地还有 Feed/提醒相关逻辑 | MA 云电脑与获得许可的设备操作 | 默认 Volcano Ark MA；另有未完成同等验收的 Claude MA 适配 | **开源客户端，非完整运行后端** [R21]、[R22]、[R23] |
+| open-instinct | Agent 服务、Gateway、消息/身份、联系人策略与支付适配 | 记忆、scheduler、持续任务、审计 | 微型 VM/桌面和应用工具 | Inkbox、Maritime、Composio；Link 支付需相应接入资格 | **直接复刻，外部服务依赖较多** [S37]、[R30] |
 
-**重点核验：** 官方 README 提醒默认主会话工具可在主机执行，需要主动配置沙箱；不能从“开源”直接推导“默认隔离”。应查看当前版本的策略、会话隔离与执行限制，避免引用其他项目 README 对旧 OpenClaw 架构的批评作为现状证据。[S32]
+“整套自托管”只表示仓库提供自己的应用与运行体系，模型和第三方应用仍可能收费或处理数据；“应用模板”表示有产品界面和执行结构，但需要部署者完成必要配置、集成和验收。
 
-**选择条件：** 当多渠道和扩展生态比极简运行时更重要时，将它纳入首轮原型。先只连接一个渠道和少量工具，确认日志、恢复和权限行为，再增加连接器。
+### 5.3 CopilotKit OpenMuse：最直接的 Muse 产品结构参照
 
-### 5.3 Hermes Agent：把经验沉淀成技能的长期工作者
+**为什么入选。** 它明确交付个人 Agent 应用，而非仅提供 UI SDK：聊天、Ideas、Goals、Activity、身份/记忆、审批、文档和电脑都在同一产品中。API、task worker 与 browser worker 由仓库提供，应用层可修改。[R01]
 
-Hermes 的一手说明重点是记忆整理、历史会话检索、从任务经验生成和改进 Skills，以及由消息 Gateway 接受请求。它同时提供调度和多种终端后端，不要求所有任务都依附正在使用的笔记本。[S33]
+**值得看的实现。** task worker 会领取持久任务、更新 lease，处理 queued/scheduled/running/waiting_approval 等状态，并提供 checkpoint 和取消检查。这说明“离开客户端后继续工作”有具体后台实现，而不只是聊天页面上的进度动画；部署服务器仍需在线。[R04]
 
-**适合借鉴：** 让 Agent 从一件完成的工作中提炼可重复步骤，并在后续任务中复用。与仅保存个人偏好相比，这更接近个人的工作方式学习。
+**完成度边界。** 默认样例可以不用真实模型和 Google 账户；官方录屏文档说明部分模型响应由 AI Mock 驱动，网页由真实 Chromium 读取，邮箱为虚构样例。验证记录进一步区分真实浏览器、Docker smoke、HTTP fixture 与尚需真实账户验收的部分。不能把这些录屏合并成“已在真实个人邮箱上自动完成工作”。[R02]、[R03]
 
-**重点核验：** 所谓 self-improving 并不表示模型权重自动训练或任务正确率必然提高。要检查生成的 Skill 是否来自已核验结果、是否能被用户查看和撤销、是否在新任务中传播旧错误。评估应比较同类任务多次执行后的干预次数与错误，而不是只观察它是否写出新技能。
+**能否直接替代 Muse。** 适合研究产品交互、任务状态、审批与成果组织，也适合作为二次开发起点。它仍是 Alpha，需要 Intelligence project key、真实模型、OAuth 和执行环境配置；仅把应用部署起来，不等于已具备商业 Muse 的完整生活服务覆盖。[R01]
 
-**选择条件：** 对本项目的开发者个人工作原型，Hermes 是优先候选之一。可用同一组邮件、日程与代码任务，与 OpenClaw 做并行方案对照；这里的“对照”指后续实验设计，本次未运行这两个产品。
+### 5.4 nanoMuse：从 OpenMuse 延续的完整个人 Agent 路线
 
-### 5.4 NanoClaw：把执行隔离作为结构性选择
+**名称关系。** `OpenMuseAgent/OpenMuse` 的迁移说明明确指向 `nano-muse/nanoMuse`。它们应按同一项目沿革理解，不应在名单里重复计数。前者保留早期版本，当前研究入口采用后者。[R29]
 
-NanoClaw 当前仓库强调每个 Agent 的 Linux 容器、明确挂载和按需添加的渠道。其默认路线基于 Claude Agent SDK，也提供其他执行 harness 的扩展方式。自定义更倾向修改个人 fork，而不是依赖大型配置系统。[S34]
+**为什么入选。** nanoMuse 提供手机、桌面和 Web 的个人应用，包含身份、记忆、Feed、目标、后台推进、审批与执行；不仅是一个可嵌入库。架构文档能对应到 Agent loop、Sentinel、memory/goals、服务端线程和 UI，主对话、侧边对话与后台目标共享必要的个人状态。[R27]、[R28]
 
-**适合借鉴：** 把可审查代码、可见挂载和可重置执行环境作为个人用户控制权的一部分。每个 Agent 的内存、目录与凭据可见性应有具体边界。
+**与商业 Muse 的差别。** 商业 Muse 以专属云电脑为核心；nanoMuse 把手机、电脑与可自托管服务都纳入执行选择。这个差别既带来设备上的可达性，也增加在线状态、平台权限和数据流的复杂度。不能只用“支持多设备”推断任何设备都能执行同样的动作。
 
-**重点核验：** 容器隔离不自动解决业务越权。即使进程不能读取主机文件，只要持有可以发邮件的工具，它仍可能发错收件人。需要同时测试容器、凭据网关、网络、动作审批与内容披露。
+**优先核对。** 模型是否由自己选择、relay 是否可替换、设备离线后工作在哪继续、审批如何返回、哪些操作只在 Android/桌面可用。作为完整开放实现，它比记忆库或调度框架更适合与 Muse/Today 做用户流程对照；实际可靠性仍待运行验证。
 
-**选择条件：** 如果项目将执行用户脚本、扩展未知 Skills 或需要更明确的任务环境隔离，应提高该路线优先级。不要仅凭“小核心”描述估算维护成本，仍要检查当前版本和依赖。
+### 5.5 wolfqing OpenGrokBot：对 Grok Bot 工作形态的直接复刻
 
-### 5.5 nanobot：Python 原型与可嵌入运行时
+**为什么入选。** 其核心就是“常驻 AI 同事 + 电脑”：一个 Gateway、多个 Bot 线程与群聊，每个 Bot 有自己的规则、记忆和 Docker 电脑，可通过 noVNC 接管登录。routine 支持时间和 webhook，Bot 可按允许方向交接工作。与商业 Grok Bot 的对位非常直接。[R11]、[R13]
 
-nanobot 当前 README 将自己定位为轻量 Python 个人 Agent 框架，列出 WebUI、消息入口、MCP、cron、长期目标、记忆与 API。它也明确区分稳定发布与 current source：README 描述的主分支能力未必已进入稳定发行包。[S35]
+**实现边界已抽查。** Agent 循环执行模型返回的工具调用，并提供停止、步数和 token 预算检查；审批模块保存待决动作及按 Bot/类别/去向限定的规则。可以据此判断仓库有工作执行与状态实现，不能据此判断复杂任务一定成功。[R14]、[R15]
 
-**适合借鉴：** 对只想研究“消息—记忆—工具—调度”的工程团队，小核心能减少第一次读源码和插入实验的成本。也适合把 Agent 作为既有 Python 系统中的一个服务。
+**两处差异很重要。** 第一，商业 Grok Bot 的同账号 Bot 共享电脑，此项目采用每 Bot 一个容器，属于产品结构上的选择，而非逐项复制。第二，安全文档明确承认：有审批界面不代表每次浏览器发送都被网关强制截住；Agent 仍可能绕过“先申请审批”的提示词约定。[S01]、[R12]
 
-**重点核验：** 不沿用早期文章的固定代码行数来判断当前复杂度；不把 README 中的全部功能视为某个已安装版本都有。原型应固定 commit 或 release，并记录模型、渠道与运行配置。
+**实际缺口。** 项目自己列出尚无未被要求时的主动提议、自己的邮件地址、完整预接连接器、语音、商业版原生应用与演示学习等。因此它适合研究多 Bot 工作台与自托管执行，不能写成“免费完整 Grok Bot”。[R13]
 
-### 5.6 nanoMuse 与 open-instinct：完整体验和服务组合的两种路线
+### 5.6 CopilotKit OpenBot：面向 AI coworker 的可改造产品
 
-**nanoMuse。** README 描述手机、桌面、Web 与 relay 协作，记忆和唤醒配置可读、可编辑，手机与电脑可成为执行设备。它尤其适合观察“一个个人身份，多个执行地点”的体验；但设备并非天然共享同一个执行能力，iOS、Android 和桌面的操作限制不同，跨设备对话也可能经过 relay。[S36]
+**为什么入选。** 与只有 Agent 协议或框架的项目不同，OpenBot 已组合频道、Bot 管理、电脑面板、持续责任、routine、连接器、策略、审批与审计。仓库同时提供用户应用和多个执行端，因此可与 Grok Bot 的工作应用形态比较。[R05]
 
-重点测试应包括：手机发起的工作在哪台设备执行；设备离线后任务如何排队；审批是否送达当前可用设备；截图、文件、对话与模型请求分别经过哪里。跨设备支持要落实到这些行为。
+**后台工作有部署前提。** routine 文档明确要求 worker；只启动 API 或创建日程记录，并不会自动执行定时工作。它还说明漏过时间窗口、连续失败和 worker 可见状态的处理。这些是部署验收应检查的功能，而不是把“有 cron 字段”视为完整持续服务。[R07]
 
-**open-instinct。** 这是独立开发的复刻，非 Instinct 官方开源版。README 描述 Pi、Inkbox、Maritime、Composio 与 Stripe Link 的组合；它把联系人等级与临时授权编码到工具运行前的策略中，并将支付交给外部批准流程。[S37]
+**开放范围和许可。** 应用仓库标 MIT，但线程、记忆与实时网关依赖 CopilotKit Intelligence。可选择托管服务或相应自托管安排；本地评估有账号及许可条件。应用代码开源不能推出所有依赖均可无账号、无额外许可运行。[R05]、[R06]
 
-它的研究价值在于把个人 Agent 拆成可采购服务：身份、通信、计算、集成、钱包和策略。开源代码本身并不免除外部服务的账号、费用、审批和运维。其 beta 状态和维护者自行报告的测试数量，不是本研究复现过的质量证明。
+**权限默认值需要注意。** 架构文档和策略源码区分策略引擎的 fail-closed 行为、dry-run 模式与实际配置；文档同时注明随项目提供的启动策略允许全部动作，除非被管理员配置替换。研究时应检查具体部署规则，不能根据“有策略引擎”推断默认敏感动作均需审批。[R06]、[R31]
 
-### 5.7 QwenPaw 与 Letta：必须跟随当前仓库的两个案例
+### 5.7 CopilotKit OpenDots：Dots 式持续工作与成果空间
 
-**QwenPaw。** 本次查询 `agentscope-ai/CoPaw` 时，GitHub API 返回规范仓库 `agentscope-ai/QwenPaw`。当前 README 已使用 QwenPaw 名称，说明多中文渠道、ReMe 支持的三层记忆、可编辑 Markdown、本地模型与执行防护。搜索中仍能找到较旧 CoPaw 镜像，不能把镜像最后更新时间当成当前项目活跃度。[S38]
+**为什么入选。** 它将命名 Dot、主对话、Spaces/Pages、文档编辑、电脑、后台工作、审批、电话和消息入口组合到一个工作台。用户可以让研究或写作成果成为可持续编辑的页面；这比只提供定时执行器更接近 Dots 的完整产品体验。[R08]
 
-这条路线值得纳入中文工作 Agent 的首轮测试。它覆盖的渠道与本地模型选择有实际相关性；“本地运行无云依赖”应限制在所选本地配置中理解，连接远程模型或外部应用后仍需追踪数据流。
+**实际运行结构。** SQLite 保存页面、配置与工作状态，Intelligence 保存对话；runner 有领取任务、lease、取消和保存结果的代码。Dot agent 对缺少 Intelligence key、模型 key 或模型名明确报配置错误，不应将“页面能打开”视为 Agent 已可工作。[R09]、[R10]、[R32]
 
-**Letta / Letta Code。** `letta-ai/letta` 的当前 README 明确指向 `letta-ai/letta-code`，旧 V1 API server 保留在 archive 分支。新的 harness 提供身份、可改写记忆、Git 跟踪的 MemFS、Skills、消息渠道与调度，已经不能简单归类为一项“向量记忆库”。[S39]、[S40]
+**不能省略的依赖。** 电脑服务来自 OpenBot；语音需要自己的 provider；Slack 需要 Channels 配置；连接应用可涉及 Composio。它们不是创建 Dot 后自动全部生效的能力。Intelligence 本地评估与生产自托管也有不同条件。[R08]、[R09]
 
-本项目应借鉴其对记忆演化和历史的显式管理，但要实测本地 backend、Cloud、远程电脑与秘密管理之间的功能边界。记忆可同步到 Git，并不表示应将个人资料提交到公开代码仓库。
+**验证边界。** README 记录了真实会话、页面上下文、电脑及语音的部分验证，同时明确 Slack、语音委派和部分学习服务仍需连接服务验收。应逐项保留这个边界，不把“有录屏”概括为所有后台和跨渠道路径都已完成。[R08]
 
-### 5.8 组件如何组合
+### 5.8 chyroc Open Muse：完整个人助理客户端，后台由 MA 提供
 
-| 需求 | 优先考察 | 自己仍要补齐 |
-| --- | --- | --- |
-| 可恢复的多步任务 | LangGraph 的持久执行、检查点和人工中断 [S41] | 业务成功条件、幂等、重试策略、工具级结果核对 |
-| 可检索的长期记忆 | Mem0，或现有运行时的记忆体系 [S33]、[S40]、[S42] | 来源、有效期、冲突、隐私范围、删除传播 |
-| 网站操作 | Browser Use 或选定运行时的浏览器层 [S43] | 登录接管、站点限制、审批、动作后的事实确认 |
-| 确定性流程和集成 | n8n [S44] | 长期个人身份、跨任务记忆、计划与注意力管理 |
-| 内部知识与业务应用 | Dify [S45] | 个人关系层、持续责任、个人电脑与消息入口 |
+**为什么入选。** 它的界面和用户目标与 Muse/Today 很接近：个人身份、主/侧对话、记忆、目标、Feed/Ideas、提醒，以及 iPhone 和 Mac 的本地能力。它不是一般的模型聊天壳；客户端还承担设备授权和跨设备个人体验。[R21]
 
-不要为了“用齐开源生态”而同时接入所有组件。若已选的运行时具备调度、记忆和工具接口，应先验证它们，再针对明确短板替换一层。过早叠加两套记忆和两套调度，容易产生重复唤醒、事实不一致与难以解释的动作。
+**为什么不能写成整套后端开源。** README 说明它是 Managed Agents 服务的客户端，默认 Volcano Ark；`shared/ma-provider.ts` 对应 Ark 与 Claude MA 的 API、环境和记忆资源。云端 loop、电脑与持久 Agent 依赖所选服务，仓库不是这些云服务本身。[R21]、[R23]
+
+**验证状态要按平台看。** 验证记录区分真实 MA Web 会话与 mocked-upstream 回归，并指出部分提醒、设备数据读取和其他平台当前功能尚未完成同等验收。README 描述的愿景、可编译客户端与真实设备数据验收，是不同证据。[R22]
+
+**适合研究什么。** 对中文、Apple 设备、本地能力与托管 Agent 的组合很有参考价值。若目标是修改完整个人助理体验而接受托管后台，可优先考察；若目标是掌握全部后端部署，需要额外寻找或替换 MA 服务。
+
+### 5.9 open-instinct：面向短信、电话和可信关系的直接复刻
+
+它明确以 Instinct 为参照，组合 Agent 运行循环、消息身份、独立电脑、应用连接、记忆、scheduler、联系人授权和支付。用户接触到的是一个能被发短信或打电话的个人助理，而不是工作流编辑器。[S37]
+
+值得研究的是它对“谁在请求”和“可以看到什么”的表达：工具前策略结合联系人层级和临时授权，电话与支付还涉及具体动作确认。安全文档也说明托管平台、运行环境、消息服务和模型仍处在数据处理链里；不能由复刻开源推断数据只留在自己的机器。[R30]
+
+它依赖 Inkbox、Maritime、Composio 和 Stripe 等服务，维护者标为 beta。适合对照 Instinct 的入口、授权和任务交付；若只想研究 Web 个人助理，先部署这些外部服务未必是最短路径。
+
+### 5.10 找到了名字，但不能列为同等完整替代的项目
+
+| 项目 | 确实做了什么 | 没有证明 / 明确缺少什么 | 本轮处理 |
+| --- | --- | --- | --- |
+| **Anil-matcha/open-grok-bot** | Bot persona、模型聊天、本地状态、受限工具、审批、可选 Docker 电脑 | README 明确没有独立长期记忆、routine、后台 worker；chat 源码先解析显式 workspace/connector 指令。根目录未见许可文件 [R16]、[R17] | 保留为**同名产品原型**；不与 Grok Bot 的持续 Agent 能力画等号 |
+| **diggerhq/openmuse** | 主协调者 + topic worker、可编辑 notes、异步结果回到主对话，具备真实产品流程 | agents、电脑和记忆在 OpenComputer；本地启动仍需其账号与 HTTPS 回调。根目录未见许可文件 [R18]、[R19]、[R20] | 作为**托管平台上的个人助理应用**研究，不列完整自托管开源栈 |
+| **aeiouvcode/open-muse** | 静态个人 Agent 原型、目标、记忆、审批、浏览器内模型和工具 | README 明确关闭标签页后不运行；连接器只约束本地计划/草稿，不触达真实账户 [R24] | **浏览器产品原型**；不能作为 24/7 个人 Agent 替代 |
+| **SiliconLabAI/OpenMuse** | Muse 风格界面、Manus API proxy、webhook 与 SSE | README 明确由 Manus API 驱动，连接器也在 Manus 上授权；仓库不提供独立 Agent 后端 [R25] | **托管 Agent API 客户端** |
+| **CelestoAI/celesto/open-muse** | 聊天、真实 Linux 桌面、浏览器操作、审批、接管与会话恢复 | 当前主要是 computer coworker 预览；本次未建立长期个人记忆、主动目标与跨应用生活助理的完整证据 [R26] | **电脑执行体验样本**，不与完整 Muse 直接等量比较 |
+
+这张表保留检索结果，是为了展示实际排除依据。项目名称、页面数量或好看的截图都不足以决定是否属于完整个人 Agent。
+
+### 5.11 本轮应优先看的项目
+
+按研究问题选择，不按一个混合总榜选择：
+
+- **研究 Muse 产品结构**：先看 CopilotKit/openmuse；再用 nanoMuse 对照完整自托管和跨设备路线。前者的样例/真实服务边界、后者的设备/relay 边界应分别验证。
+- **研究 Grok Bot 式多同事工作台**：先看 wolfqing/OpenGrokBot 的直接复刻，再看 CopilotKit/OpenBot 的产品模板和治理/部署结构。
+- **研究 Dots 式成果空间与持续工作**：看 CopilotKit/OpenDots，先验证 Intelligence 和电脑服务，再讨论语音、Slack 与学习。
+- **研究中文 Apple 个人体验**：看 chyroc/open-muse，同时接受并明确其托管后端依赖。
+- **研究 Instinct 式联系人入口**：看 open-instinct，重点跟踪身份、联系人权限、电话、支付及外部服务成本。
+
+OpenClaw、Hermes、LangGraph、Mem0 等保留在构建附录。它们可以帮助实现某些能力，但本节的选择问题是“哪一个开源应用与商业产品在解决同一种用户任务”，不再用基础组件补齐产品名单。
 
 ## 6. 技术架构与关键设计
 
@@ -433,17 +471,18 @@ API 优先用于有稳定业务对象、权限范围和返回值的工作；浏�
 
 暂缓购物支付、医疗事务、家庭关系自动协商与跨人 Agent 网络。这样能在同一套评测材料里检查记忆、持续性、授权和交付，而不需要同时解决多个现实服务体系。
 
-### 8.2 买产品、扩展开源还是自建
+### 8.2 按商业产品选择同类开源参照
 
-| 目标 | 建议路径 | 为什么 | 切换条件 |
-| --- | --- | --- | --- |
-| 自己尽快获得个人工作帮助 | 根据已有账号和资格体验 Dots、Grok Bot、Duet；中文日常体验加入 Today，生活执行加入 Muse/Instinct | 接入成本低，先理解真实工作收益 | 若权限、地区、可导出性或工具覆盖明显不满足，再考虑自托管 |
-| 做可控的个人工作原型 | 从 Hermes 或 OpenClaw 选一个起点；中文本地路线加入 QwenPaw；隔离优先时评估 NanoClaw | 保留成熟渠道与运行机制，把开发集中到真正差异 | 以同一任务集的失败、修改成本和可恢复性作决定 |
-| 研究 Agent 内部流程 | nanobot 或清晰拆层的自建服务 | 易于插入记忆、调度和策略实验 | 当功能复杂度或可靠性需求超过小核心时再换运行底座 |
-| 做完整跨设备个人产品 | 先研究 nanoMuse 的设备/relay 边界；另考察 Letta 的持续身份与记忆 | 能看到客户端和长期运行之间的产品接口 | 原型证实跨设备有净收益后才扩大设备支持 |
-| 面向多人长期提供服务 | 使用持久任务控制面，明确租户、凭据、授权和执行隔离 | 个人 fork 的默认假设通常不够 | 真实需求证明需要独立控制面时，评估 LangGraph 等组件 |
+| 研究目标 | 优先比较 | 首先验证什么 |
+| --- | --- | --- |
+| Muse 式个人助理交互与后台任务 | Meta Muse ↔ CopilotKit/openmuse、nanoMuse | 主对话、目标、记忆、后台持续、审批、结果能否在同一流程里成立 |
+| Grok Bot 式多同事工作台 | Grok Bot ↔ wolfqing/OpenGrokBot、CopilotKit/OpenBot | Bot 身份、电脑隔离/共享、交接、routine、权限和需要补齐的连接器 |
+| Dots 式持续工作与成果空间 | OpenAI Dots ↔ CopilotKit/OpenDots | 后台任务与页面成果、原对话续作、Intelligence 与电脑服务依赖 |
+| 中文跨设备个人体验 | Today/Muse 的相关流程 ↔ chyroc/open-muse、nanoMuse | 中文、手机/Mac 能力、云与设备在线条件、哪些后端在自己控制下 |
+| 短信/电话式个人助理 | Instinct ↔ open-instinct | 联系人身份、外部服务、授权、电话/支付和结果交付 |
+| 未来独立实现某一层能力 | 再参考构建附录 | 先证明产品短板，随后选择运行时、记忆或执行组件 |
 
-这里是**待实测的候选顺序**，不是“某产品最好”的排名。本次没有足够依据指定唯一技术赢家。
+这些是按用户任务对应的研究顺序，不代表已经验证哪一项能完整替代商业产品。正式体验前要区分真实模型、样例数据、接通的真实账户与还未配置的界面。
 
 ### 8.3 最小功能集合
 
@@ -536,7 +575,7 @@ API 优先用于有稳定业务对象、权限范围和返回值的工作；浏�
 | 阶段 | 工作 | 进入下一阶段的条件 |
 | --- | --- | --- |
 | A：固定样本 | 确定真实用户、两种数据源、三个责任场景、测试材料与完成定义 | 同一任务可由人手、聊天模型和 Agent 公平对照 |
-| B：验证最小闭环 | 选择一个运行时，完成读取、记忆、准备、审批和结果核对 | 可见结果正确，重复触发不产生重复动作 |
+| B：验证最小闭环 | 选择一个同类开源应用，完成读取、记忆、准备、审批和结果核对 | 可见结果正确，重复触发不产生重复动作 |
 | C：持续运行 | 加入事件、调度、恢复、停止与通知去重 | 重启后状态明确；登录和审批阻塞可解释 |
 | D：做对照选择 | 用固定任务集比较少量商业与自托管候选 | 用完成、干预、成本和错误选型，不用主观演示印象 |
 | E：扩大范围 | 增加连接器、多设备、更多角色或团队协作 | 每新增范围都能说明用户收益与新增权限边界 |
@@ -547,7 +586,7 @@ API 优先用于有稳定业务对象、权限范围和返回值的工作；浏�
 2. Today 各端下载、连接器和计划在当前版本中是否一致；冲突文档对应什么发布时间。
 3. Instinct 的完整审批、持续任务状态、数据导出/删除与可信联系人规则。
 4. Dots、Grok Bot、Duet 在长期任务中的真实配额消耗与授权体验。
-5. 开源运行时在相同模型和工具配置下，谁能用更少干预完成相同责任。
+5. 同类开源应用在真实模型和真实工具配置下，谁能用更少干预完成相同责任；各应用的模型/后端差异单独记录。
 6. 各方案怎样处理“已经发送但网络响应丢失”、授权后内容变化、用户临时取消等问题。
 7. 记忆和日志能否有选择地迁移与清理；停用一个连接后，已有资料与持续任务如何变化。
 8. 中文工作场景能否达到与英语演示相近的任务清晰度、资料检索和工具使用质量。
@@ -610,3 +649,35 @@ API 优先用于有稳定业务对象、权限范围和返回值的工作；浏�
 [S46]: https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro
 [S47]: https://agentskills.io/home
 [S48]: https://a2a-protocol.org/latest/
+[R01]: https://github.com/CopilotKit/openmuse/blob/1ac68f3909f2478ab6280883f1ab5ea65eb5719d/README.md
+[R02]: https://github.com/CopilotKit/openmuse/blob/1ac68f3909f2478ab6280883f1ab5ea65eb5719d/docs/VERIFICATION.md
+[R03]: https://github.com/CopilotKit/openmuse/blob/1ac68f3909f2478ab6280883f1ab5ea65eb5719d/docs/DEMO.md
+[R04]: https://github.com/CopilotKit/openmuse/blob/1ac68f3909f2478ab6280883f1ab5ea65eb5719d/apps/server/src/engine/worker.ts
+[R05]: https://github.com/CopilotKit/OpenBot/blob/74051c1dd4b34efe7980e708192201c49a854921/README.md
+[R06]: https://github.com/CopilotKit/OpenBot/blob/74051c1dd4b34efe7980e708192201c49a854921/docs/architecture.md
+[R07]: https://github.com/CopilotKit/OpenBot/blob/74051c1dd4b34efe7980e708192201c49a854921/docs/routines.md
+[R08]: https://github.com/CopilotKit/OpenDots/blob/b4e77df7cf496bedf33ee1c237d144588c6965d6/README.md
+[R09]: https://github.com/CopilotKit/OpenDots/blob/b4e77df7cf496bedf33ee1c237d144588c6965d6/docs/SETUP.md
+[R10]: https://github.com/CopilotKit/OpenDots/blob/b4e77df7cf496bedf33ee1c237d144588c6965d6/src/server/dot-agent.ts
+[R11]: https://github.com/wolfqing/OpenGrokBot/blob/ad0a3fcadc31d96115736314e78a92780c4dab23/README.md
+[R12]: https://github.com/wolfqing/OpenGrokBot/blob/ad0a3fcadc31d96115736314e78a92780c4dab23/docs/security.md
+[R13]: https://github.com/wolfqing/OpenGrokBot/blob/ad0a3fcadc31d96115736314e78a92780c4dab23/docs/comparison.md
+[R14]: https://github.com/wolfqing/OpenGrokBot/blob/ad0a3fcadc31d96115736314e78a92780c4dab23/gateway/src/agent.ts
+[R15]: https://github.com/wolfqing/OpenGrokBot/blob/ad0a3fcadc31d96115736314e78a92780c4dab23/gateway/src/approvals.ts
+[R16]: https://github.com/Anil-matcha/open-grok-bot/blob/6ea54a988b0b09d09f6abf4ea7edae3e3fd62699/README.md
+[R17]: https://github.com/Anil-matcha/open-grok-bot/blob/6ea54a988b0b09d09f6abf4ea7edae3e3fd62699/server/app/routers/chat.py
+[R18]: https://github.com/diggerhq/openmuse/blob/2fff664dac90f8d24b67b754912485106660c034/README.md
+[R19]: https://github.com/diggerhq/openmuse/blob/2fff664dac90f8d24b67b754912485106660c034/docs/development.md
+[R20]: https://github.com/diggerhq/openmuse/blob/2fff664dac90f8d24b67b754912485106660c034/opencomputer/agents/topic-worker/agent.ts
+[R21]: https://github.com/chyroc/open-muse/blob/051a2f057a29853eb3f3805f785d5e76f178d0c5/README.md
+[R22]: https://github.com/chyroc/open-muse/blob/051a2f057a29853eb3f3805f785d5e76f178d0c5/docs/verification.md
+[R23]: https://github.com/chyroc/open-muse/blob/051a2f057a29853eb3f3805f785d5e76f178d0c5/shared/ma-provider.ts
+[R24]: https://github.com/aeiouvcode/open-muse/blob/62f658012569c0cb7692562977b0f7fe17ad396e/README.md
+[R25]: https://github.com/SiliconLabAI/OpenMuse/blob/f05feb468418c489e17b8fc52df2afae8d3c9b74/README.md
+[R26]: https://github.com/CelestoAI/celesto/blob/5b276a8c7a05c9943fca4a60c04e068f5ba9a95a/open-muse/README.md
+[R27]: https://github.com/nano-muse/nanoMuse/blob/948a11d04bb4afe1dc78d67b8c2336cae498a359/README.md
+[R28]: https://github.com/nano-muse/nanoMuse/blob/948a11d04bb4afe1dc78d67b8c2336cae498a359/docs/architecture.md
+[R29]: https://github.com/OpenMuseAgent/OpenMuse/blob/76b71309f49e5055d216cc57e41a68ae660e3190/README.md
+[R30]: https://github.com/mariagorskikh/open-instinct/blob/cb3d97ca2322a6c53d0208155b7b5ab66c5ba0d4/docs/SECURITY.md
+[R31]: https://github.com/CopilotKit/OpenBot/blob/74051c1dd4b34efe7980e708192201c49a854921/server/src/computer/policy.ts
+[R32]: https://github.com/CopilotKit/OpenDots/blob/b4e77df7cf496bedf33ee1c237d144588c6965d6/src/server/runner.ts

@@ -4,16 +4,17 @@
 
 ## 调研文档
 
-- [Personal Agent 深度调研：商业产品、创业公司与开源生态](docs/research/personal-agent-landscape-2026-10-22.md)
+- [Personal Agent 深度调研：商业产品与同类开源替代](docs/research/personal-agent-landscape-2026-10-22.md)
+- [构建附录：通用运行时与组件](docs/research/agent-building-blocks-2026-10-22.md)
 - [来源索引与核验记录](docs/research/sources-2026-10-22.md)
 
 首版核验日期：**2026-10-22（Asia/Shanghai）**。
 
-覆盖 Grok Bot、Meta Muse、OpenAI Dots、Claude Duet、Today AI、Instinct，以及 OpenClaw、Hermes Agent、NanoClaw、nanobot、nanoMuse 等开源项目。报告包含产品对比、技术架构、商业模式、选型建议和后续实测方案。
+主报告比较 Grok Bot、Meta Muse、OpenAI Dots、Claude Duet、Today AI、Instinct，与 CopilotKit OpenMuse/OpenBot/OpenDots、wolfqing/OpenGrokBot、nanoMuse、chyroc/open-muse、open-instinct 等同类应用。逐项说明完整自托管、额外服务依赖、托管后端客户端和未完成原型的边界。通用运行时及基础组件单列构建附录。
 
 ## 阅读约定
 
-文档明确区分官方公开能力、维护者声明和研究判断。首版基于公开资料与仓库文档，未声称完成各产品的登录体验或端到端实测。价格、地区、候补资格和配额均可能变化，采用时应复查文档中的原始链接。
+文档明确区分官方公开能力、维护者声明和研究判断。研究基于公开资料、仓库文档与关键源码抽查，未声称完成各产品的登录体验或端到端实测。价格、地区、候补资格和配额均可能变化，采用时应复查文档中的原始链接。
 
 ## 仓库约定
 
