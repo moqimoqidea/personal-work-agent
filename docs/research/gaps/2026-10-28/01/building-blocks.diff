@@ -1,0 +1,43 @@
+--- a/docs/research/agent-building-blocks-2026-10-22.md
++++ b/docs/research/agent-building-blocks-2026-10-28.md
+@@ -1,6 +1,6 @@
+ # 构建附录：通用 Agent 运行时与组件
+ 
+-核验时点：2026-10-22。返回[商业个人 Agent 与同类开源替代调研](personal-agent-landscape-2026-10-22.md)。
++本轮活动监测：**2026-10-28**。返回[修订主报告](personal-agent-landscape-2026-10-28.md)。能力与许可说明沿用 10 月 22 日固定来源；本轮新增 HEAD、少量发行记录与选型影响见第 5 节。未重新安装或运行组件。
+ 
+ 本附录保存实现背景，不进入商业个人 Agent 的直接替代主表。判断对标关系应看用户拿到的产品、任务闭环与依赖范围；不能因为项目有 memory、cron 或 tools，就与 Muse、Grok Bot、Dots、Duet 并列。
+ 
+@@ -38,3 +38,32 @@
+ ## 4. 何时再回到这些组件
+ 
+ 先选择主报告中的同类产品，走通“请求—持续工作—审批—结果—后续更新”。当具体产品缺少一层能力时，再评估是否用这里的组件补充。这样才能知道是在修补明确短板，还是无意中重造一整套产品。
++
++## 5. 本轮动态与采用边界
++
++本表记录活动，不把每个新提交当成功能发布。组件仍按它解决的实现层选择；同类产品名单不因组件发版而扩张。
++
++| 项目 | 10 月 28 日取得的 HEAD | 时间（UTC） | 本轮深度 |
++| --- | --- | --- | --- |
++| openclaw/openclaw | [b4cc6fe87a18](https://github.com/openclaw/openclaw/tree/b4cc6fe87a18220ac11a0a3377b0a3ef43cf2093) | 2026-10-28 02:58:55 | HEAD + 发行说明 |
++| NousResearch/hermes-agent | [aad60e1ac670](https://github.com/NousResearch/hermes-agent/tree/aad60e1ac670268aa39b364b16b16dbf06de85df) | 2026-10-28 02:34:10 | HEAD + 发行说明 |
++| nanocoai/nanoclaw | [acc2b1c8f52a](https://github.com/nanocoai/nanoclaw/tree/acc2b1c8f52a954368cfaf04b61c32f9a1efc280) | 2026-10-26 07:00:31 | HEAD 活动监测 |
++| HKUDS/nanobot | [b07b3eac244f](https://github.com/HKUDS/nanobot/tree/b07b3eac244ff7faa7eeb2d4777fe54dbae1b6d2) | 2026-10-27 13:05:32 | HEAD 活动监测 |
++| agentscope-ai/QwenPaw | [9e59502cbe3b](https://github.com/agentscope-ai/QwenPaw/tree/9e59502cbe3b62e9a962027cfa6c549936c89135) | 2026-10-28 01:58:24 | HEAD 活动监测 |
++| letta-ai/letta-code | [5dea67021b99](https://github.com/letta-ai/letta-code/tree/5dea67021b99810707ff753db35e4534f70ff1fd) | 2026-10-28 02:41:25 | HEAD 活动监测 |
++| langchain-ai/langgraph | [eb8ec111b3e9](https://github.com/langchain-ai/langgraph/tree/eb8ec111b3e9d3108af5d7bdcac51e3e913637a0) | 2026-10-27 21:46:39 | HEAD 活动监测 |
++| mem0ai/mem0 | [26cdefb46600](https://github.com/mem0ai/mem0/tree/26cdefb46600c0fa5953c4b5ee5003c125539fc4) | 2026-10-26 14:51:39 | HEAD 活动监测 |
++| browser-use/browser-use | [2cc71890e650](https://github.com/browser-use/browser-use/tree/2cc71890e65056b67fdb29d98bb407749c15bb08) | 2026-10-26 22:00:16 | HEAD + 发行说明 |
++| n8n-io/n8n | [dd5f870ecc38](https://github.com/n8n-io/n8n/tree/dd5f870ecc38344951fb3956f1a7ba7852612c70) | 2026-10-27 20:55:46 | HEAD 活动监测 |
++| langgenius/dify | [c01cb5d119a6](https://github.com/langgenius/dify/tree/c01cb5d119a69532df73ec20da8daa18cf44e0fb) | 2026-10-28 02:46:42 | HEAD 活动监测 |
++
++
++- **OpenClaw**：本次首条发行记录是 [v2026.10.10-beta.4](https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.4)，标为预发行。其说明涉及定时跟进授权、Gateway 凭据和备份审批的修复，不能据此称为稳定渠道全量发布。
++- **Hermes**：取得 [v0.22.5](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5) 记录，GitHub 发布时间为 10 月 23 日，内文写 10 月 22 日。作为维护补丁观察，不按版本说明中的提交数量判断个人 Agent 效果。
++- **Browser Use**：取得 [0.13.14](https://github.com/browser-use/browser-use/releases/tag/0.13.14)。说明明确保留 Python Agent，Pi 迁移另列；本轮未验证 PyPI 是否已完成分发，不把“发布 GitHub Release”当成所有安装渠道已更新。
++- **OpenAI 执行模型**：[10 月 26–30 日官方周页](https://learn.chatgpt.com/docs/whats-new/october-26-30-2026)新增 GPT-6.1 Terra 在 Work/Codex 的可用性说明。它属于执行端模型选择证据，不证明 Dots 的主模型已经替换。
++- **其余组件**：HEAD 已前进，但本轮未完整读取变化、重新核对许可证或跑通部署。上面第 1、2 节的固定 README 保持历史引用，不能当成新 HEAD 的全部能力保证。
++
++对本项目，先验证主报告的应用流程，再决定是否替换底层组件。新版本重点复测任务恢复、权限配置、记忆迁移和连接器行为；不要为了追逐 HEAD 同时改变模型、框架与数据层。
++
++详细快照与取证限制见[本轮来源索引](sources-2026-10-28.md)。

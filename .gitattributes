@@ -1,0 +1,2 @@
+# A context-only blank line in an archived unified diff contains one space.
+docs/research/gaps/**/*.diff whitespace=-blank-at-eol
