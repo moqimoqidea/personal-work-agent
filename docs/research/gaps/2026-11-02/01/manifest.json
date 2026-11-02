@@ -1,0 +1,2684 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-11-02/01",
+  "recorded_on": "2026-11-02",
+  "timezone": "Asia/Shanghai",
+  "record_type": "report_update",
+  "started_from_revision": "897b0241b92d0bda97a8a5d25c439bd4ca0e8758",
+  "baseline": {
+    "report_date": "2026-10-28",
+    "version_id": "2026-10-28",
+    "revision": "c69eb962dd73f0d7b2958818703ab67a7b3866f1",
+    "files": {
+      "report": "docs/research/personal-agent-landscape-2026-10-28.md",
+      "sources": "docs/research/sources-2026-10-28.md",
+      "building_blocks": "docs/research/agent-building-blocks-2026-10-28.md"
+    }
+  },
+  "current": {
+    "report_date": "2026-11-02",
+    "version_id": "2026-11-02",
+    "revision": null,
+    "files": {
+      "report": "docs/research/personal-agent-landscape-2026-11-02.md",
+      "sources": "docs/research/sources-2026-11-02.md",
+      "building_blocks": "docs/research/agent-building-blocks-2026-11-02.md"
+    },
+    "revision_note": "Prepared before commit; file SHA-256 fixes this content. Actual commit and push result are reported in the final delivery, not written recursively into this commit."
+  },
+  "file_diffs": [
+    {
+      "kind": "report",
+      "baseline_path": "docs/research/personal-agent-landscape-2026-10-28.md",
+      "current_path": "docs/research/personal-agent-landscape-2026-11-02.md",
+      "baseline_sha256": "103790c9ad679e55536127a976571eb0fcdd2b49284ce4c2849c7a9ad80c52bd",
+      "current_sha256": "278084020e4aa322a8490e0d80d6f131df4b66fef625b10f6704543eea684697",
+      "diff_path": "report.diff",
+      "diff_sha256": "46d0ac65bcceb22e72ffeff090208534d79496dd874f8ead0c953fd28e063fa9",
+      "added_lines": 206,
+      "removed_lines": 124
+    },
+    {
+      "kind": "sources",
+      "baseline_path": "docs/research/sources-2026-10-28.md",
+      "current_path": "docs/research/sources-2026-11-02.md",
+      "baseline_sha256": "f4058c4dc8892dbb3bbd4370d41b64e1757596ddf0b07540deb4e6f2558a91f3",
+      "current_sha256": "68f82e22cd631b9b566d0e9e4d27e21732cb82404a8aca251084c53303f037b7",
+      "diff_path": "sources.diff",
+      "diff_sha256": "8896174e0942549873462c072d3934568df36ce3f0827ca66bc9a0e345bcccc3",
+      "added_lines": 158,
+      "removed_lines": 156
+    },
+    {
+      "kind": "building_blocks",
+      "baseline_path": "docs/research/agent-building-blocks-2026-10-28.md",
+      "current_path": "docs/research/agent-building-blocks-2026-11-02.md",
+      "baseline_sha256": "69b66b04f26f25ba952745beb083aee664f529d085232e579c649fd33c8ba57d",
+      "current_sha256": "90f4147b419aa9f00e965f42899ee70505fefdf956fd2e9d13464c01872dcd2d",
+      "diff_path": "building-blocks.diff",
+      "diff_sha256": "cd9b9587bc3c88a9eec00192da8dd6657b916913b23aac391129ffa3f336bac2",
+      "added_lines": 32,
+      "removed_lines": 22
+    }
+  ],
+  "coverage": {
+    "commercial_core_count": 6,
+    "commercial_core": [
+      "Grok Bot",
+      "Muse",
+      "Dots",
+      "Duet",
+      "Today",
+      "Instinct"
+    ],
+    "baseline_repositories_checked": 25,
+    "baseline_heads_changed": 16,
+    "baseline_heads_unchanged": 9,
+    "new_repositories": [
+      "CopilotKit/OpenDuet"
+    ],
+    "repositories_checked": 26,
+    "direct_application_samples": 8,
+    "main_readmes_downloaded": 8,
+    "main_readme_read_scope": "Positioning, dependency, capability and execution-boundary sections; not a claim of every line audited.",
+    "repository_comparisons_read": 6,
+    "repository_comparisons": [
+      {
+        "repository": "CopilotKit/OpenBot",
+        "ahead_by": 25,
+        "behind_by": 0,
+        "status": "ahead",
+        "files_returned": 300,
+        "limit": 300,
+        "total_commits": 25
+      },
+      {
+        "repository": "wolfqing/OpenGrokBot",
+        "ahead_by": 28,
+        "behind_by": 0,
+        "status": "ahead",
+        "files_returned": 62,
+        "limit": 300,
+        "total_commits": 28
+      },
+      {
+        "repository": "nano-muse/nanoMuse",
+        "ahead_by": 179,
+        "behind_by": 0,
+        "status": "ahead",
+        "files_returned": 280,
+        "limit": 300,
+        "total_commits": 179
+      },
+      {
+        "repository": "chyroc/open-muse",
+        "ahead_by": 5,
+        "behind_by": 0,
+        "status": "ahead",
+        "files_returned": 16,
+        "limit": 300,
+        "total_commits": 5
+      },
+      {
+        "repository": "mariagorskikh/open-instinct",
+        "ahead_by": 18,
+        "behind_by": 0,
+        "status": "ahead",
+        "files_returned": 44,
+        "limit": 300,
+        "total_commits": 18
+      },
+      {
+        "repository": "CelestoAI/celesto",
+        "ahead_by": 7,
+        "behind_by": 0,
+        "status": "ahead",
+        "files_returned": 32,
+        "limit": 300,
+        "total_commits": 7
+      }
+    ],
+    "release_lists_read": 19,
+    "release_list_scope": "First five items for seven original main applications, eleven components, and new OpenDuet; other prototype repositories checked for metadata and HEAD only.",
+    "new_source_count": 42,
+    "new_source_ids": [
+      "U30",
+      "U31",
+      "U32",
+      "U33",
+      "U34",
+      "U35",
+      "U36",
+      "U37",
+      "U38",
+      "U39",
+      "U40",
+      "U41",
+      "U42",
+      "U43",
+      "U44",
+      "U45",
+      "U46",
+      "U47",
+      "U48",
+      "U49",
+      "U50",
+      "U51",
+      "U52",
+      "U53",
+      "U54",
+      "U55",
+      "U56",
+      "U57",
+      "U58",
+      "U59",
+      "U60",
+      "U61",
+      "U62",
+      "U63",
+      "U64",
+      "U65",
+      "U66",
+      "U67",
+      "U68",
+      "U69",
+      "U70",
+      "U71"
+    ],
+    "static_code_read": [
+      "OpenBot computer-key.ts and person-access.ts; recorder and changes cross-checked with commits/changelog, not complete code audit.",
+      "OpenGrokBot v0.4.0 sandbox.ts in full; compared with current HEAD and versioned security.md. Linux SECRET_DIRS discrepancy is static and untested.",
+      "nanoMuse v1.0.9 privacy.md, runtime-budgets.md, llm/budget.py and phone-approvals.ts. Native runtime budgets not verified.",
+      "OpenDuet brief.ts, triage.ts and wiring.ts relevant sections; MIT LICENSE in full. No real Google mailbox or deployment.",
+      "chyroc Windows DictationHandler relevant sections; open-instinct WhatsApp parse and channel router; no platform runtime tests."
+    ],
+    "not_reverified": [
+      "Historical S/R/U sources not enumerated as read in current sources section 3.",
+      "Full licenses of old repositories, complete source changes, binary signatures and package-manager distribution.",
+      "Muse Singapore current body was not fully retrieved; prior U02 remains historical evidence.",
+      "Cue current access, iOS availability and prices; cue.im returns no readable text.",
+      "Instinct public price and comprehensive authorization matrix; exact Dots texting launch time and Duet Ultra eligibility-change date."
+    ],
+    "product_runtime_tests": "not_performed",
+    "product_accounts_connected": [],
+    "security_probe_execution": "not_performed",
+    "new_test_plans": [
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "U30",
+      "title": "Grok Bot 更新日志",
+      "url": "https://x.ai/changelog/bot",
+      "source_time": "2026-10-27 / v0.78.1",
+      "accessed_on": "2026-11-02",
+      "scope": "最新条目及购物、订单与订阅模板；晚于上版日志快照，但事件早于基线报告日，按补证处理。"
+    },
+    {
+      "id": "U31",
+      "title": "Muse 日本开放公告",
+      "url": "https://about.fb.com/ja/news/2026/10/muse-personal-ai-agent-launches-in-japan/",
+      "source_time": "2026-10-23（日本时间）",
+      "accessed_on": "2026-11-02",
+      "scope": "正文开放日、连接器与功能地区边界；补收旧公告，不算本期新开放。"
+    },
+    {
+      "id": "U32",
+      "title": "Text your dot",
+      "url": "https://learn.chatgpt.com/docs/whats-new/dots-october-28-2026",
+      "source_time": "2026-10-26–30 周；正文未标绝对日",
+      "accessed_on": "2026-11-02",
+      "scope": "官方更新正文；美国 Pro、iMessage/RCS beta、审批回 ChatGPT；不能仅从 URL 推断具体发布时间。"
+    },
+    {
+      "id": "U33",
+      "title": "Message your dot",
+      "url": "https://learn.chatgpt.com/docs/dots/channels",
+      "source_time": "动态页；iOS 1.2026.279",
+      "accessed_on": "2026-11-02",
+      "scope": "全文；短信式一对一、其他短信不可读、群聊/电话/FaceTime 不支持；widget/Shortcuts 渐进上线，未标首发日。"
+    },
+    {
+      "id": "U34",
+      "title": "Duet 当前帮助页",
+      "url": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet",
+      "source_time": "动态页；Updated this week 无绝对日",
+      "accessed_on": "2026-11-02",
+      "scope": "重读 U04 同一页面：美国 Pro/Max/Ultra 候补、历史聊天搜索、限制与共享配额；未确认 Ultra 加入日期。"
+    },
+    {
+      "id": "U35",
+      "title": "Today 中国站",
+      "url": "https://todayai.cn/",
+      "source_time": "未标",
+      "accessed_on": "2026-11-02",
+      "scope": "首页正文恢复可读；展示 3 亿 tokens / 3 个月 Pro，未登录领取。"
+    },
+    {
+      "id": "U36",
+      "title": "Today 中国下载目录",
+      "url": "https://todayai.cn/downloads",
+      "source_time": "未标",
+      "accessed_on": "2026-11-02",
+      "scope": "Mac/Windows/Linux/iOS/Android 下载入口；只核对目录，不下载或运行安装包。"
+    },
+    {
+      "id": "U37",
+      "title": "Town 1Password 更新",
+      "url": "https://www.town.com/updates",
+      "source_time": "2026-10-29 条目",
+      "accessed_on": "2026-11-02",
+      "scope": "新集成；美国区 Individual/Families 的 Personal vault 与逐次登录批准条件。"
+    },
+    {
+      "id": "U38",
+      "title": "Gemini 文件编辑公告",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/",
+      "source_time": "2026-10-29",
+      "accessed_on": "2026-11-02",
+      "scope": "正文；PDF web/mobile、其他格式 web，不能外推 Spark 后台能力。"
+    },
+    {
+      "id": "U39",
+      "title": "Perplexity Mac 本地模式",
+      "url": "https://www.perplexity.ai/en-GB/hub/blog/perplexity-computer-now-runs-fully-local-on-mac",
+      "source_time": "官方目录日期 2026-10-20；正文未重列日期",
+      "accessed_on": "2026-11-02",
+      "scope": "本次取得正文：Apple silicon、Pro/Max/Enterprise、建议 36 GB、Qwen 3.6/PPLX Pro；联网/浏览器/连接应用可授权转云。"
+    },
+    {
+      "id": "U40",
+      "title": "Perplexity Automations",
+      "url": "https://www.perplexity.ai/en-GB/hub/blog/computer-adds-automations-for-ongoing-work",
+      "source_time": "官方目录日期 2026-09-29；正文未重列日期",
+      "accessed_on": "2026-11-02",
+      "scope": "本次取得正文：事件触发、跨轮记忆、运行历史和待触发不耗 credits；属于补证。"
+    },
+    {
+      "id": "U41",
+      "title": "OpenBot 当前 README",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/c396a5f68c817043846f1ca3c2b42061ee73ceb5/README.md",
+      "source_time": "c396a5f68c817043846f1ca3c2b42061ee73ceb5",
+      "accessed_on": "2026-11-02",
+      "scope": "定位、依赖、每人电脑、隔离选项、电脑与 Recorder 相关段落；同属 Beta 模板。"
+    },
+    {
+      "id": "U42",
+      "title": "OpenBot 当前变更说明",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/c396a5f68c817043846f1ca3c2b42061ee73ceb5/CHANGELOG.md",
+      "source_time": "固定 HEAD / Unreleased",
+      "accessed_on": "2026-11-02",
+      "scope": "第 1–490 行；联读提交区间，区分本期改动与先前 Unreleased；仅主分支。"
+    },
+    {
+      "id": "U43",
+      "title": "OpenBot 提交比较",
+      "url": "https://github.com/CopilotKit/OpenBot/compare/da9a3caf5784074baa779110dd7e9d1338c8871b...c396a5f68c817043846f1ca3c2b42061ee73ceb5",
+      "source_time": "25 commits / API 返回 300 files",
+      "accessed_on": "2026-11-02",
+      "scope": "读取元数据与首 300 文件清单；另取 40 条提交历史到旧 SHA，不能称完整逐文件审计。"
+    },
+    {
+      "id": "U44",
+      "title": "OpenBot 电脑归属代码",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/c396a5f68c817043846f1ca3c2b42061ee73ceb5/server/src/computer/computer-key.ts",
+      "source_time": "c396a5f68c817043846f1ca3c2b42061ee73ceb5",
+      "accessed_on": "2026-11-02",
+      "scope": "全文静态读取：person/bot key、seatOf 与共享电脑不能强制 isolated 的判定；未运行。"
+    },
+    {
+      "id": "U45",
+      "title": "OpenBot 人工浏览器边界",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/c396a5f68c817043846f1ca3c2b42061ee73ceb5/agent-computer/src/person-access.ts",
+      "source_time": "c396a5f68c817043846f1ca3c2b42061ee73ceb5",
+      "accessed_on": "2026-11-02",
+      "scope": "全文静态读取：人工浏览器路径允许表、电脑归属与 Bot 路径拒绝；不等于实测隔离成功。"
+    },
+    {
+      "id": "U46",
+      "title": "OpenGrokBot v0.4.0",
+      "url": "https://github.com/wolfqing/OpenGrokBot/releases/tag/v0.4.0",
+      "source_time": "2026-10-30 23:17:48 UTC",
+      "accessed_on": "2026-11-02",
+      "scope": "发行说明全文；tag 解引用至 15e42b1ae55301ae23bd59ca9eabb89649c4f8df；无二进制 assets。"
+    },
+    {
+      "id": "U47",
+      "title": "OpenGrokBot 版本化安全文",
+      "url": "https://github.com/wolfqing/OpenGrokBot/blob/15e42b1ae55301ae23bd59ca9eabb89649c4f8df/docs/security.md",
+      "source_time": "v0.4.0 / 15e42b1ae55301ae23bd59ca9eabb89649c4f8df",
+      "accessed_on": "2026-11-02",
+      "scope": "本地模式、命令、网络、资源与普通浏览器审批边界；维护者的共同密钥遮蔽声明需与 U48 交叉核对。"
+    },
+    {
+      "id": "U48",
+      "title": "OpenGrokBot 本地命令隔离",
+      "url": "https://github.com/wolfqing/OpenGrokBot/blob/15e42b1ae55301ae23bd59ca9eabb89649c4f8df/gateway/src/sandbox.ts",
+      "source_time": "v0.4.0；与本次 HEAD 文本相同",
+      "accessed_on": "2026-11-02",
+      "scope": "全文 212 行；Seatbelt、bubblewrap 参数与 self-check。Linux 参数未像 macOS 一样列 SECRET_DIRS，形成静态文码差异，未利用验证。"
+    },
+    {
+      "id": "U49",
+      "title": "nanoMuse v1.0.8 Crew",
+      "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.8",
+      "source_time": "2026-10-29 06:31:54 UTC",
+      "accessed_on": "2026-11-02",
+      "scope": "开头及跨设备审批、记录/训练与发行条件段落；长说明未逐条审阅，不把所有合入都算基线之后。"
+    },
+    {
+      "id": "U50",
+      "title": "nanoMuse v1.0.9 Tiller",
+      "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.9",
+      "source_time": "2026-10-29 15:07:55 UTC",
+      "accessed_on": "2026-11-02",
+      "scope": "开头、Highlights、Upgrade Notes；签入桌面启动修复、预算、全库 recall、iOS 审核条件；tag 为 b47448bebc6dd592b2502fcdea3ba0ad8240373f。"
+    },
+    {
+      "id": "U51",
+      "title": "nanoMuse v1.0.9 隐私",
+      "url": "https://github.com/nano-muse/nanoMuse/blob/b47448bebc6dd592b2502fcdea3ba0ad8240373f/docs/privacy.md",
+      "source_time": "v1.0.9 / relay 0.31",
+      "accessed_on": "2026-11-02",
+      "scope": "全文；自带密钥记录和训练、同步、删除与默认开关；保留直连文字与记录条款的表述冲突。"
+    },
+    {
+      "id": "U52",
+      "title": "nanoMuse 任务预算说明",
+      "url": "https://github.com/nano-muse/nanoMuse/blob/b47448bebc6dd592b2502fcdea3ba0ad8240373f/docs/runtime-budgets.md",
+      "source_time": "v1.0.9",
+      "accessed_on": "2026-11-02",
+      "scope": "全文 69 行；只约束 Python runtime/Python hands，默认关闭，不包含全部模型账单或原生执行引擎。"
+    },
+    {
+      "id": "U53",
+      "title": "nanoMuse 预算代码",
+      "url": "https://github.com/nano-muse/nanoMuse/blob/b47448bebc6dd592b2502fcdea3ba0ad8240373f/nanomuse/llm/budget.py",
+      "source_time": "v1.0.9",
+      "accessed_on": "2026-11-02",
+      "scope": "全文静态读取；TaskBudget、估计/报告 token 与取消处理；未运行计费实验。"
+    },
+    {
+      "id": "U54",
+      "title": "nanoMuse 手机审批代码",
+      "url": "https://github.com/nano-muse/nanoMuse/blob/b47448bebc6dd592b2502fcdea3ba0ad8240373f/harness/dsh-nanomuse/src/phone-approvals.ts",
+      "source_time": "v1.0.9",
+      "accessed_on": "2026-11-02",
+      "scope": "全文 120 行；审批 ID、scope、首个回答与 approval_result；未测网络重放和端到端一致性。"
+    },
+    {
+      "id": "U55",
+      "title": "nanoMuse 提交比较",
+      "url": "https://github.com/nano-muse/nanoMuse/compare/dae9de5bb9fb564abc19f0033bba78aa5f3da62d...b3bf3e940078c735fb9916e8c5ce539a87993e25",
+      "source_time": "179 commits / 280 files",
+      "accessed_on": "2026-11-02",
+      "scope": "比较元数据和文件清单；未遍历全部提交补丁，以版本化文档和关键代码支持结论。"
+    },
+    {
+      "id": "U56",
+      "title": "chyroc 提交比较",
+      "url": "https://github.com/chyroc/open-muse/compare/051a2f057a29853eb3f3805f785d5e76f178d0c5...e5860df79f76d41562bbde91484bbf3df075389b",
+      "source_time": "5 commits / 16 files",
+      "accessed_on": "2026-11-02",
+      "scope": "Windows 听写、日历、位置与更新相关变更范围；后台依赖分类未改变。"
+    },
+    {
+      "id": "U57",
+      "title": "chyroc Windows 听写",
+      "url": "https://github.com/chyroc/open-muse/blob/e5860df79f76d41562bbde91484bbf3df075389b/windows/OpenMuse.App/Handlers/DictationHandler.cs",
+      "source_time": "e5860df79f76d41562bbde91484bbf3df075389b",
+      "accessed_on": "2026-11-02",
+      "scope": "停止回执、麦克风与系统语音条件相关静态段落；未安装 Windows 包。"
+    },
+    {
+      "id": "U58",
+      "title": "open-instinct 提交比较",
+      "url": "https://github.com/mariagorskikh/open-instinct/compare/3b30ea91a170ff88b6d9eb02ffba6273357e96e5...2e5e71b72622d1262e212da7deb0e785bd95facd",
+      "source_time": "18 commits / 44 files",
+      "accessed_on": "2026-11-02",
+      "scope": "WhatsApp 与 Keenable 文件范围；无 GitHub Release 记录。"
+    },
+    {
+      "id": "U59",
+      "title": "open-instinct WhatsApp 说明",
+      "url": "https://github.com/mariagorskikh/open-instinct/blob/2e5e71b72622d1262e212da7deb0e785bd95facd/packages/whatsapp/README.md",
+      "source_time": "2e5e71b72622d1262e212da7deb0e785bd95facd",
+      "accessed_on": "2026-11-02",
+      "scope": "全文；独立账号、Baileys 非官方链路、一对一、持久收件箱与重新配对条件；维护者条款提示不作为独立法律判断。"
+    },
+    {
+      "id": "U60",
+      "title": "open-instinct WhatsApp 解析",
+      "url": "https://github.com/mariagorskikh/open-instinct/blob/2e5e71b72622d1262e212da7deb0e785bd95facd/packages/whatsapp/src/parse.ts",
+      "source_time": "2e5e71b72622d1262e212da7deb0e785bd95facd",
+      "accessed_on": "2026-11-02",
+      "scope": "读取 JID、direct chat 与媒体解析；另读 server/src/whatsapp.ts 路由全文；不证明真实身份验证与送达可靠性。"
+    },
+    {
+      "id": "U61",
+      "title": "Celesto 提交比较",
+      "url": "https://github.com/CelestoAI/celesto/compare/189e287a94d0a7eb87b111f5555462b4a1494298...6e3b3901fac8558bb647bf044a732cf7fbe67ee2",
+      "source_time": "7 commits / 32 files",
+      "accessed_on": "2026-11-02",
+      "scope": "文件清单集中 kernel、构建和发布；未见 open-muse/ 路径变更，不当成应用新能力。"
+    },
+    {
+      "id": "U62",
+      "title": "OpenDuet README",
+      "url": "https://github.com/CopilotKit/OpenDuet/blob/f52288fff5ccdbd3de428d573d9f026fce5ff480/README.md",
+      "source_time": "f52288fff5ccdbd3de428d573d9f026fce5ff480",
+      "accessed_on": "2026-11-02",
+      "scope": "定位、能力、Quick start、部署边界与架构段落；仓库 created_at 2026-10-21，属新增候选补证，不认定本周首发。"
+    },
+    {
+      "id": "U63",
+      "title": "OpenDuet 晨报实现",
+      "url": "https://github.com/CopilotKit/OpenDuet/blob/f52288fff5ccdbd3de428d573d9f026fce5ff480/openbot/server/src/openduet/brief.ts",
+      "source_time": "f52288fff5ccdbd3de428d573d9f026fce5ff480",
+      "accessed_on": "2026-11-02",
+      "scope": "读取构建晨报、工具授权、50 封上限、couldNotCheck 和分拣异常；不是完整后台调度审计。"
+    },
+    {
+      "id": "U64",
+      "title": "OpenDuet 分拣实现",
+      "url": "https://github.com/CopilotKit/OpenDuet/blob/f52288fff5ccdbd3de428d573d9f026fce5ff480/openbot/server/src/openduet/triage.ts",
+      "source_time": "f52288fff5ccdbd3de428d573d9f026fce5ff480",
+      "accessed_on": "2026-11-02",
+      "scope": "规则与模型分拣相关段落；另读 wiring 的任务入队/研究默认值段落；不采用维护者评测当本研究成绩。"
+    },
+    {
+      "id": "U65",
+      "title": "OpenDuet MIT 许可",
+      "url": "https://github.com/CopilotKit/OpenDuet/blob/f52288fff5ccdbd3de428d573d9f026fce5ff480/LICENSE",
+      "source_time": "f52288fff5ccdbd3de428d573d9f026fce5ff480",
+      "accessed_on": "2026-11-02",
+      "scope": "新候选 LICENSE 全文核对；不覆盖 Intelligence、模型与第三方服务许可。"
+    },
+    {
+      "id": "U66",
+      "title": "OpenClaw 稳定发行",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.9",
+      "source_time": "2026-10-29 15:54:35 UTC / prerelease=false",
+      "accessed_on": "2026-11-02",
+      "scope": "Highlights 与维护方向；保留数据、升级回滚、凭据与工作区约束；未完整审计说明所列修复。"
+    },
+    {
+      "id": "U67",
+      "title": "OpenClaw 预发行",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.5",
+      "source_time": "2026-10-30 03:57:14 UTC / prerelease=true",
+      "accessed_on": "2026-11-02",
+      "scope": "Highlights、Node 兼容、流式与 cron 恢复；不覆盖稳定渠道。"
+    },
+    {
+      "id": "U68",
+      "title": "nanobot v0.4.0",
+      "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.4.0",
+      "source_time": "2026-10-28 10:50:17 UTC",
+      "accessed_on": "2026-11-02",
+      "scope": "开头及 Highlights；SQLite 历史迁移、更新确认与安装归属；发布晚于基线报告提交，未逐项审阅长变更列表。"
+    },
+    {
+      "id": "U69",
+      "title": "LangGraph 1.2.19",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.19",
+      "source_time": "2026-10-30 22:23:43 UTC",
+      "accessed_on": "2026-11-02",
+      "scope": "发行说明全文；流事件命名空间、暂停工具与 awaited task 返回；不声称完整状态持久性复验。"
+    },
+    {
+      "id": "U70",
+      "title": "QwenPaw 2.3.0 beta.2",
+      "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0-beta.2",
+      "source_time": "2026-11-02 06:08:12 UTC / prerelease=true",
+      "accessed_on": "2026-11-02",
+      "scope": "说明前部的技能、插件、媒体与模型启动修复；只作预发行观察。"
+    },
+    {
+      "id": "U71",
+      "title": "Letta Code 0.34.38",
+      "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.38",
+      "source_time": "2026-11-02 07:09:09 UTC",
+      "accessed_on": "2026-11-02",
+      "scope": "说明全文；子任务进度与 JSONL 事件日志，未运行验证。"
+    }
+  ],
+  "changes": [
+    {
+      "id": "G01",
+      "types": [
+        "补证修正"
+      ],
+      "subject": "Grok Bot",
+      "before": "基线日志录到 v0.77.0",
+      "after": "10 月 27 日 v0.78.1 已有购物、订单和订阅模板",
+      "impact": "补齐既有能力，不把早于基线的事件算本期发布",
+      "sources": [
+        "U30"
+      ]
+    },
+    {
+      "id": "G02",
+      "types": [
+        "补证修正"
+      ],
+      "subject": "Muse",
+      "before": "已确认美国、加拿大、新加坡，漏日本",
+      "after": "日本官方 10 月 23 日开始提供，部分本地功能另定",
+      "impact": "扩大已证实地区，保留各区功能和连接器差异",
+      "sources": [
+        "U31",
+        "U02"
+      ]
+    },
+    {
+      "id": "G03",
+      "types": [
+        "补证修正",
+        "未能核验"
+      ],
+      "subject": "Dots 联系渠道",
+      "before": "主报告侧重 ChatGPT/Slack/Teams",
+      "after": "周页明确美国 Pro iMessage/RCS beta，当前页有 iOS widget/Shortcuts；精确发布时刻未标",
+      "impact": "纳入低摩擦联系比较，不外推群聊、第三方电话或其他短信读取",
+      "sources": [
+        "U32",
+        "U33"
+      ]
+    },
+    {
+      "id": "G04",
+      "types": [
+        "补证修正"
+      ],
+      "subject": "Duet",
+      "before": "资格只列美国 Pro/Max",
+      "after": "当前帮助列 Pro/Max/Ultra，说明项目外聊天搜索；Ultra 加入日未标",
+      "impact": "同步资格与记忆实验，仍需候补，限制与共享配额保留",
+      "sources": [
+        "U34"
+      ]
+    },
+    {
+      "id": "G05",
+      "types": [
+        "补证修正",
+        "未能核验"
+      ],
+      "subject": "Today",
+      "before": "中国站超时，权益和 Android 入口待核",
+      "after": "首页与目录可读，列注册权益及 Mac/Windows/Linux/iOS/Android 入口",
+      "impact": "缩小取证缺口，不将目录等同安装可用或全球统一权益",
+      "sources": [
+        "U35",
+        "U36"
+      ]
+    },
+    {
+      "id": "G06",
+      "types": [
+        "本期新增",
+        "结论调整"
+      ],
+      "subject": "OpenBot",
+      "before": "以每 Bot 独立/共享电脑概述，Gmail 为首要验收",
+      "after": "主分支变为每人电脑、条件式 Isolated、Recorder/Browser、退款审批与审计修复",
+      "impact": "重写比较与迁移检查；同电脑无强隔离；v0.2.0 仍与源码分开",
+      "sources": [
+        "U41",
+        "U42",
+        "U43",
+        "U44",
+        "U45"
+      ]
+    },
+    {
+      "id": "G07",
+      "types": [
+        "本期新增",
+        "结论调整",
+        "未能核验"
+      ],
+      "subject": "OpenGrokBot",
+      "before": "v0.3.0 以 Docker 与只读 watch 为重点",
+      "after": "v0.4.0 增本机电脑；Linux bubblewrap 参数没有同样的 SECRET_DIRS 遮蔽，和安全文共同表述不一致",
+      "impact": "本地命令默认关闭，真实资料优先验收 Docker；差异仅静态，未复现泄露",
+      "sources": [
+        "U46",
+        "U47",
+        "U48"
+      ]
+    },
+    {
+      "id": "G08",
+      "types": [
+        "本期新增",
+        "结论调整"
+      ],
+      "subject": "nanoMuse",
+      "before": "发行记录到 1.0.7；强调记录与自带密钥",
+      "after": "1.0.8/1.0.9 发版，跨设备审批、桌面修复、Python 预算；版本化隐私含 relay 0.31 训练条件",
+      "impact": "扩展跨设备验收；预算不覆盖所有引擎/费用；记录、同步、训练分别检查",
+      "sources": [
+        "U49",
+        "U50",
+        "U51",
+        "U52",
+        "U53",
+        "U54",
+        "U55"
+      ]
+    },
+    {
+      "id": "G09",
+      "types": [
+        "补证修正",
+        "结论调整"
+      ],
+      "subject": "CopilotKit/OpenDuet",
+      "before": "没有确认 Duet 完整直接参照",
+      "after": "补入 10 月 21 日 UTC 创建的早期应用模板；晨报、分拣、Tasks/Make、MIT 应用代码",
+      "impact": "八个直接应用样本；共用 OpenBot 基础，不等于独立运行栈或本周新首发",
+      "sources": [
+        "U62",
+        "U63",
+        "U64",
+        "U65"
+      ]
+    },
+    {
+      "id": "G10",
+      "types": [
+        "本期新增",
+        "复核未变"
+      ],
+      "subject": "chyroc/open-muse",
+      "before": "HEAD 与更早版本相同，分类为托管 MA 客户端",
+      "after": "5 commits / 16 files；抽查 Windows 听写停止和系统语音条件",
+      "impact": "记录客户端维护，完整后台开放分类不变，未验收 Windows 分发",
+      "sources": [
+        "U56",
+        "U57"
+      ]
+    },
+    {
+      "id": "G11",
+      "types": [
+        "本期新增",
+        "结论调整"
+      ],
+      "subject": "open-instinct",
+      "before": "以 Inkbox/Maritime/Composio 为重点",
+      "after": "增加 WhatsApp/Baileys 和 Keenable 路径，18 commits / 44 files",
+      "impact": "新增可选入口但非官方 API；不把维护者说明当实际送达、身份或账号可持续性成绩",
+      "sources": [
+        "U58",
+        "U59",
+        "U60"
+      ]
+    },
+    {
+      "id": "G12",
+      "types": [
+        "补证修正",
+        "结论调整"
+      ],
+      "subject": "Perplexity",
+      "before": "Mac fully local 只取得目录；Automations 正文缺失",
+      "after": "正文确认硬件/订阅/36 GB 建议、授权转云，另有事件触发与跨轮历史",
+      "impact": "可加入本地资料和持续研究扩展对照；旧事件不算本期发布",
+      "sources": [
+        "U39",
+        "U40"
+      ]
+    },
+    {
+      "id": "G13",
+      "types": [
+        "本期新增"
+      ],
+      "subject": "Town / Gemini",
+      "before": "Town 仅录到共同编辑；Gemini 以 Tasks 入口为重点",
+      "after": "10 月 29 日 1Password 条件式接入及 Gemini 文件编辑公告",
+      "impact": "补登录与成果编辑参照，保留账号、格式和端侧限制",
+      "sources": [
+        "U37",
+        "U38"
+      ]
+    },
+    {
+      "id": "G14",
+      "types": [
+        "本期新增",
+        "复核未变"
+      ],
+      "subject": "Celesto / 未变化应用",
+      "before": "前轮收紧 Celesto 为本地 QEMU 预览，其他保留分类",
+      "after": "Celesto 7 commits / 32 files，未见 open-muse/ 路径；9 个旧仓 HEAD 相同",
+      "impact": "kernel/构建维护不算个人助理能力升级；相同 HEAD 不证明托管依赖不变",
+      "sources": [
+        "U61"
+      ]
+    },
+    {
+      "id": "G15",
+      "types": [
+        "本期新增",
+        "复核未变"
+      ],
+      "subject": "构建组件",
+      "before": "多数组件只监测 HEAD，部分发行到旧版本",
+      "after": "记录 OpenClaw stable/beta、nanobot 0.4.0、LangGraph 1.2.19、QwenPaw beta.2、Letta 0.34.38；其余按元数据",
+      "impact": "稳定/预发行/维护线分开；新日志、持久性和升级仍需实测，不重盖许可日期",
+      "sources": [
+        "U66",
+        "U67",
+        "U68",
+        "U69",
+        "U70",
+        "U71"
+      ]
+    },
+    {
+      "id": "G16",
+      "types": [
+        "复核未变",
+        "未能核验"
+      ],
+      "subject": "Instinct / Cue / 账号与实测",
+      "before": "价格、完整审批与部分资格证据不足",
+      "after": "Instinct 官网和隐私已复核；cue.im 仍无可读正文；所有候选未登录或部署",
+      "impact": "不编造价格/权限矩阵，不把公开页面和文档检查写成端到端验收",
+      "sources": [
+        "S23",
+        "S24",
+        "U20"
+      ]
+    }
+  ],
+  "repository_snapshots": [
+    {
+      "repository": "CopilotKit/openmuse",
+      "canonical_repository": "CopilotKit/openmuse",
+      "default_branch": "main",
+      "baseline_head": "a4944f4c471d3dc93b8bfc060b5da309b5216ab2",
+      "current_head": "a4944f4c471d3dc93b8bfc060b5da309b5216ab2",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-26T15:38:10Z",
+      "subject": "fix: keep surrogate numeric character references from failing the mail list (#183)",
+      "releases": []
+    },
+    {
+      "repository": "CopilotKit/OpenBot",
+      "canonical_repository": "CopilotKit/OpenBot",
+      "default_branch": "main",
+      "baseline_head": "da9a3caf5784074baa779110dd7e9d1338c8871b",
+      "current_head": "c396a5f68c817043846f1ca3c2b42061ee73ceb5",
+      "head_changed": true,
+      "committer_time_utc": "2026-10-31T17:17:48Z",
+      "subject": "agent-computer: COMPUTER_BIND chooses the address a managed computer listens on (#910)",
+      "releases": [
+        {
+          "tag": "v0.2.0",
+          "published_at": "2026-10-12T15:19:49Z",
+          "prerelease": false,
+          "assets": [
+            "container-images.json"
+          ]
+        },
+        {
+          "tag": "v0.1.2",
+          "published_at": "2026-10-07T12:36:21Z",
+          "prerelease": false,
+          "assets": [
+            "container-images.json"
+          ]
+        },
+        {
+          "tag": "v0.1.1",
+          "published_at": "2026-10-06T21:08:30Z",
+          "prerelease": false,
+          "assets": [
+            "container-images.json"
+          ]
+        },
+        {
+          "tag": "v0.1.0",
+          "published_at": "2026-10-03T00:45:44Z",
+          "prerelease": false,
+          "assets": [
+            "container-images.json"
+          ]
+        },
+        {
+          "tag": "v0.0.15",
+          "published_at": "2026-09-22T04:21:36Z",
+          "prerelease": false,
+          "assets": [
+            "container-images.json"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "CopilotKit/OpenDots",
+      "canonical_repository": "CopilotKit/OpenDots",
+      "default_branch": "main",
+      "baseline_head": "8091324942b86789ed0da7facbee855145d933b0",
+      "current_head": "8091324942b86789ed0da7facbee855145d933b0",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-22T15:12:44Z",
+      "subject": "Merge pull request #148 from DevJoaoLopes/chore/knip-configuration",
+      "releases": []
+    },
+    {
+      "repository": "wolfqing/OpenGrokBot",
+      "canonical_repository": "wolfqing/OpenGrokBot",
+      "default_branch": "main",
+      "baseline_head": "e26183cf8923b5db5b177903b21172f8924c5904",
+      "current_head": "52a52840e0a559baaf4b280b707a5d9df8b21684",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-01T14:48:11Z",
+      "subject": "docs(readme): describe local computers wherever the READMEs assumed Docker",
+      "releases": [
+        {
+          "tag": "v0.4.0",
+          "published_at": "2026-10-30T23:17:48Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v0.3.1",
+          "published_at": "2026-10-30T13:28:11Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v0.3.0",
+          "published_at": "2026-10-22T13:27:04Z",
+          "prerelease": false,
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "nano-muse/nanoMuse",
+      "canonical_repository": "nano-muse/nanoMuse",
+      "default_branch": "main",
+      "baseline_head": "dae9de5bb9fb564abc19f0033bba78aa5f3da62d",
+      "current_head": "b3bf3e940078c735fb9916e8c5ce539a87993e25",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-01T16:08:54Z",
+      "subject": "Merge pull request #748 from Longfellow1/test/goal-eval-real-tasks",
+      "releases": [
+        {
+          "tag": "v1.0.9",
+          "published_at": "2026-10-29T15:07:55Z",
+          "prerelease": false,
+          "assets": [
+            "dsh-nanomuse-1.0.9.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.9-arm64.apk",
+            "nanoMuse-1.0.9-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.9-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.9-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.9-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.9-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.9-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.9-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.9-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.9-win-x64.exe",
+            "nanoMuse-Desktop-1.0.9-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        },
+        {
+          "tag": "v1.0.8",
+          "published_at": "2026-10-29T06:31:54Z",
+          "prerelease": false,
+          "assets": [
+            "dsh-nanomuse-1.0.8.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.8-arm64.apk",
+            "nanoMuse-1.0.8-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.8-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.8-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.8-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.8-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.8-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.8-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.8-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.8-win-x64.exe",
+            "nanoMuse-Desktop-1.0.8-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        },
+        {
+          "tag": "v1.0.7",
+          "published_at": "2026-10-25T05:27:50Z",
+          "prerelease": false,
+          "assets": [
+            "dsh-nanomuse-1.0.7.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.7-arm64.apk",
+            "nanoMuse-1.0.7-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.7-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.7-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.7-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.7-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.7-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.7-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.7-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.7-win-x64.exe",
+            "nanoMuse-Desktop-1.0.7-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        },
+        {
+          "tag": "v1.0.6",
+          "published_at": "2026-10-24T08:02:04Z",
+          "prerelease": false,
+          "assets": [
+            "dsh-nanomuse-1.0.6.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.6-arm64.apk",
+            "nanoMuse-1.0.6-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.6-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.6-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.6-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.6-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.6-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.6-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.6-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.6-win-x64.exe",
+            "nanoMuse-Desktop-1.0.6-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        },
+        {
+          "tag": "v1.0.5",
+          "published_at": "2026-10-13T18:10:38Z",
+          "prerelease": false,
+          "assets": [
+            "dsh-nanomuse-1.0.5.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.5-arm64.apk",
+            "nanoMuse-1.0.5-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.5-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.5-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.5-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.5-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.5-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.5-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.5-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.5-win-x64.exe",
+            "nanoMuse-Desktop-1.0.5-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "chyroc/open-muse",
+      "canonical_repository": "chyroc/open-muse",
+      "default_branch": "master",
+      "baseline_head": "051a2f057a29853eb3f3805f785d5e76f178d0c5",
+      "current_head": "e5860df79f76d41562bbde91484bbf3df075389b",
+      "head_changed": true,
+      "committer_time_utc": "2026-10-30T17:21:15Z",
+      "subject": "fix(windows): end dictation cleanly when stopped or without a microphone",
+      "releases": []
+    },
+    {
+      "repository": "mariagorskikh/open-instinct",
+      "canonical_repository": "mariagorskikh/open-instinct",
+      "default_branch": "main",
+      "baseline_head": "3b30ea91a170ff88b6d9eb02ffba6273357e96e5",
+      "current_head": "2e5e71b72622d1262e212da7deb0e785bd95facd",
+      "head_changed": true,
+      "committer_time_utc": "2026-10-30T05:38:58Z",
+      "subject": "Merge pull request #47 from tb-ship-it/feat/whatsapp-channel",
+      "releases": []
+    },
+    {
+      "repository": "Anil-matcha/open-grok-bot",
+      "canonical_repository": "Anil-matcha/open-grok-bot",
+      "default_branch": "main",
+      "baseline_head": "6ea54a988b0b09d09f6abf4ea7edae3e3fd62699",
+      "current_head": "6ea54a988b0b09d09f6abf4ea7edae3e3fd62699",
+      "head_changed": false,
+      "committer_time_utc": "2026-09-20T05:10:01Z",
+      "subject": "Update renamed Muse repository link"
+    },
+    {
+      "repository": "diggerhq/openmuse",
+      "canonical_repository": "diggerhq/openmuse",
+      "default_branch": "main",
+      "baseline_head": "2fff664dac90f8d24b67b754912485106660c034",
+      "current_head": "2fff664dac90f8d24b67b754912485106660c034",
+      "head_changed": false,
+      "committer_time_utc": "2026-09-11T01:33:11Z",
+      "subject": "Weave personal ownership into the README"
+    },
+    {
+      "repository": "aeiouvcode/open-muse",
+      "canonical_repository": "aeiouvcode/open-muse",
+      "default_branch": "main",
+      "baseline_head": "62f658012569c0cb7692562977b0f7fe17ad396e",
+      "current_head": "62f658012569c0cb7692562977b0f7fe17ad396e",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-01T11:24:27Z",
+      "subject": "gen45 private Workforce reviewed UI patch and focus-safe removal"
+    },
+    {
+      "repository": "SiliconLabAI/OpenMuse",
+      "canonical_repository": "SiliconLabAI/OpenMuse",
+      "default_branch": "main",
+      "baseline_head": "f05feb468418c489e17b8fc52df2afae8d3c9b74",
+      "current_head": "f05feb468418c489e17b8fc52df2afae8d3c9b74",
+      "head_changed": false,
+      "committer_time_utc": "2026-09-26T18:28:16Z",
+      "subject": "update license"
+    },
+    {
+      "repository": "CelestoAI/celesto",
+      "canonical_repository": "CelestoAI/celesto",
+      "default_branch": "main",
+      "baseline_head": "189e287a94d0a7eb87b111f5555462b4a1494298",
+      "current_head": "6e3b3901fac8558bb647bf044a732cf7fbe67ee2",
+      "head_changed": true,
+      "committer_time_utc": "2026-10-31T18:52:54Z",
+      "subject": "fix(security): update pypa/gh-action-pypi-publish from 1.14.2 to 1.14.3 (#698)"
+    },
+    {
+      "repository": "OpenMuseAgent/OpenMuse",
+      "canonical_repository": "OpenMuseAgent/OpenMuse",
+      "default_branch": "main",
+      "baseline_head": "76b71309f49e5055d216cc57e41a68ae660e3190",
+      "current_head": "76b71309f49e5055d216cc57e41a68ae660e3190",
+      "head_changed": false,
+      "committer_time_utc": "2026-09-23T08:38:20Z",
+      "subject": "docs: this repository moved to nano-muse/nanoMuse"
+    },
+    {
+      "repository": "Shashankss1205/OpenDots",
+      "canonical_repository": "Shashankss1205/OpenDots",
+      "default_branch": "main",
+      "baseline_head": "de37e7445418ace9862daf33b7ac7014064790de",
+      "current_head": "de37e7445418ace9862daf33b7ac7014064790de",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-15T13:53:41Z",
+      "subject": "Merge pull request #71 from Shashankss1205/fix/jsonl-generation-ids"
+    },
+    {
+      "repository": "openclaw/openclaw",
+      "canonical_repository": "openclaw/openclaw",
+      "default_branch": "main",
+      "baseline_head": "b4cc6fe87a18220ac11a0a3377b0a3ef43cf2093",
+      "current_head": "2777468d26e5f21455b67591a045a40c770aee13",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-02T09:17:48Z",
+      "subject": "chore(ui): refresh control ui locales (#191002)",
+      "releases": [
+        {
+          "tag": "v2026.10.10-beta.5",
+          "published_at": "2026-10-30T03:57:14Z",
+          "prerelease": true,
+          "assets": [
+            "openclaw-2026.10.10-beta.5-dependency-evidence.zip",
+            "openclaw-2026.10.10-beta.5-postpublish-evidence.json",
+            "openclaw-2026.10.10-beta.5-postpublish-evidence.json.sha256",
+            "openclaw-2026.10.10-beta.5-release-manifest.json",
+            "openclaw-2026.10.10-beta.5-release-manifest.json.sha256"
+          ]
+        },
+        {
+          "tag": "v2026.10.9",
+          "published_at": "2026-10-29T15:54:35Z",
+          "prerelease": false,
+          "assets": [
+            "latest.json",
+            "OpenClaw-2026.10.9-amd64.AppImage",
+            "OpenClaw-2026.10.9-amd64.deb",
+            "OpenClaw-2026.10.9-arm64.dmg",
+            "OpenClaw-2026.10.9-arm64.dSYM.zip",
+            "OpenClaw-2026.10.9-arm64.zip",
+            "openclaw-2026.10.9-dependency-evidence.zip",
+            "OpenClaw-2026.10.9-linux.json",
+            "openclaw-2026.10.9-postpublish-evidence.json",
+            "openclaw-2026.10.9-postpublish-evidence.json.sha256",
+            "openclaw-2026.10.9-release-manifest.json",
+            "openclaw-2026.10.9-release-manifest.json.sha256",
+            "openclaw-2026.10.9-stable-main-closeout.json",
+            "openclaw-2026.10.9-stable-main-closeout.json.sha256",
+            "OpenClaw-2026.10.9-x86_64.dmg",
+            "OpenClaw-2026.10.9-x86_64.dSYM.zip",
+            "OpenClaw-2026.10.9-x86_64.zip",
+            "OpenClaw-2026.10.9.dmg",
+            "OpenClaw-2026.10.9.dSYM.zip",
+            "OpenClaw-2026.10.9.zip",
+            "SHA256SUMS.linux-app.txt"
+          ]
+        },
+        {
+          "tag": "v2026.9.36",
+          "published_at": "2026-10-29T20:19:38Z",
+          "prerelease": false,
+          "assets": [
+            "openclaw-2026.9.36-dependency-evidence.zip",
+            "openclaw-2026.9.36-postpublish-evidence.json",
+            "openclaw-2026.9.36-postpublish-evidence.json.sha256",
+            "openclaw-2026.9.36-release-manifest.json",
+            "openclaw-2026.9.36-release-manifest.json.sha256"
+          ]
+        },
+        {
+          "tag": "v2026.10.10-beta.4",
+          "published_at": "2026-10-27T05:39:34Z",
+          "prerelease": true,
+          "assets": [
+            "openclaw-2026.10.10-beta.4-dependency-evidence.zip",
+            "openclaw-2026.10.10-beta.4-postpublish-evidence.json",
+            "openclaw-2026.10.10-beta.4-postpublish-evidence.json.sha256",
+            "openclaw-2026.10.10-beta.4-release-manifest.json",
+            "openclaw-2026.10.10-beta.4-release-manifest.json.sha256"
+          ]
+        },
+        {
+          "tag": "v2026.10.8",
+          "published_at": "2026-10-27T11:56:59Z",
+          "prerelease": false,
+          "assets": [
+            "latest.json",
+            "OpenClaw-2026.10.8-amd64.AppImage",
+            "OpenClaw-2026.10.8-amd64.deb",
+            "OpenClaw-2026.10.8-arm64.dmg",
+            "OpenClaw-2026.10.8-arm64.dSYM.zip",
+            "OpenClaw-2026.10.8-arm64.zip",
+            "openclaw-2026.10.8-dependency-evidence.zip",
+            "OpenClaw-2026.10.8-linux.json",
+            "openclaw-2026.10.8-postpublish-evidence.json",
+            "openclaw-2026.10.8-postpublish-evidence.json.sha256",
+            "openclaw-2026.10.8-release-manifest.json",
+            "openclaw-2026.10.8-release-manifest.json.sha256",
+            "openclaw-2026.10.8-stable-main-closeout.json",
+            "openclaw-2026.10.8-stable-main-closeout.json.sha256",
+            "OpenClaw-2026.10.8-x86_64.dmg",
+            "OpenClaw-2026.10.8-x86_64.dSYM.zip",
+            "OpenClaw-2026.10.8-x86_64.zip",
+            "OpenClaw-2026.10.8.dmg",
+            "OpenClaw-2026.10.8.dSYM.zip",
+            "OpenClaw-2026.10.8.zip",
+            "SHA256SUMS.linux-app.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "NousResearch/hermes-agent",
+      "canonical_repository": "NousResearch/hermes-agent",
+      "default_branch": "main",
+      "baseline_head": "aad60e1ac670268aa39b364b16b16dbf06de85df",
+      "current_head": "b425edd286179eaa2419ca13f9cbf6706845e8ab",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-02T09:09:07Z",
+      "subject": "fix(cron): a failed write mid-drain no longer restarts the hold window",
+      "releases": [
+        {
+          "tag": "v0.22.5",
+          "published_at": "2026-10-23T05:28:45Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v0.22.4",
+          "published_at": "2026-10-21T18:49:24Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v0.22.3",
+          "published_at": "2026-10-21T12:21:11Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v0.22.2",
+          "published_at": "2026-10-15T08:21:32Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v0.22.1",
+          "published_at": "2026-10-14T23:59:24Z",
+          "prerelease": false,
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "nanocoai/nanoclaw",
+      "canonical_repository": "nanocoai/nanoclaw",
+      "default_branch": "main",
+      "baseline_head": "acc2b1c8f52a954368cfaf04b61c32f9a1efc280",
+      "current_head": "acc2b1c8f52a954368cfaf04b61c32f9a1efc280",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-26T07:00:31Z",
+      "subject": "agent-images: v2026.10.0 -> v2026.10.0-20261026T0306 (#4226)",
+      "releases": [
+        {
+          "tag": "v2026.10.1-rc.2",
+          "published_at": "2026-10-22T15:48:44Z",
+          "prerelease": true,
+          "assets": []
+        },
+        {
+          "tag": "v2026.10.1-rc.1",
+          "published_at": "2026-10-20T16:50:09Z",
+          "prerelease": true,
+          "assets": []
+        },
+        {
+          "tag": "v2026.10.0",
+          "published_at": "2026-10-09T11:26:13Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v2026.10.0-rc.2",
+          "published_at": "2026-10-05T11:05:40Z",
+          "prerelease": true,
+          "assets": []
+        },
+        {
+          "tag": "v2026.10.0-rc.1",
+          "published_at": "2026-10-04T15:55:10Z",
+          "prerelease": true,
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "HKUDS/nanobot",
+      "canonical_repository": "HKUDS/nanobot",
+      "default_branch": "main",
+      "baseline_head": "b07b3eac244ff7faa7eeb2d4777fe54dbae1b6d2",
+      "current_head": "8b37976d36c2812c62b464321e729a88872b60f9",
+      "head_changed": true,
+      "committer_time_utc": "2026-10-31T03:55:13Z",
+      "subject": "fix(providers): tighten tool calls and compatibility fallbacks",
+      "releases": [
+        {
+          "tag": "v0.4.0",
+          "published_at": "2026-10-28T10:50:17Z",
+          "prerelease": false,
+          "assets": [
+            "nanobot-tui-darwin-arm64.zip",
+            "nanobot-tui-darwin-arm64.zip.sha256",
+            "nanobot-tui-darwin-x64.zip",
+            "nanobot-tui-darwin-x64.zip.sha256",
+            "nanobot-tui-linux-arm64.zip",
+            "nanobot-tui-linux-arm64.zip.sha256",
+            "nanobot-tui-linux-x64.zip",
+            "nanobot-tui-linux-x64.zip.sha256",
+            "nanobot-tui-win32-x64.exe.zip",
+            "nanobot-tui-win32-x64.exe.zip.sha256",
+            "nanobot_ai-0.4.0-py3-none-macosx_13_0_arm64.whl",
+            "nanobot_ai-0.4.0-py3-none-macosx_13_0_x86_64.whl",
+            "nanobot_ai-0.4.0-py3-none-manylinux_2_17_aarch64.whl",
+            "nanobot_ai-0.4.0-py3-none-manylinux_2_17_x86_64.whl",
+            "nanobot_ai-0.4.0-py3-none-win_amd64.whl",
+            "nanobot_ai-0.4.0.tar.gz",
+            "release-manifest.json"
+          ]
+        },
+        {
+          "tag": "v0.3.5",
+          "published_at": "2026-09-15T19:05:37Z",
+          "prerelease": false,
+          "assets": [
+            "nanobot-tui-darwin-arm64.zip",
+            "nanobot-tui-darwin-arm64.zip.sha256",
+            "nanobot-tui-darwin-x64.zip",
+            "nanobot-tui-darwin-x64.zip.sha256",
+            "nanobot-tui-linux-arm64.zip",
+            "nanobot-tui-linux-arm64.zip.sha256",
+            "nanobot-tui-linux-x64.zip",
+            "nanobot-tui-linux-x64.zip.sha256",
+            "nanobot-tui-win32-x64.exe.zip",
+            "nanobot-tui-win32-x64.exe.zip.sha256"
+          ]
+        },
+        {
+          "tag": "v0.3.0",
+          "published_at": "2026-07-25T08:08:47Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v0.2.2",
+          "published_at": "2026-06-23T01:37:26Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v0.2.1",
+          "published_at": "2026-06-01T08:56:35Z",
+          "prerelease": false,
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "agentscope-ai/QwenPaw",
+      "canonical_repository": "agentscope-ai/QwenPaw",
+      "default_branch": "main",
+      "baseline_head": "9e59502cbe3b62e9a962027cfa6c549936c89135",
+      "current_head": "d09c34f6c4be3939931c90f2623ae3cbc93c6cc4",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-02T09:10:41Z",
+      "subject": "fix(creator): release 2.0.4 with media and probe hardening (#8529)",
+      "releases": [
+        {
+          "tag": "v2.3.0-beta.2",
+          "published_at": "2026-11-02T06:08:12Z",
+          "prerelease": true,
+          "assets": [
+            "QwenPaw-Tauri-2.3.0b2-macOS.zip",
+            "QwenPaw-Tauri-2.3.0b2-Windows-setup.exe"
+          ]
+        },
+        {
+          "tag": "v2.3.0-beta.1",
+          "published_at": "2026-10-27T12:42:16Z",
+          "prerelease": true,
+          "assets": [
+            "QwenPaw-Tauri-2.3.0b1-macOS.zip",
+            "QwenPaw-Tauri-2.3.0b1-Windows-setup.exe"
+          ]
+        },
+        {
+          "tag": "v2.2.2.post1",
+          "published_at": "2026-10-22T11:49:43Z",
+          "prerelease": false,
+          "assets": [
+            "QwenPaw-Tauri-2.2.2.post1-macOS.zip",
+            "QwenPaw-Tauri-2.2.2.post1-Windows-setup.exe"
+          ]
+        },
+        {
+          "tag": "v2.2.2",
+          "published_at": "2026-10-15T07:10:45Z",
+          "prerelease": false,
+          "assets": [
+            "QwenPaw-Tauri-2.2.2-macOS.zip",
+            "QwenPaw-Tauri-2.2.2-Windows-setup.exe"
+          ]
+        },
+        {
+          "tag": "v2.2.2-beta.6",
+          "published_at": "2026-10-14T10:50:00Z",
+          "prerelease": true,
+          "assets": [
+            "QwenPaw-Tauri-2.2.2b6-macOS.zip",
+            "QwenPaw-Tauri-2.2.2b6-Windows-setup.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "letta-ai/letta-code",
+      "canonical_repository": "letta-ai/letta-code",
+      "default_branch": "main",
+      "baseline_head": "5dea67021b99810707ff753db35e4534f70ff1fd",
+      "current_head": "6155d9f562f13eb1f352240a7fd07a87933ac76a",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-02T06:58:30Z",
+      "subject": "chore: bump version to 0.34.38 (#5445)",
+      "releases": [
+        {
+          "tag": "v0.34.38",
+          "published_at": "2026-11-02T07:09:09Z",
+          "prerelease": false,
+          "assets": [
+            "letta.js"
+          ]
+        },
+        {
+          "tag": "v0.34.37",
+          "published_at": "2026-11-02T00:25:50Z",
+          "prerelease": false,
+          "assets": [
+            "letta.js"
+          ]
+        },
+        {
+          "tag": "v0.34.36",
+          "published_at": "2026-10-31T02:29:58Z",
+          "prerelease": false,
+          "assets": [
+            "letta.js"
+          ]
+        },
+        {
+          "tag": "v0.34.35",
+          "published_at": "2026-10-30T21:03:20Z",
+          "prerelease": false,
+          "assets": [
+            "letta.js"
+          ]
+        },
+        {
+          "tag": "v0.34.34",
+          "published_at": "2026-10-30T18:34:25Z",
+          "prerelease": false,
+          "assets": [
+            "letta.js"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "langchain-ai/langgraph",
+      "canonical_repository": "langchain-ai/langgraph",
+      "default_branch": "main",
+      "baseline_head": "eb8ec111b3e9d3108af5d7bdcac51e3e913637a0",
+      "current_head": "ee3c043bddcc514012885167dd5916b15d6e4731",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-02T04:33:29Z",
+      "subject": "chore(deps): bump langgraph from 1.2.3 to 1.2.14 in /libs/cli (#9512)",
+      "releases": [
+        {
+          "tag": "1.2.19",
+          "published_at": "2026-10-30T22:23:43Z",
+          "prerelease": false
+        },
+        {
+          "tag": "sdk==0.4.11",
+          "published_at": "2026-10-30T22:17:59Z",
+          "prerelease": false
+        },
+        {
+          "tag": "checkpointsqlite==3.1.3",
+          "published_at": "2026-10-30T22:18:54Z",
+          "prerelease": false
+        },
+        {
+          "tag": "1.2.18",
+          "published_at": "2026-10-26T20:04:45Z",
+          "prerelease": false
+        },
+        {
+          "tag": "sdk==0.4.10",
+          "published_at": "2026-10-26T19:59:56Z",
+          "prerelease": false
+        }
+      ]
+    },
+    {
+      "repository": "mem0ai/mem0",
+      "canonical_repository": "mem0ai/mem0",
+      "default_branch": "main",
+      "baseline_head": "26cdefb46600c0fa5953c4b5ee5003c125539fc4",
+      "current_head": "753496cf1435d76c3a711f3af51303f7fdcb6420",
+      "head_changed": true,
+      "committer_time_utc": "2026-10-30T21:35:34Z",
+      "subject": "fix(memory): never re-create a deleted memory when update races delete (#7787)",
+      "releases": [
+        {
+          "tag": "v2.2.1",
+          "published_at": "2026-09-25T17:35:20Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "ts-v3.3.1",
+          "published_at": "2026-09-25T17:36:35Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "v2.2.0",
+          "published_at": "2026-09-23T19:03:48Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "ts-v3.3.0",
+          "published_at": "2026-09-23T19:05:42Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "pi-agent-v0.3.2",
+          "published_at": "2026-09-23T19:12:34Z",
+          "prerelease": false,
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "browser-use/browser-use",
+      "canonical_repository": "browser-use/browser-use",
+      "default_branch": "main",
+      "baseline_head": "2cc71890e65056b67fdb29d98bb407749c15bb08",
+      "current_head": "b49a68e4060acb226da8f784194fef301c53a6d7",
+      "head_changed": true,
+      "committer_time_utc": "2026-10-30T04:28:48Z",
+      "subject": "Add Fireworks model example (#6238)",
+      "releases": [
+        {
+          "tag": "0.13.14",
+          "published_at": "2026-10-26T22:00:34Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "0.13.13",
+          "published_at": "2026-10-15T23:50:45Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "0.13.12",
+          "published_at": "2026-10-15T23:37:58Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "0.13.11",
+          "published_at": "2026-10-07T04:23:18Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "0.13.10",
+          "published_at": "2026-09-04T03:28:53Z",
+          "prerelease": false,
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "n8n-io/n8n",
+      "canonical_repository": "n8n-io/n8n",
+      "default_branch": "master",
+      "baseline_head": "dd5f870ecc38344951fb3956f1a7ba7852612c70",
+      "current_head": "db28d8b94db48cc0b2c137fb94a76c592b8a3047",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-02T08:58:30Z",
+      "subject": "fix(core): Export the stored last success of durable system tasks on every main (#42319)",
+      "releases": [
+        {
+          "tag": "n8n@1.123.92",
+          "published_at": "2026-11-02T08:36:14Z",
+          "prerelease": false,
+          "assets": [
+            "sbom-source.cdx.json",
+            "vex.openvex.json"
+          ]
+        },
+        {
+          "tag": "n8n@2.46.4",
+          "published_at": "2026-11-02T08:27:00Z",
+          "prerelease": true,
+          "assets": [
+            "sbom-source.cdx.json",
+            "THIRD_PARTY_LICENSES.md",
+            "vex.openvex.json"
+          ]
+        },
+        {
+          "tag": "beta",
+          "published_at": "2026-11-02T08:27:03Z",
+          "prerelease": true,
+          "assets": []
+        },
+        {
+          "tag": "stable",
+          "published_at": "2026-10-30T08:24:58Z",
+          "prerelease": false,
+          "assets": []
+        },
+        {
+          "tag": "n8n@2.45.7",
+          "published_at": "2026-10-30T08:24:56Z",
+          "prerelease": false,
+          "assets": [
+            "sbom-source.cdx.json",
+            "THIRD_PARTY_LICENSES.md",
+            "vex.openvex.json"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "langgenius/dify",
+      "canonical_repository": "langgenius/dify",
+      "default_branch": "main",
+      "baseline_head": "c01cb5d119a69532df73ec20da8daa18cf44e0fb",
+      "current_head": "8c5e2efb996617da715677cd6d621b5ba15c250e",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-02T08:54:45Z",
+      "subject": "test(api): stop excluding twelve core-side test modules from strict pyrefly (#45099)",
+      "releases": [
+        {
+          "tag": "1.18.0",
+          "published_at": "2026-10-23T06:33:50Z",
+          "prerelease": false,
+          "assets": [
+            "difyctl-v1.18.0-checksums.txt",
+            "difyctl-v1.18.0-darwin-arm64",
+            "difyctl-v1.18.0-darwin-x64",
+            "difyctl-v1.18.0-linux-arm64",
+            "difyctl-v1.18.0-linux-x64",
+            "difyctl-v1.18.0-windows-x64.exe"
+          ]
+        },
+        {
+          "tag": "1.17.1",
+          "published_at": "2026-09-10T10:04:06Z",
+          "prerelease": false,
+          "assets": [
+            "difyctl-v1.17.1-checksums.txt",
+            "difyctl-v1.17.1-darwin-arm64",
+            "difyctl-v1.17.1-darwin-x64",
+            "difyctl-v1.17.1-linux-arm64",
+            "difyctl-v1.17.1-linux-x64",
+            "difyctl-v1.17.1-windows-x64.exe"
+          ]
+        },
+        {
+          "tag": "1.17.0",
+          "published_at": "2026-08-25T11:28:25Z",
+          "prerelease": false,
+          "assets": [
+            "difyctl-v0.2.0-alpha-checksums.txt",
+            "difyctl-v0.2.0-alpha-darwin-arm64",
+            "difyctl-v0.2.0-alpha-darwin-x64",
+            "difyctl-v0.2.0-alpha-linux-arm64",
+            "difyctl-v0.2.0-alpha-linux-x64",
+            "difyctl-v0.2.0-alpha-windows-x64.exe"
+          ]
+        },
+        {
+          "tag": "1.16.1",
+          "published_at": "2026-07-28T03:43:51Z",
+          "prerelease": false,
+          "assets": [
+            "difyctl-v0.2.0-alpha-checksums.txt",
+            "difyctl-v0.2.0-alpha-darwin-arm64",
+            "difyctl-v0.2.0-alpha-darwin-x64",
+            "difyctl-v0.2.0-alpha-linux-arm64",
+            "difyctl-v0.2.0-alpha-linux-x64",
+            "difyctl-v0.2.0-alpha-windows-x64.exe"
+          ]
+        },
+        {
+          "tag": "1.16.0",
+          "published_at": "2026-07-17T11:14:06Z",
+          "prerelease": false,
+          "assets": [
+            "difyctl-v0.2.0-alpha-checksums.txt",
+            "difyctl-v0.2.0-alpha-darwin-arm64",
+            "difyctl-v0.2.0-alpha-darwin-x64",
+            "difyctl-v0.2.0-alpha-linux-arm64",
+            "difyctl-v0.2.0-alpha-linux-x64",
+            "difyctl-v0.2.0-alpha-windows-x64.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "CopilotKit/OpenDuet",
+      "canonical_repository": "CopilotKit/OpenDuet",
+      "default_branch": "main",
+      "baseline_head": null,
+      "current_head": "f52288fff5ccdbd3de428d573d9f026fce5ff480",
+      "head_changed": null,
+      "committer_time_utc": "2026-10-31T21:26:41Z",
+      "subject": "Merge pull request #96 from eli-berman8/readme/trendshift-badge",
+      "new_candidate": true
+    }
+  ],
+  "release_tag_commits": {
+    "nanoMuse_v1.0.9": "b47448bebc6dd592b2502fcdea3ba0ad8240373f",
+    "OpenGrokBot_v0.4.0": "15e42b1ae55301ae23bd59ca9eabb89649c4f8df"
+  },
+  "release_metadata": [
+    {
+      "repository": "CopilotKit/openmuse",
+      "releases": []
+    },
+    {
+      "repository": "CopilotKit/OpenBot",
+      "releases": [
+        {
+          "tag": "v0.2.0",
+          "published_at": "2026-10-12T15:19:49Z",
+          "prerelease": false,
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v0.2.0",
+          "assets": [
+            "container-images.json"
+          ]
+        },
+        {
+          "tag": "v0.1.2",
+          "published_at": "2026-10-07T12:36:21Z",
+          "prerelease": false,
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v0.1.2",
+          "assets": [
+            "container-images.json"
+          ]
+        },
+        {
+          "tag": "v0.1.1",
+          "published_at": "2026-10-06T21:08:30Z",
+          "prerelease": false,
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v0.1.1",
+          "assets": [
+            "container-images.json"
+          ]
+        },
+        {
+          "tag": "v0.1.0",
+          "published_at": "2026-10-03T00:45:44Z",
+          "prerelease": false,
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v0.1.0",
+          "assets": [
+            "container-images.json"
+          ]
+        },
+        {
+          "tag": "v0.0.15",
+          "published_at": "2026-09-22T04:21:36Z",
+          "prerelease": false,
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v0.0.15",
+          "assets": [
+            "container-images.json"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "CopilotKit/OpenDots",
+      "releases": []
+    },
+    {
+      "repository": "wolfqing/OpenGrokBot",
+      "releases": [
+        {
+          "tag": "v0.4.0",
+          "published_at": "2026-10-30T23:17:48Z",
+          "prerelease": false,
+          "url": "https://github.com/wolfqing/OpenGrokBot/releases/tag/v0.4.0",
+          "assets": []
+        },
+        {
+          "tag": "v0.3.1",
+          "published_at": "2026-10-30T13:28:11Z",
+          "prerelease": false,
+          "url": "https://github.com/wolfqing/OpenGrokBot/releases/tag/v0.3.1",
+          "assets": []
+        },
+        {
+          "tag": "v0.3.0",
+          "published_at": "2026-10-22T13:27:04Z",
+          "prerelease": false,
+          "url": "https://github.com/wolfqing/OpenGrokBot/releases/tag/v0.3.0",
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "nano-muse/nanoMuse",
+      "releases": [
+        {
+          "tag": "v1.0.9",
+          "published_at": "2026-10-29T15:07:55Z",
+          "prerelease": false,
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.9",
+          "assets": [
+            "dsh-nanomuse-1.0.9.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.9-arm64.apk",
+            "nanoMuse-1.0.9-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.9-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.9-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.9-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.9-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.9-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.9-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.9-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.9-win-x64.exe",
+            "nanoMuse-Desktop-1.0.9-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        },
+        {
+          "tag": "v1.0.8",
+          "published_at": "2026-10-29T06:31:54Z",
+          "prerelease": false,
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.8",
+          "assets": [
+            "dsh-nanomuse-1.0.8.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.8-arm64.apk",
+            "nanoMuse-1.0.8-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.8-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.8-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.8-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.8-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.8-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.8-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.8-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.8-win-x64.exe",
+            "nanoMuse-Desktop-1.0.8-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        },
+        {
+          "tag": "v1.0.7",
+          "published_at": "2026-10-25T05:27:50Z",
+          "prerelease": false,
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.7",
+          "assets": [
+            "dsh-nanomuse-1.0.7.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.7-arm64.apk",
+            "nanoMuse-1.0.7-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.7-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.7-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.7-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.7-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.7-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.7-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.7-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.7-win-x64.exe",
+            "nanoMuse-Desktop-1.0.7-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        },
+        {
+          "tag": "v1.0.6",
+          "published_at": "2026-10-24T08:02:04Z",
+          "prerelease": false,
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.6",
+          "assets": [
+            "dsh-nanomuse-1.0.6.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.6-arm64.apk",
+            "nanoMuse-1.0.6-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.6-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.6-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.6-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.6-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.6-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.6-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.6-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.6-win-x64.exe",
+            "nanoMuse-Desktop-1.0.6-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        },
+        {
+          "tag": "v1.0.5",
+          "published_at": "2026-10-13T18:10:38Z",
+          "prerelease": false,
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.5",
+          "assets": [
+            "dsh-nanomuse-1.0.5.tgz",
+            "latest.yml",
+            "nanoMuse-1.0.5-arm64.apk",
+            "nanoMuse-1.0.5-arm64.apk.sha256",
+            "nanoMuse-Desktop-1.0.5-linux-x64.AppImage",
+            "nanoMuse-Desktop-1.0.5-linux-x64.deb",
+            "nanoMuse-Desktop-1.0.5-linux-x64.tar.gz",
+            "nanoMuse-Desktop-1.0.5-mac-arm64.dmg",
+            "nanoMuse-Desktop-1.0.5-mac-arm64.zip",
+            "nanoMuse-Desktop-1.0.5-mac-x64.dmg",
+            "nanoMuse-Desktop-1.0.5-mac-x64.zip",
+            "nanoMuse-Desktop-1.0.5-win-x64.exe",
+            "nanoMuse-Desktop-1.0.5-win-x64.exe.blockmap",
+            "SHA256SUMS-desktop.txt",
+            "SHA256SUMS-harness.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "chyroc/open-muse",
+      "releases": []
+    },
+    {
+      "repository": "mariagorskikh/open-instinct",
+      "releases": []
+    },
+    {
+      "repository": "Anil-matcha/open-grok-bot",
+      "releases": []
+    },
+    {
+      "repository": "diggerhq/openmuse",
+      "releases": []
+    },
+    {
+      "repository": "aeiouvcode/open-muse",
+      "releases": []
+    },
+    {
+      "repository": "SiliconLabAI/OpenMuse",
+      "releases": []
+    },
+    {
+      "repository": "CelestoAI/celesto",
+      "releases": []
+    },
+    {
+      "repository": "OpenMuseAgent/OpenMuse",
+      "releases": []
+    },
+    {
+      "repository": "Shashankss1205/OpenDots",
+      "releases": []
+    },
+    {
+      "repository": "openclaw/openclaw",
+      "releases": [
+        {
+          "tag": "v2026.10.10-beta.5",
+          "published_at": "2026-10-30T03:57:14Z",
+          "prerelease": true,
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.5",
+          "assets": [
+            "openclaw-2026.10.10-beta.5-dependency-evidence.zip",
+            "openclaw-2026.10.10-beta.5-postpublish-evidence.json",
+            "openclaw-2026.10.10-beta.5-postpublish-evidence.json.sha256",
+            "openclaw-2026.10.10-beta.5-release-manifest.json",
+            "openclaw-2026.10.10-beta.5-release-manifest.json.sha256"
+          ]
+        },
+        {
+          "tag": "v2026.10.9",
+          "published_at": "2026-10-29T15:54:35Z",
+          "prerelease": false,
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.9",
+          "assets": [
+            "latest.json",
+            "OpenClaw-2026.10.9-amd64.AppImage",
+            "OpenClaw-2026.10.9-amd64.deb",
+            "OpenClaw-2026.10.9-arm64.dmg",
+            "OpenClaw-2026.10.9-arm64.dSYM.zip",
+            "OpenClaw-2026.10.9-arm64.zip",
+            "openclaw-2026.10.9-dependency-evidence.zip",
+            "OpenClaw-2026.10.9-linux.json",
+            "openclaw-2026.10.9-postpublish-evidence.json",
+            "openclaw-2026.10.9-postpublish-evidence.json.sha256",
+            "openclaw-2026.10.9-release-manifest.json",
+            "openclaw-2026.10.9-release-manifest.json.sha256",
+            "openclaw-2026.10.9-stable-main-closeout.json",
+            "openclaw-2026.10.9-stable-main-closeout.json.sha256",
+            "OpenClaw-2026.10.9-x86_64.dmg",
+            "OpenClaw-2026.10.9-x86_64.dSYM.zip",
+            "OpenClaw-2026.10.9-x86_64.zip",
+            "OpenClaw-2026.10.9.dmg",
+            "OpenClaw-2026.10.9.dSYM.zip",
+            "OpenClaw-2026.10.9.zip",
+            "SHA256SUMS.linux-app.txt"
+          ]
+        },
+        {
+          "tag": "v2026.9.36",
+          "published_at": "2026-10-29T20:19:38Z",
+          "prerelease": false,
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.36",
+          "assets": [
+            "openclaw-2026.9.36-dependency-evidence.zip",
+            "openclaw-2026.9.36-postpublish-evidence.json",
+            "openclaw-2026.9.36-postpublish-evidence.json.sha256",
+            "openclaw-2026.9.36-release-manifest.json",
+            "openclaw-2026.9.36-release-manifest.json.sha256"
+          ]
+        },
+        {
+          "tag": "v2026.10.10-beta.4",
+          "published_at": "2026-10-27T05:39:34Z",
+          "prerelease": true,
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.4",
+          "assets": [
+            "openclaw-2026.10.10-beta.4-dependency-evidence.zip",
+            "openclaw-2026.10.10-beta.4-postpublish-evidence.json",
+            "openclaw-2026.10.10-beta.4-postpublish-evidence.json.sha256",
+            "openclaw-2026.10.10-beta.4-release-manifest.json",
+            "openclaw-2026.10.10-beta.4-release-manifest.json.sha256"
+          ]
+        },
+        {
+          "tag": "v2026.10.8",
+          "published_at": "2026-10-27T11:56:59Z",
+          "prerelease": false,
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.8",
+          "assets": [
+            "latest.json",
+            "OpenClaw-2026.10.8-amd64.AppImage",
+            "OpenClaw-2026.10.8-amd64.deb",
+            "OpenClaw-2026.10.8-arm64.dmg",
+            "OpenClaw-2026.10.8-arm64.dSYM.zip",
+            "OpenClaw-2026.10.8-arm64.zip",
+            "openclaw-2026.10.8-dependency-evidence.zip",
+            "OpenClaw-2026.10.8-linux.json",
+            "openclaw-2026.10.8-postpublish-evidence.json",
+            "openclaw-2026.10.8-postpublish-evidence.json.sha256",
+            "openclaw-2026.10.8-release-manifest.json",
+            "openclaw-2026.10.8-release-manifest.json.sha256",
+            "openclaw-2026.10.8-stable-main-closeout.json",
+            "openclaw-2026.10.8-stable-main-closeout.json.sha256",
+            "OpenClaw-2026.10.8-x86_64.dmg",
+            "OpenClaw-2026.10.8-x86_64.dSYM.zip",
+            "OpenClaw-2026.10.8-x86_64.zip",
+            "OpenClaw-2026.10.8.dmg",
+            "OpenClaw-2026.10.8.dSYM.zip",
+            "OpenClaw-2026.10.8.zip",
+            "SHA256SUMS.linux-app.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "NousResearch/hermes-agent",
+      "releases": [
+        {
+          "tag": "v0.22.5",
+          "published_at": "2026-10-23T05:28:45Z",
+          "prerelease": false,
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
+          "assets": []
+        },
+        {
+          "tag": "v0.22.4",
+          "published_at": "2026-10-21T18:49:24Z",
+          "prerelease": false,
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.4",
+          "assets": []
+        },
+        {
+          "tag": "v0.22.3",
+          "published_at": "2026-10-21T12:21:11Z",
+          "prerelease": false,
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.3",
+          "assets": []
+        },
+        {
+          "tag": "v0.22.2",
+          "published_at": "2026-10-15T08:21:32Z",
+          "prerelease": false,
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2",
+          "assets": []
+        },
+        {
+          "tag": "v0.22.1",
+          "published_at": "2026-10-14T23:59:24Z",
+          "prerelease": false,
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.1",
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "nanocoai/nanoclaw",
+      "releases": [
+        {
+          "tag": "v2026.10.1-rc.2",
+          "published_at": "2026-10-22T15:48:44Z",
+          "prerelease": true,
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.1-rc.2",
+          "assets": []
+        },
+        {
+          "tag": "v2026.10.1-rc.1",
+          "published_at": "2026-10-20T16:50:09Z",
+          "prerelease": true,
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.1-rc.1",
+          "assets": []
+        },
+        {
+          "tag": "v2026.10.0",
+          "published_at": "2026-10-09T11:26:13Z",
+          "prerelease": false,
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.0",
+          "assets": []
+        },
+        {
+          "tag": "v2026.10.0-rc.2",
+          "published_at": "2026-10-05T11:05:40Z",
+          "prerelease": true,
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.0-rc.2",
+          "assets": []
+        },
+        {
+          "tag": "v2026.10.0-rc.1",
+          "published_at": "2026-10-04T15:55:10Z",
+          "prerelease": true,
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.0-rc.1",
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "HKUDS/nanobot",
+      "releases": [
+        {
+          "tag": "v0.4.0",
+          "published_at": "2026-10-28T10:50:17Z",
+          "prerelease": false,
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.4.0",
+          "assets": [
+            "nanobot-tui-darwin-arm64.zip",
+            "nanobot-tui-darwin-arm64.zip.sha256",
+            "nanobot-tui-darwin-x64.zip",
+            "nanobot-tui-darwin-x64.zip.sha256",
+            "nanobot-tui-linux-arm64.zip",
+            "nanobot-tui-linux-arm64.zip.sha256",
+            "nanobot-tui-linux-x64.zip",
+            "nanobot-tui-linux-x64.zip.sha256",
+            "nanobot-tui-win32-x64.exe.zip",
+            "nanobot-tui-win32-x64.exe.zip.sha256",
+            "nanobot_ai-0.4.0-py3-none-macosx_13_0_arm64.whl",
+            "nanobot_ai-0.4.0-py3-none-macosx_13_0_x86_64.whl",
+            "nanobot_ai-0.4.0-py3-none-manylinux_2_17_aarch64.whl",
+            "nanobot_ai-0.4.0-py3-none-manylinux_2_17_x86_64.whl",
+            "nanobot_ai-0.4.0-py3-none-win_amd64.whl",
+            "nanobot_ai-0.4.0.tar.gz",
+            "release-manifest.json"
+          ]
+        },
+        {
+          "tag": "v0.3.5",
+          "published_at": "2026-09-15T19:05:37Z",
+          "prerelease": false,
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.5",
+          "assets": [
+            "nanobot-tui-darwin-arm64.zip",
+            "nanobot-tui-darwin-arm64.zip.sha256",
+            "nanobot-tui-darwin-x64.zip",
+            "nanobot-tui-darwin-x64.zip.sha256",
+            "nanobot-tui-linux-arm64.zip",
+            "nanobot-tui-linux-arm64.zip.sha256",
+            "nanobot-tui-linux-x64.zip",
+            "nanobot-tui-linux-x64.zip.sha256",
+            "nanobot-tui-win32-x64.exe.zip",
+            "nanobot-tui-win32-x64.exe.zip.sha256"
+          ]
+        },
+        {
+          "tag": "v0.3.0",
+          "published_at": "2026-07-25T08:08:47Z",
+          "prerelease": false,
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0",
+          "assets": []
+        },
+        {
+          "tag": "v0.2.2",
+          "published_at": "2026-06-23T01:37:26Z",
+          "prerelease": false,
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.2.2",
+          "assets": []
+        },
+        {
+          "tag": "v0.2.1",
+          "published_at": "2026-06-01T08:56:35Z",
+          "prerelease": false,
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.2.1",
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "agentscope-ai/QwenPaw",
+      "releases": [
+        {
+          "tag": "v2.3.0-beta.2",
+          "published_at": "2026-11-02T06:08:12Z",
+          "prerelease": true,
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0-beta.2",
+          "assets": [
+            "QwenPaw-Tauri-2.3.0b2-macOS.zip",
+            "QwenPaw-Tauri-2.3.0b2-Windows-setup.exe"
+          ]
+        },
+        {
+          "tag": "v2.3.0-beta.1",
+          "published_at": "2026-10-27T12:42:16Z",
+          "prerelease": true,
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0-beta.1",
+          "assets": [
+            "QwenPaw-Tauri-2.3.0b1-macOS.zip",
+            "QwenPaw-Tauri-2.3.0b1-Windows-setup.exe"
+          ]
+        },
+        {
+          "tag": "v2.2.2.post1",
+          "published_at": "2026-10-22T11:49:43Z",
+          "prerelease": false,
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.2.post1",
+          "assets": [
+            "QwenPaw-Tauri-2.2.2.post1-macOS.zip",
+            "QwenPaw-Tauri-2.2.2.post1-Windows-setup.exe"
+          ]
+        },
+        {
+          "tag": "v2.2.2",
+          "published_at": "2026-10-15T07:10:45Z",
+          "prerelease": false,
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.2",
+          "assets": [
+            "QwenPaw-Tauri-2.2.2-macOS.zip",
+            "QwenPaw-Tauri-2.2.2-Windows-setup.exe"
+          ]
+        },
+        {
+          "tag": "v2.2.2-beta.6",
+          "published_at": "2026-10-14T10:50:00Z",
+          "prerelease": true,
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.2-beta.6",
+          "assets": [
+            "QwenPaw-Tauri-2.2.2b6-macOS.zip",
+            "QwenPaw-Tauri-2.2.2b6-Windows-setup.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "letta-ai/letta-code",
+      "releases": [
+        {
+          "tag": "v0.34.38",
+          "published_at": "2026-11-02T07:09:09Z",
+          "prerelease": false,
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.38",
+          "assets": [
+            "letta.js"
+          ]
+        },
+        {
+          "tag": "v0.34.37",
+          "published_at": "2026-11-02T00:25:50Z",
+          "prerelease": false,
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.37",
+          "assets": [
+            "letta.js"
+          ]
+        },
+        {
+          "tag": "v0.34.36",
+          "published_at": "2026-10-31T02:29:58Z",
+          "prerelease": false,
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.36",
+          "assets": [
+            "letta.js"
+          ]
+        },
+        {
+          "tag": "v0.34.35",
+          "published_at": "2026-10-30T21:03:20Z",
+          "prerelease": false,
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.35",
+          "assets": [
+            "letta.js"
+          ]
+        },
+        {
+          "tag": "v0.34.34",
+          "published_at": "2026-10-30T18:34:25Z",
+          "prerelease": false,
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.34",
+          "assets": [
+            "letta.js"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "langchain-ai/langgraph",
+      "releases": [
+        {
+          "tag": "1.2.19",
+          "published_at": "2026-10-30T22:23:43Z",
+          "prerelease": false,
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.19",
+          "assets": []
+        },
+        {
+          "tag": "sdk==0.4.11",
+          "published_at": "2026-10-30T22:17:59Z",
+          "prerelease": false,
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.11",
+          "assets": []
+        },
+        {
+          "tag": "checkpointsqlite==3.1.3",
+          "published_at": "2026-10-30T22:18:54Z",
+          "prerelease": false,
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/checkpointsqlite%3D%3D3.1.3",
+          "assets": []
+        },
+        {
+          "tag": "1.2.18",
+          "published_at": "2026-10-26T20:04:45Z",
+          "prerelease": false,
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18",
+          "assets": []
+        },
+        {
+          "tag": "sdk==0.4.10",
+          "published_at": "2026-10-26T19:59:56Z",
+          "prerelease": false,
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.10",
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "mem0ai/mem0",
+      "releases": [
+        {
+          "tag": "v2.2.1",
+          "published_at": "2026-09-25T17:35:20Z",
+          "prerelease": false,
+          "url": "https://github.com/mem0ai/mem0/releases/tag/v2.2.1",
+          "assets": []
+        },
+        {
+          "tag": "ts-v3.3.1",
+          "published_at": "2026-09-25T17:36:35Z",
+          "prerelease": false,
+          "url": "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.1",
+          "assets": []
+        },
+        {
+          "tag": "v2.2.0",
+          "published_at": "2026-09-23T19:03:48Z",
+          "prerelease": false,
+          "url": "https://github.com/mem0ai/mem0/releases/tag/v2.2.0",
+          "assets": []
+        },
+        {
+          "tag": "ts-v3.3.0",
+          "published_at": "2026-09-23T19:05:42Z",
+          "prerelease": false,
+          "url": "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.0",
+          "assets": []
+        },
+        {
+          "tag": "pi-agent-v0.3.2",
+          "published_at": "2026-09-23T19:12:34Z",
+          "prerelease": false,
+          "url": "https://github.com/mem0ai/mem0/releases/tag/pi-agent-v0.3.2",
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "browser-use/browser-use",
+      "releases": [
+        {
+          "tag": "0.13.14",
+          "published_at": "2026-10-26T22:00:34Z",
+          "prerelease": false,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.14",
+          "assets": []
+        },
+        {
+          "tag": "0.13.13",
+          "published_at": "2026-10-15T23:50:45Z",
+          "prerelease": false,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.13",
+          "assets": []
+        },
+        {
+          "tag": "0.13.12",
+          "published_at": "2026-10-15T23:37:58Z",
+          "prerelease": false,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.12",
+          "assets": []
+        },
+        {
+          "tag": "0.13.11",
+          "published_at": "2026-10-07T04:23:18Z",
+          "prerelease": false,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.11",
+          "assets": []
+        },
+        {
+          "tag": "0.13.10",
+          "published_at": "2026-09-04T03:28:53Z",
+          "prerelease": false,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.10",
+          "assets": []
+        }
+      ]
+    },
+    {
+      "repository": "n8n-io/n8n",
+      "releases": [
+        {
+          "tag": "n8n@1.123.92",
+          "published_at": "2026-11-02T08:36:14Z",
+          "prerelease": false,
+          "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.92",
+          "assets": [
+            "sbom-source.cdx.json",
+            "vex.openvex.json"
+          ]
+        },
+        {
+          "tag": "n8n@2.46.4",
+          "published_at": "2026-11-02T08:27:00Z",
+          "prerelease": true,
+          "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.46.4",
+          "assets": [
+            "sbom-source.cdx.json",
+            "THIRD_PARTY_LICENSES.md",
+            "vex.openvex.json"
+          ]
+        },
+        {
+          "tag": "beta",
+          "published_at": "2026-11-02T08:27:03Z",
+          "prerelease": true,
+          "url": "https://github.com/n8n-io/n8n/releases/tag/beta",
+          "assets": []
+        },
+        {
+          "tag": "stable",
+          "published_at": "2026-10-30T08:24:58Z",
+          "prerelease": false,
+          "url": "https://github.com/n8n-io/n8n/releases/tag/stable",
+          "assets": []
+        },
+        {
+          "tag": "n8n@2.45.7",
+          "published_at": "2026-10-30T08:24:56Z",
+          "prerelease": false,
+          "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.45.7",
+          "assets": [
+            "sbom-source.cdx.json",
+            "THIRD_PARTY_LICENSES.md",
+            "vex.openvex.json"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "langgenius/dify",
+      "releases": [
+        {
+          "tag": "1.18.0",
+          "published_at": "2026-10-23T06:33:50Z",
+          "prerelease": false,
+          "url": "https://github.com/langgenius/dify/releases/tag/1.18.0",
+          "assets": [
+            "difyctl-v1.18.0-checksums.txt",
+            "difyctl-v1.18.0-darwin-arm64",
+            "difyctl-v1.18.0-darwin-x64",
+            "difyctl-v1.18.0-linux-arm64",
+            "difyctl-v1.18.0-linux-x64",
+            "difyctl-v1.18.0-windows-x64.exe"
+          ]
+        },
+        {
+          "tag": "1.17.1",
+          "published_at": "2026-09-10T10:04:06Z",
+          "prerelease": false,
+          "url": "https://github.com/langgenius/dify/releases/tag/1.17.1",
+          "assets": [
+            "difyctl-v1.17.1-checksums.txt",
+            "difyctl-v1.17.1-darwin-arm64",
+            "difyctl-v1.17.1-darwin-x64",
+            "difyctl-v1.17.1-linux-arm64",
+            "difyctl-v1.17.1-linux-x64",
+            "difyctl-v1.17.1-windows-x64.exe"
+          ]
+        },
+        {
+          "tag": "1.17.0",
+          "published_at": "2026-08-25T11:28:25Z",
+          "prerelease": false,
+          "url": "https://github.com/langgenius/dify/releases/tag/1.17.0",
+          "assets": [
+            "difyctl-v0.2.0-alpha-checksums.txt",
+            "difyctl-v0.2.0-alpha-darwin-arm64",
+            "difyctl-v0.2.0-alpha-darwin-x64",
+            "difyctl-v0.2.0-alpha-linux-arm64",
+            "difyctl-v0.2.0-alpha-linux-x64",
+            "difyctl-v0.2.0-alpha-windows-x64.exe"
+          ]
+        },
+        {
+          "tag": "1.16.1",
+          "published_at": "2026-07-28T03:43:51Z",
+          "prerelease": false,
+          "url": "https://github.com/langgenius/dify/releases/tag/1.16.1",
+          "assets": [
+            "difyctl-v0.2.0-alpha-checksums.txt",
+            "difyctl-v0.2.0-alpha-darwin-arm64",
+            "difyctl-v0.2.0-alpha-darwin-x64",
+            "difyctl-v0.2.0-alpha-linux-arm64",
+            "difyctl-v0.2.0-alpha-linux-x64",
+            "difyctl-v0.2.0-alpha-windows-x64.exe"
+          ]
+        },
+        {
+          "tag": "1.16.0",
+          "published_at": "2026-07-17T11:14:06Z",
+          "prerelease": false,
+          "url": "https://github.com/langgenius/dify/releases/tag/1.16.0",
+          "assets": [
+            "difyctl-v0.2.0-alpha-checksums.txt",
+            "difyctl-v0.2.0-alpha-darwin-arm64",
+            "difyctl-v0.2.0-alpha-darwin-x64",
+            "difyctl-v0.2.0-alpha-linux-arm64",
+            "difyctl-v0.2.0-alpha-linux-x64",
+            "difyctl-v0.2.0-alpha-windows-x64.exe"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "CopilotKit/OpenDuet",
+      "releases": []
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checked_on": "2026-11-02",
+    "checks": {
+      "source_references": {
+        "status": "passed",
+        "definitions": 151,
+        "new_evidence": 42,
+        "scope": "All definitions unique and all used numeric source IDs resolved; external sources checked only to documented reading scope, not every historical URL re-requested."
+      },
+      "markdown_links_anchors_fences_tables": {
+        "status": "passed",
+        "markdown_files": 7,
+        "local_links": 60
+      },
+      "manifest_hashes_counts_and_diff_reconstruction": {
+        "status": "passed",
+        "method": "Applied each complete unified diff to explicit temporary baseline and output paths with system patch; compared exact bytes.",
+        "reconstructed": [
+          {
+            "kind": "report",
+            "sha256": "278084020e4aa322a8490e0d80d6f131df4b66fef625b10f6704543eea684697"
+          },
+          {
+            "kind": "sources",
+            "sha256": "68f82e22cd631b9b566d0e9e4d27e21732cb82404a8aca251084c53303f037b7"
+          },
+          {
+            "kind": "building_blocks",
+            "sha256": "90f4147b419aa9f00e965f42899ee70505fefdf956fd2e9d13464c01872dcd2d"
+          }
+        ]
+      },
+      "repository_snapshots_and_coverage": {
+        "status": "passed",
+        "repositories": 26,
+        "baseline_changed": 16,
+        "baseline_unchanged": 9,
+        "new_candidates": 1
+      },
+      "historical_integrity_and_task_scope": {
+        "status": "passed",
+        "immutable_existing_research_files": 13,
+        "tracked_changes": [
+          "README.md",
+          "docs/research/gaps/README.md"
+        ]
+      },
+      "whitespace_and_cache_exclusion": {
+        "status": "passed",
+        "git_diff_check": "passed",
+        "cache_ignored": true,
+        "archived_diff_policy": "Only .diff blank-at-eol exempt; unified context markers retained."
+      }
+    },
+    "product_test_claims": "not_performed",
+    "staged_scope": {
+      "status": "passed",
+      "files": [
+        "README.md",
+        "docs/research/personal-agent-landscape-2026-11-02.md",
+        "docs/research/sources-2026-11-02.md",
+        "docs/research/agent-building-blocks-2026-11-02.md",
+        "docs/research/gaps/README.md",
+        "docs/research/gaps/2026-11-02/README.md",
+        "docs/research/gaps/2026-11-02/01/README.md",
+        "docs/research/gaps/2026-11-02/01/manifest.json",
+        "docs/research/gaps/2026-11-02/01/report.diff",
+        "docs/research/gaps/2026-11-02/01/sources.diff",
+        "docs/research/gaps/2026-11-02/01/building-blocks.diff"
+      ],
+      "file_count": 11,
+      "cache_and_private_account_data": "excluded",
+      "unrelated_changes": "none observed; only explicit task paths staged"
+    },
+    "git_staged_diff_check": "passed"
+  }
+}
