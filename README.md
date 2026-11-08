@@ -2,16 +2,18 @@
 
 个人 AI Agent 产品、开源方案和实现路径的研究项目。
 
-## 最新调研：2026-11-02
+## 最新调研 2026-11-08
 
-- [Personal Agent 深度调研：商业产品与同类开源替代](docs/research/personal-agent-landscape-2026-11-02.md)
-- [构建附录：通用运行时与组件](docs/research/agent-building-blocks-2026-11-02.md)
-- [本轮来源、仓库快照与核验记录](docs/research/sources-2026-11-02.md)
-- [相对 10 月 28 日版的变化与完整 diff](docs/research/gaps/2026-11-02/01/README.md)
+本轮记录生成时间为 **2026-11-08T20:30:02+08:00（Asia/Shanghai）**。
 
-本轮复核六个核心商业产品、原有 25 个仓库，新增 OpenDuet，合计 26 个仓库与八个直接应用样本。重点更新 OpenBot 电脑归属和 Recorder、OpenGrokBot v0.4.0 本地执行边界、nanoMuse v1.0.9 跨设备审批与预算范围；补证 Muse 日本、Dots 联系渠道、Today 下载目录和 Perplexity 本地模式。Linux 本地命令的文码差异明确列为待实测项。
+- [Personal Agent 深度调研](docs/research/personal-agent-landscape-2026-11-08.md)
+- [构建附录](docs/research/agent-building-blocks-2026-11-08.md)
+- [来源、仓库快照与核验范围](docs/research/sources-2026-11-08.md)
+- [相对 11 月 2 日版的变化与完整 diff](docs/research/gaps/2026-11-08/01/README.md)
 
-主报告第 0 节区分本期发布、旧资料补证与判断变化。新增证据 U30–U71 可追溯；默认分支、发行标签、安装包目录、账号资格和端到端测试分别记录。
+复核六个核心商业产品、26 个仓库与八个直接应用样本，新增 Perplexity Teammates 商业参照。补入 Muse 语音/Spaces/专用模型、Dots Terra 与工作区预览、Duet 用量重置变化；更新 OpenBot v0.3.3 与最新 Personal 记忆关闭边界、OpenSuperBot 更名及 v0.5.0、nanoMuse/OpenDots 恢复与 Skills，以及组件发行。
+
+新增 U72–U121 共 50 条证据。15 个仓库 HEAD 前进、11 个相同。主报告、比较表、选型和 E01–E16 验收方案同步，默认分支、发行标签、安装资产、许可和账号状态分别记录，产品端到端仍待实测。
 
 ## 更新与变更记录
 
@@ -23,7 +25,9 @@
 
 ## 历史版本
 
-上一轮 2026-10-28：[主报告](docs/research/personal-agent-landscape-2026-10-28.md)、[构建附录](docs/research/agent-building-blocks-2026-10-28.md)、[来源索引](docs/research/sources-2026-10-28.md)。
+上一轮 2026-11-02：[主报告](docs/research/personal-agent-landscape-2026-11-02.md)、[构建附录](docs/research/agent-building-blocks-2026-11-02.md)、[来源索引](docs/research/sources-2026-11-02.md)。
+
+2026-10-28：[主报告](docs/research/personal-agent-landscape-2026-10-28.md)、[构建附录](docs/research/agent-building-blocks-2026-10-28.md)、[来源索引](docs/research/sources-2026-10-28.md)。
 
 首版核验日期：**2026-10-22（Asia/Shanghai）**，保留正文与来源原样：
 

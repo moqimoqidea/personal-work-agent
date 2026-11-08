@@ -1,0 +1,80 @@
+--- docs/research/agent-building-blocks-2026-11-02.md
++++ docs/research/agent-building-blocks-2026-11-08.md
+@@ -1,6 +1,6 @@
+ # 构建附录：通用 Agent 运行时与组件
+ 
+-本轮活动监测：**2026-11-02（Asia/Shanghai）**。返回[修订主报告](personal-agent-landscape-2026-11-02.md)。能力与许可说明沿用 10 月 22 日固定来源；本轮 HEAD、发行渠道与选型影响见第 5 节。未重新安装或运行组件。
++本轮活动监测日期为 **2026-11-08（Asia/Shanghai）**，记录生成时间为 **2026-11-08T20:30:02+08:00**。返回[修订主报告](personal-agent-landscape-2026-11-08.md)。能力与许可说明沿用 10 月 22 日固定来源；本轮 HEAD、发行渠道与选型影响见第 5 节。未重新安装或运行组件。
+ 
+ 本附录保存实现背景，不进入商业个人 Agent 的直接替代主表。判断对标关系应看用户拿到的产品、任务闭环与依赖范围；不能因为项目有 memory、cron 或 tools，就与 Muse、Grok Bot、Dots、Duet 并列。
+ 
+@@ -41,39 +41,41 @@
+ 
+ ## 5. 本轮动态与采用边界
+ 
+-查询 11 个组件的 metadata、默认分支 HEAD 与 Releases 前五项；除 NanoClaw 外，10 个 HEAD 前进。时间是 **UTC**。下表是活动监测；第 1、2 节的能力与许可仍引用 10 月 22 日固定来源，没有替换成未审过的新版本保证。
++查询 11 个组件的 metadata、默认分支 HEAD 和 Releases 前五项，10 个 HEAD 前进，Browser Use 相同。第 1、2 节能力和许可仍使用 10 月 22 日固定来源。下表属于活动监测，时间为 UTC；发行说明读取深度另列。
+ 
+-| 仓库 | 基线固定 SHA | 本次固定 SHA | 提交时间（UTC） | 本次范围 |
++| 仓库 | 基线固定 SHA | 本次固定 SHA | committer 时间（UTC） | 实际范围 |
+ | --- | --- | --- | --- | --- |
+-| openclaw/openclaw | [b4cc6fe87a18](https://github.com/openclaw/openclaw/tree/b4cc6fe87a18220ac11a0a3377b0a3ef43cf2093) | [2777468d26e5](https://github.com/openclaw/openclaw/tree/2777468d26e5f21455b67591a045a40c770aee13) | 2026-11-02 09:17:48 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| NousResearch/hermes-agent | [aad60e1ac670](https://github.com/NousResearch/hermes-agent/tree/aad60e1ac670268aa39b364b16b16dbf06de85df) | [b425edd28617](https://github.com/NousResearch/hermes-agent/tree/b425edd286179eaa2419ca13f9cbf6706845e8ab) | 2026-11-02 09:09:07 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| nanocoai/nanoclaw | [acc2b1c8f52a](https://github.com/nanocoai/nanoclaw/tree/acc2b1c8f52a954368cfaf04b61c32f9a1efc280) | [acc2b1c8f52a](https://github.com/nanocoai/nanoclaw/tree/acc2b1c8f52a954368cfaf04b61c32f9a1efc280) | 2026-10-26 07:00:31 | HEAD 相同；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| HKUDS/nanobot | [b07b3eac244f](https://github.com/HKUDS/nanobot/tree/b07b3eac244ff7faa7eeb2d4777fe54dbae1b6d2) | [8b37976d36c2](https://github.com/HKUDS/nanobot/tree/8b37976d36c2812c62b464321e729a88872b60f9) | 2026-10-31 03:55:13 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| agentscope-ai/QwenPaw | [9e59502cbe3b](https://github.com/agentscope-ai/QwenPaw/tree/9e59502cbe3b62e9a962027cfa6c549936c89135) | [d09c34f6c4be](https://github.com/agentscope-ai/QwenPaw/tree/d09c34f6c4be3939931c90f2623ae3cbc93c6cc4) | 2026-11-02 09:10:41 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| letta-ai/letta-code | [5dea67021b99](https://github.com/letta-ai/letta-code/tree/5dea67021b99810707ff753db35e4534f70ff1fd) | [6155d9f562f1](https://github.com/letta-ai/letta-code/tree/6155d9f562f13eb1f352240a7fd07a87933ac76a) | 2026-11-02 06:58:30 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| langchain-ai/langgraph | [eb8ec111b3e9](https://github.com/langchain-ai/langgraph/tree/eb8ec111b3e9d3108af5d7bdcac51e3e913637a0) | [ee3c043bddcc](https://github.com/langchain-ai/langgraph/tree/ee3c043bddcc514012885167dd5916b15d6e4731) | 2026-11-02 04:33:29 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| mem0ai/mem0 | [26cdefb46600](https://github.com/mem0ai/mem0/tree/26cdefb46600c0fa5953c4b5ee5003c125539fc4) | [753496cf1435](https://github.com/mem0ai/mem0/tree/753496cf1435d76c3a711f3af51303f7fdcb6420) | 2026-10-30 21:35:34 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| browser-use/browser-use | [2cc71890e650](https://github.com/browser-use/browser-use/tree/2cc71890e65056b67fdb29d98bb407749c15bb08) | [b49a68e4060a](https://github.com/browser-use/browser-use/tree/b49a68e4060acb226da8f784194fef301c53a6d7) | 2026-10-30 04:28:48 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| n8n-io/n8n | [dd5f870ecc38](https://github.com/n8n-io/n8n/tree/dd5f870ecc38344951fb3956f1a7ba7852612c70) | [db28d8b94db4](https://github.com/n8n-io/n8n/tree/db28d8b94db48cc0b2c137fb94a76c592b8a3047) | 2026-11-02 08:58:30 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
+-| langgenius/dify | [c01cb5d119a6](https://github.com/langgenius/dify/tree/c01cb5d119a69532df73ec20da8daa18cf44e0fb) | [8c5e2efb9966](https://github.com/langgenius/dify/tree/8c5e2efb996617da715677cd6d621b5ba15c250e) | 2026-11-02 08:54:45 | HEAD 前进；HEAD + Releases 前五项，能力/许可沿用历史 |
++| openclaw/openclaw | [2777468d26e5](https://github.com/openclaw/openclaw/tree/2777468d26e5f21455b67591a045a40c770aee13) | [6c983bb80229](https://github.com/openclaw/openclaw/tree/6c983bb8022904eb8ede66691341522943d3f61e) | 2026-11-08 12:10:51 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| NousResearch/hermes-agent | [b425edd28617](https://github.com/NousResearch/hermes-agent/tree/b425edd286179eaa2419ca13f9cbf6706845e8ab) | [8422e54df36f](https://github.com/NousResearch/hermes-agent/tree/8422e54df36f42371f31b8fbee653e7c801edcbd) | 2026-11-08 12:05:12 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| nanocoai/nanoclaw | [acc2b1c8f52a](https://github.com/nanocoai/nanoclaw/tree/acc2b1c8f52a954368cfaf04b61c32f9a1efc280) | [dd19240d9036](https://github.com/nanocoai/nanoclaw/tree/dd19240d9036bab13491953513cb88ec7a2980e6) | 2026-11-08 10:55:12 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| HKUDS/nanobot | [8b37976d36c2](https://github.com/HKUDS/nanobot/tree/8b37976d36c2812c62b464321e729a88872b60f9) | [1e2dc02fa228](https://github.com/HKUDS/nanobot/tree/1e2dc02fa228b6c5c62b8fc84de2a2d77dd925f3) | 2026-11-08 08:32:20 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| agentscope-ai/QwenPaw | [d09c34f6c4be](https://github.com/agentscope-ai/QwenPaw/tree/d09c34f6c4be3939931c90f2623ae3cbc93c6cc4) | [2cf28d14a20c](https://github.com/agentscope-ai/QwenPaw/tree/2cf28d14a20c9f9c769cce2a9c0568ccf84e459c) | 2026-11-06 10:38:59 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| letta-ai/letta-code | [6155d9f562f1](https://github.com/letta-ai/letta-code/tree/6155d9f562f13eb1f352240a7fd07a87933ac76a) | [64fdf5999441](https://github.com/letta-ai/letta-code/tree/64fdf5999441094a6f43f7a38a6d356519fea029) | 2026-11-08 07:40:05 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| langchain-ai/langgraph | [ee3c043bddcc](https://github.com/langchain-ai/langgraph/tree/ee3c043bddcc514012885167dd5916b15d6e4731) | [e5e37b5d70db](https://github.com/langchain-ai/langgraph/tree/e5e37b5d70dbfd93c7006bd90a658c6179a95946) | 2026-11-06 16:08:12 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| mem0ai/mem0 | [753496cf1435](https://github.com/mem0ai/mem0/tree/753496cf1435d76c3a711f3af51303f7fdcb6420) | [f1791daa86d4](https://github.com/mem0ai/mem0/tree/f1791daa86d469249c9b002f62644d58a1eb96a0) | 2026-11-06 16:53:06 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| browser-use/browser-use | [b49a68e4060a](https://github.com/browser-use/browser-use/tree/b49a68e4060acb226da8f784194fef301c53a6d7) | [b49a68e4060a](https://github.com/browser-use/browser-use/tree/b49a68e4060acb226da8f784194fef301c53a6d7) | 2026-10-30 04:28:48 | HEAD 相同；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| n8n-io/n8n | [db28d8b94db4](https://github.com/n8n-io/n8n/tree/db28d8b94db48cc0b2c137fb94a76c592b8a3047) | [01bd57cddf11](https://github.com/n8n-io/n8n/tree/01bd57cddf11e8173b16adce1b22a8eb94598672) | 2026-11-08 02:29:38 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| langgenius/dify | [8c5e2efb9966](https://github.com/langgenius/dify/tree/8c5e2efb996617da715677cd6d621b5ba15c250e) | [208a2489f05f](https://github.com/langgenius/dify/tree/208a2489f05f688afd701ba262a42d08289996a7) | 2026-11-08 09:39:21 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+ 
+-| 对象 | 本轮发行观察 | 对采用的影响 |
++| 对象 | 本轮发行观察 | 对采用的影响与读取边界 |
+ | --- | --- | --- |
+-| OpenClaw | [U66 稳定 v2026.10.9](https://github.com/openclaw/openclaw/releases/tag/v2026.10.9)，10 月 29 日 15:54:35 UTC；[U67 beta.5](https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.5)，10 月 30 日 03:57:14 UTC，prerelease=true | 稳定摘要涉及工作区约束、凭据、数据恢复与升级回滚；beta 摘要含 Node 兼容、流式及 cron 恢复。只读 Highlights/相关摘要，未核验所有修复或安装分发；不能以 beta 首项覆盖稳定渠道 |
+-| Hermes / NanoClaw | Hermes 首项仍 v0.22.5；NanoClaw 首项 rc.2、前五项含稳定 v2026.10.0，且 HEAD 未变 | 只复查元数据，不把旧版本重新算本期发布；主分支、rc 和稳定包分开 |
+-| nanobot | [U68 v0.4.0](https://github.com/HKUDS/nanobot/releases/tag/v0.4.0)，10 月 28 日 10:50:17 UTC，晚于基线报告提交 | Highlights 描述 SQLite 历史导入、更新确认、安装归属与恢复。大幅改动持久历史时应验收迁移与当前数据保留，不能由维护者说明推断已无丢失；未遍历长清单或验证 PyPI |
+-| QwenPaw | [U70 v2.3.0-beta.2](https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0-beta.2)，11 月 2 日 06:08:12 UTC，预发行 | 前部说明涉及插件、技能、媒体与模型启动；只作 beta 观察，不据新 HEAD 称稳定能力已经升级 |
+-| Letta Code | [U71 v0.34.38](https://github.com/letta-ai/letta-code/releases/tag/v0.34.38)，11 月 2 日 07:09:09 UTC | 说明全文涉及子任务进度输出与完整 JSONL 日志，适合作为任务可观察性参照；没有运行对照 |
+-| LangGraph | [U69 1.2.19](https://github.com/langchain-ai/langgraph/releases/tag/1.2.19)，10 月 30 日 22:23:43 UTC；同页列表另有 SDK/checkpoint-sqlite 标签 | 说明涉及流事件 namespace、暂停工具和 awaited task 返回；不能将不同子包版本号混用。首次 API 连接错误重试已成功 |
+-| Mem0 / Browser Use / Dify | Releases 前五项首项分别仍 v2.2.1、0.13.14、1.18.0 | 仅发行元数据与 HEAD；旧功能、托管基准、Python/Pi 分界和许可不重新盖日期 |
+-| n8n | 前五项同时有 1.123.92 稳定维护线、2.46.4 预发行、stable 别名和 2.45.7 非预发行 | 不能按列表首项或别名选定升级目标；本轮没有读取全部发行说明和重审 Sustainable Use/Enterprise 许可 |
++| OpenClaw | [U112 v2026.11.1](https://github.com/openclaw/openclaw/releases/tag/v2026.11.1)，11 月 5 日 09:48:37 UTC，稳定；列表另有 v2026.11.5-beta.1 | Highlights 涉及秘密配置保存、渠道回复、历史/子任务恢复、更新回滚。只读摘要与开头 Changes，未重验全部补丁；发布日和数字版本顺序分开 |
++| Hermes | [U113 v0.23.0](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0)，11 月 5 日 21:32:33 UTC | Highlights 增加 Gateway 提供 Webapp、单 Gateway 持有会话等主题；说明汇总 0.22.x，未把全部条目算本期首创，未因新 UI 将其自动改列某家产品的直接复刻 |
++| NanoClaw / QwenPaw | 前五项首项分别仍 rc.2、beta.2，包含较早稳定标签；HEAD 均前进 | 本轮仅元数据，不给旧发行或许可赋新的全文核验日期 |
++| nanobot | [U114 v0.4.1](https://github.com/HKUDS/nanobot/releases/tag/v0.4.1)，11 月 6 日 15:55:22 UTC | 说明全文包含 0.3.5 可直接升级、0.4.x 保留历史导入、临时 apiType 转换的最后支持版、应用内自动安装未启用。升级需按原安装渠道并验收旧数据、消息和再次重启 |
++| Letta Code | [U115 v0.34.45](https://github.com/letta-ai/letta-code/releases/tag/v0.34.45)，11 月 8 日 07:49:26 UTC | 说明全文列退役默认模型改为需要密钥/额度、父 vault 刷新、MemFS 空格路径修复；未做真实凭据或模型调用 |
++| LangGraph | [U116 1.2.20](https://github.com/langchain-ai/langgraph/releases/tag/1.2.20)，11 月 5 日 02:20:53 UTC；SDK/CLI 各有子包标签 | 说明全文列 interrupt 独立 ID、strict resume 拒绝过期回答。可作为审批绑定版本和重放的机制参照，实际持久状态仍需配置与验收 |
++| Dify | [U117 1.19.0](https://github.com/langgenius/dify/releases/tag/1.19.0)，11 月 4 日 07:36:16 UTC | Highlights 有嵌套 Workflow Tool tracing 与 package v2，历史 traces 不回填；未读全部升级步骤，修改版 Apache 许可仍按旧固定来源 |
++| n8n | [U118 2.46.6](https://github.com/n8n-io/n8n/releases/tag/n8n%402.46.6)，11 月 4 日 13:10:07 UTC；列表另有 stable 及 2.47.x 预发行 | 说明正文仅确认 npm 跨平台安装修复，未运行包安装；多维护线、别名和安装归属需分别核对 |
++| Mem0 / Browser Use | 首项仍 v2.2.1 / 0.13.14；Mem0 HEAD 前进，Browser Use HEAD 相同 | 只观察元数据，保留既有 SDK/托管成绩、Python/Pi 和许可边界 |
+ 
+ ## 6. 与应用选型同步的边界
+ 
+-- **本地执行不是一个统一能力。** OpenGrokBot v0.4.0 的 Linux 命令参数与安全文有静态差异；采用前先用临时资料验证，不能仅凭有 Seatbelt/bubblewrap 就认定两平台密钥隔离等价。见主报告 U47/U48 与 E08。
+-- **预算须按引擎确定。** nanoMuse 1.0.9 的预算只适用 Python runtime/Python hands，不覆盖原生 Android 和桌面聊天引擎，也不保证第三方账单封顶。见 U52/U53 与 E10。
+-- **应用模板仍有外部基础。** 新增 OpenDuet 是应用层参照，依赖仓内 OpenBot、Intelligence、模型和连接服务；不把应用 MIT 许可扩展为所有依赖许可。
+-- **Perplexity fully local 是商业执行路径。** 官方正文给出 Apple silicon、订阅与建议内存条件，也允许授权转云；它不属于本表的开源组件。见 U39。
+-- **执行模型与主协调模型分开。** OpenAI [10 月 26–30 日周页](https://learn.chatgpt.com/docs/whats-new/october-26-30-2026)本次重读仍将 Terra 用于 Work/Codex；Dots 主页仍描述 GPT-6 Astra，不能相互替换。
++- **应用交付分 edition 和版本。** OpenBot 已有 Personal 桌面发行，本地 Intelligence 仍有账号和评估许可。晚于 v0.3.3 的 Personal 源码关闭独立记忆，Skills 学习单独存在。主报告 U87/U91/U119 分开记录，长期记忆按 E13 验收。
++- **本地文件隔离有了修复依据。** OpenSuperBot 0.5.0 在 macOS/Linux 改为整 home 遮蔽和只读工具链例外，旧版 Linux 文码差异已有静态修复。网络、系统服务、资源上限及 Windows 无本地命令另验，见 U95/U96 与 E08。
++- **持久状态仍需业务结果核对。** OpenDots 的过期 claim 恢复与显式重试无法单独证明外部动作只发生一次；LangGraph strict resume 针对旧回答是另一层控制。见 U108/U109/U116 与 E14。
++- **预算与 Skills 按引擎和作用域。** nanoMuse Python 预算范围继续保留，新主分支 Skills 全局/工作区关闭需覆盖 discovery/get/provider，尚未进入 1.0.9 发行承诺。见 U102/U105/U106 与 E16。
++- **应用与组件分层。** Muse Spaces、Perplexity Teammates 是商业产品参照，OpenDuet 继续依赖 Intelligence 与其仓内 OpenBot。新功能不统一增加开源底层生态数量。
++- **协调模型已有新直接证据。** OpenAI [11 月 2–6 日周页](https://learn.chatgpt.com/docs/whats-new/november-2-6-2026)明确 Terra 加入 Dots 模型家族，撤回上版只能确认 Work/Codex 的时点限制。模型实际选择按任务记录。
+ 
+-先验收主报告的应用闭环，再决定是否替换运行时、记忆或浏览器层。所有发行与源码观察均未执行部署、账号或端到端实验。完整证据、查询范围和失败替代入口见[本轮来源索引](sources-2026-11-02.md)。
++本轮范围为资料、发行与静态实现检查。账号、部署、安装签名和产品实验状态保存在[来源索引](sources-2026-11-08.md)，完整变化与逐行差异保存在[本轮 gap](gaps/2026-11-08/01/README.md)。
