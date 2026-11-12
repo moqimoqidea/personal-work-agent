@@ -1,0 +1,2858 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-11-12/01",
+  "recorded_on": "2026-11-12",
+  "timezone": "Asia/Shanghai",
+  "record_type": "report_update",
+  "started_from_revision": "09e8b1e0607af28d435c3e427dc8db31726c26ce",
+  "baseline": {
+    "report_date": "2026-11-08",
+    "version_id": "2026-11-08",
+    "revision": "09e8b1e0607af28d435c3e427dc8db31726c26ce",
+    "files": {
+      "report": "docs/research/personal-agent-landscape-2026-11-08.md",
+      "sources": "docs/research/sources-2026-11-08.md",
+      "building_blocks": "docs/research/agent-building-blocks-2026-11-08.md"
+    }
+  },
+  "current": {
+    "report_date": "2026-11-12",
+    "version_id": "2026-11-12",
+    "revision": null,
+    "files": {
+      "report": "docs/research/personal-agent-landscape-2026-11-12.md",
+      "sources": "docs/research/sources-2026-11-12.md",
+      "building_blocks": "docs/research/agent-building-blocks-2026-11-12.md"
+    },
+    "revision_note": "Prepared before commit; exact file hashes identify content. Actual commit and push result are delivered separately."
+  },
+  "file_diffs": [
+    {
+      "kind": "report",
+      "baseline_path": "docs/research/personal-agent-landscape-2026-11-08.md",
+      "current_path": "docs/research/personal-agent-landscape-2026-11-12.md",
+      "baseline_sha256": "a8d74be347c874c1f9f2935ad6fdcc79137a78664c3f3d52aa9fd94b4c4acdc3",
+      "current_sha256": "694f36a5bbcc7328bede8d9145a9b2617a59e3ff1f7bd551f2a6cbda528a6fe2",
+      "diff_path": "report.diff",
+      "diff_sha256": "1a2ca3e7c253cd91584c2cf0749897ceabeee984fb79ba09c82f51bd3d442fc7",
+      "added_lines": 278,
+      "removed_lines": 209
+    },
+    {
+      "kind": "sources",
+      "baseline_path": "docs/research/sources-2026-11-08.md",
+      "current_path": "docs/research/sources-2026-11-12.md",
+      "baseline_sha256": "7446788066bf09e70ef9be9eb2520f20468a5e44f2af249a79b3c19991b0d081",
+      "current_sha256": "09e956852bbad028db97dd8097d5379166307025ced4ce8eaeec0729eee9bcfc",
+      "diff_path": "sources.diff",
+      "diff_sha256": "b11c36333dec79fb9f5d442c850ff2cbb368b508dd1cb734f3626b243ad21e17",
+      "added_lines": 150,
+      "removed_lines": 155
+    },
+    {
+      "kind": "building_blocks",
+      "baseline_path": "docs/research/agent-building-blocks-2026-11-08.md",
+      "current_path": "docs/research/agent-building-blocks-2026-11-12.md",
+      "baseline_sha256": "099337a3d9771062b8a53ede35a0435afbd8270a94050a1b4083edaa286f57ac",
+      "current_sha256": "4e3d69898be595cdf5357551fa9e62bf594bcb8bcef5b46eed62fd350f6617c2",
+      "diff_path": "building-blocks.diff",
+      "diff_sha256": "6540664ddc5eb0c67508c2db0a119ec2bc919dd63b439e69ffb35a77c14a6d1a",
+      "added_lines": 33,
+      "removed_lines": 31
+    }
+  ],
+  "coverage": {
+    "commercial_core_count": 7,
+    "commercial_core": [
+      "Grok Bot",
+      "Muse",
+      "Dots",
+      "Duet",
+      "Today",
+      "Instinct",
+      "Perplexity Teammates"
+    ],
+    "repositories_checked": 26,
+    "baseline_heads_changed": 15,
+    "baseline_heads_unchanged": 11,
+    "new_repositories": [],
+    "direct_application_samples": 8,
+    "repository_comparisons_read": 5,
+    "release_lists_read": 19,
+    "release_scope": "First five per repository, not all tags or package channels",
+    "compare_limits": "Relative to actual 2026-11-08 baseline: OpenBot 300-file cap; nanoMuse 240, OpenDots 2, OpenDuet 7, OpenSuperBot 113. Earlier 2026-11-02 comparisons retained as supplementary observations.",
+    "static_code_read": [
+      "OpenSuperBot HEAD sandbox.ts, v0.5.0 sandbox.ts lines 100–160",
+      "OpenSuperBot v0.5.0 llm-responses.ts full; llm-anthropic.ts lines 1–120",
+      "nanoMuse HEAD nanomuse/llm/budget.py full",
+      "OpenBot v1.0.2 and HEAD edition.ts full; Personal memory disabled in both"
+    ],
+    "product_runtime_tests": "not_performed",
+    "product_accounts_connected": [],
+    "not_reverified": [
+      "Historical pages not enumerated in current source reading table",
+      "All prior license texts, installer signatures, account entitlements, full source changes",
+      "Cue current status and historic Perplexity Mac / Gemini / Spark pages"
+    ],
+    "baseline_sync": "Exact connector-fetched remote blobs/tree/commit reconstructed and fast-forwarded in isolated checkout; original .git is read-only and shell DNS unavailable."
+  },
+  "evidence": [
+    {
+      "id": "U122",
+      "title": "Grok Bot 更新日志",
+      "url": "https://x.ai/changelog/bot",
+      "source_time": "2026-11-05、06、11 / v0.79.2–v1.0.1",
+      "accessed_on": "2026-11-12",
+      "scope": "读取本期三条日志的新增和相关修复；会议、共享连接器、学习审批、附件与团队权限；非账号实测。"
+    },
+    {
+      "id": "U123",
+      "title": "Muse 语音与头像",
+      "url": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/",
+      "source_time": "2026-11-05；页面另列 11-06",
+      "accessed_on": "2026-11-12",
+      "scope": "公告正文；首批美国、mobile/web/Mac，眼镜和 Charm 仍为后续计划。"
+    },
+    {
+      "id": "U124",
+      "title": "Muse Spaces",
+      "url": "https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/",
+      "source_time": "2026-11-06",
+      "accessed_on": "2026-11-12",
+      "scope": "公告正文；持久交互空间、后台更新、入口布局；分享仍属探索，不等于可协作。"
+    },
+    {
+      "id": "U125",
+      "title": "Dots 11 月首周更新",
+      "url": "https://learn.chatgpt.com/docs/whats-new/november-2-6-2026",
+      "source_time": "2026-11-04",
+      "accessed_on": "2026-11-12",
+      "scope": "OpenAI Docs 全文；Terra、iOS 通知/分享、桌面标注、Windows、企业开放。"
+    },
+    {
+      "id": "U126",
+      "title": "Dots 当前概览",
+      "url": "https://learn.chatgpt.com/docs/dots",
+      "source_time": "动态页，未标绝对修改日",
+      "accessed_on": "2026-11-12",
+      "scope": "OpenAI Docs 正文；模型家族、资格、委派和计量；不再将主 dot 固定成单一 Astra。"
+    },
+    {
+      "id": "U127",
+      "title": "Dots 企业管理",
+      "url": "https://learn.chatgpt.com/docs/enterprise/dots-admin-guide",
+      "source_time": "动态页；2026-11-18 为未来默认开放/计费节点",
+      "accessed_on": "2026-11-12",
+      "scope": "OpenAI Docs 管理、权限与 preview/billing 章节；未登录管理员控制台；不是已到 11 月 18 日。"
+    },
+    {
+      "id": "U128",
+      "title": "Duet 当前资格与配额",
+      "url": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet",
+      "source_time": "动态页 Updated yesterday，绝对修改日未标",
+      "accessed_on": "2026-11-12",
+      "scope": "正文；美国 Pro/Max/Ultra、用户邀请、重置次数及 12 月 15 日到期；保留 M365/接管限制。"
+    },
+    {
+      "id": "U129",
+      "title": "Today 中国首页",
+      "url": "https://todayai.cn/",
+      "source_time": "未标",
+      "accessed_on": "2026-11-12",
+      "scope": "首页正文；注册权益、记忆、Skills 与云电脑；没有登录领取。"
+    },
+    {
+      "id": "U130",
+      "title": "Today 下载目录",
+      "url": "https://todayai.cn/downloads",
+      "source_time": "未标",
+      "accessed_on": "2026-11-12",
+      "scope": "完整目录；Mac/Windows/Linux/iOS/Android，未下载、验签或运行。"
+    },
+    {
+      "id": "U131",
+      "title": "Instinct 首页",
+      "url": "https://instinct.com/",
+      "source_time": "未标",
+      "accessed_on": "2026-11-12",
+      "scope": "首页全文；短信/电话定位；不据此填充价格和完整审批矩阵。"
+    },
+    {
+      "id": "U132",
+      "title": "Instinct 隐私",
+      "url": "https://instinct.com/privacy-policy",
+      "source_time": "2026-08-26 修订",
+      "accessed_on": "2026-11-12",
+      "scope": "读取隐私正文；数据用途、Workspace 数据及断连/删除条件；未发现修订日期改变。"
+    },
+    {
+      "id": "U133",
+      "title": "OpenBot HEAD README",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/68fe32774a83689a862d5821a6260e72e5f8fdb9/README.md",
+      "source_time": "2026-11-12T01:17:42Z",
+      "accessed_on": "2026-11-12",
+      "scope": "定位、桌面、AG-UI、部署与许可章节；源码运行和桌面产品分开。"
+    },
+    {
+      "id": "U134",
+      "title": "OpenBot v1.0.2",
+      "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v1.0.2",
+      "source_time": "2026-11-11T08:45:38Z",
+      "accessed_on": "2026-11-12",
+      "scope": "发行说明开头、桌面升级/数据与依赖段落、18 项 assets 元数据；长清单未逐项审计，未下载包。"
+    },
+    {
+      "id": "U135",
+      "title": "OpenBot 发行版 README",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/cca9f609cacf1b53bf5f27fc3ec0465138accb70/README.md",
+      "source_time": "v1.0.2 → cca9f609cacf1b53bf5f27fc3ec0465138accb70",
+      "accessed_on": "2026-11-12",
+      "scope": "前 150 行，确认本地 Intelligence、免费本地/试用与生产许可分界，不把 HEAD 自动归入发行。"
+    },
+    {
+      "id": "U136",
+      "title": "OpenBot HEAD changelog",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/68fe32774a83689a862d5821a6260e72e5f8fdb9/CHANGELOG.md",
+      "source_time": "2026-11-12T01:17:42Z",
+      "accessed_on": "2026-11-12",
+      "scope": "前 310 行；Unreleased 0089/0090 与 rc.12 对比发行版 0088/rc.11；不是完整 changelog 审阅。"
+    },
+    {
+      "id": "U137",
+      "title": "OpenDots 当前 README",
+      "url": "https://github.com/CopilotKit/OpenDots/blob/46eaf96c9e3802adc972ceafd8f20f99bda34e70/README.md",
+      "source_time": "2026-11-10T08:10:14Z",
+      "accessed_on": "2026-11-12",
+      "scope": "维护归属、OpenBot skin、Spaces 和依赖章节；社区 starter 与团队维护平台分开。"
+    },
+    {
+      "id": "U138",
+      "title": "OpenDuet 当前 README",
+      "url": "https://github.com/CopilotKit/OpenDuet/blob/edb912666beb113ebeba65b2884faa4af26da8c6/README.md",
+      "source_time": "2026-11-10T17:02:16Z",
+      "accessed_on": "2026-11-12",
+      "scope": "维护归属、skin、原有晨报/Tasks 和部署边界；不推断 skin 获得专用功能。"
+    },
+    {
+      "id": "U139",
+      "title": "OpenGrokBot 重定向后的规范仓库",
+      "url": "https://github.com/wolfqing/OpenSuperBot",
+      "source_time": "2026-11-12 查询；更名绝对日未单独确定",
+      "accessed_on": "2026-11-12",
+      "scope": "旧 URL 官方跳转 + GitHub 元数据 ID 1331719870，确认同一仓，不新增候选计数。"
+    },
+    {
+      "id": "U140",
+      "title": "OpenSuperBot v0.5.0",
+      "url": "https://github.com/wolfqing/OpenSuperBot/releases/tag/v0.5.0",
+      "source_time": "2026-11-08T09:14:00Z",
+      "accessed_on": "2026-11-12",
+      "scope": "安全/多模型/更名/Windows/Recorder 段落；tag 对象解引用到 5b6cdedc0f98ab542c649165f39b8d733485e750。"
+    },
+    {
+      "id": "U141",
+      "title": "OpenSuperBot 安全文",
+      "url": "https://github.com/wolfqing/OpenSuperBot/blob/aa551c404009e7b00c3e9e4d1347023a1b394591/docs/security.md",
+      "source_time": "2026-11-11T03:45:53Z",
+      "accessed_on": "2026-11-12",
+      "scope": "命令隔离、上传与普通浏览器审批约定等章节；维护者的边界说明，未实测。"
+    },
+    {
+      "id": "U142",
+      "title": "OpenSuperBot 当前 sandbox",
+      "url": "https://github.com/wolfqing/OpenSuperBot/blob/aa551c404009e7b00c3e9e4d1347023a1b394591/gateway/src/sandbox.ts",
+      "source_time": "aa551c404009e7b00c3e9e4d1347023a1b394591",
+      "accessed_on": "2026-11-12",
+      "scope": "全文 286 行静态读取；home tmpfs、工具链只读回绑、Seatbelt 与 self-check；未执行探针。"
+    },
+    {
+      "id": "U143",
+      "title": "OpenSuperBot 发行 sandbox",
+      "url": "https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/gateway/src/sandbox.ts",
+      "source_time": "v0.5.0",
+      "accessed_on": "2026-11-12",
+      "scope": "第 100–160 行交叉确认两平台家目录遮蔽已在 tag；不把 HEAD 专有变化全部纳入。"
+    },
+    {
+      "id": "U144",
+      "title": "OpenSuperBot Responses 适配",
+      "url": "https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/gateway/src/llm-responses.ts",
+      "source_time": "v0.5.0",
+      "accessed_on": "2026-11-12",
+      "scope": "全文静态读取；store=false、encrypted reasoning、工具项与不完整输出处理。仅说明该项目实现，不外推官方 API 通用限制。"
+    },
+    {
+      "id": "U145",
+      "title": "OpenSuperBot Anthropic 适配",
+      "url": "https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/gateway/src/llm-anthropic.ts",
+      "source_time": "v0.5.0",
+      "accessed_on": "2026-11-12",
+      "scope": "前 120 行；原生思考块、专用连接 key、清除环境自定义头；没有验证所有后续转换分支。"
+    },
+    {
+      "id": "U146",
+      "title": "nanoMuse HEAD README",
+      "url": "https://github.com/nano-muse/nanoMuse/blob/c4fda49b802371c464a85e29ab9b5b1697ad09dd/README.md",
+      "source_time": "2026-11-12T01:39:25Z",
+      "accessed_on": "2026-11-12",
+      "scope": "定位、完整自托管、demo 与仍标 1.0.9 的发行入口；未部署 demo。"
+    },
+    {
+      "id": "U147",
+      "title": "nanoMuse HEAD 隐私",
+      "url": "https://github.com/nano-muse/nanoMuse/blob/c4fda49b802371c464a85e29ab9b5b1697ad09dd/docs/privacy.md",
+      "source_time": "2026-11-12T01:39:25Z",
+      "accessed_on": "2026-11-12",
+      "scope": "全文正文；账号记录/训练、无登录自带 key、showcase 记录、Windows 更新与记住审批的条件；未审相应全部代码。"
+    },
+    {
+      "id": "U148",
+      "title": "nanoMuse 当前预算",
+      "url": "https://github.com/nano-muse/nanoMuse/blob/c4fda49b802371c464a85e29ab9b5b1697ad09dd/docs/runtime-budgets.md",
+      "source_time": "2026-11-12T01:39:25Z",
+      "accessed_on": "2026-11-12",
+      "scope": "全文；另读基线 b3bf3e9 的同文件，文本相同；上下文估算不算本期新增，Python 范围不变。"
+    },
+    {
+      "id": "U149",
+      "title": "nanoMuse 当前预算代码",
+      "url": "https://github.com/nano-muse/nanoMuse/blob/c4fda49b802371c464a85e29ab9b5b1697ad09dd/nanomuse/llm/budget.py",
+      "source_time": "2026-11-12T01:39:25Z",
+      "accessed_on": "2026-11-12",
+      "scope": "全文静态读取；估算/报告 usage、共享预算、取消与费用排除；不外推实际账单。"
+    },
+    {
+      "id": "U150",
+      "title": "Perplexity Teammates 公告",
+      "url": "https://www.perplexity.ai/en-GB/hub/blog/teammates-are-agents-for-complex-ongoing-work",
+      "source_time": "目录标 2026-11-04，正文未重列日期",
+      "accessed_on": "2026-11-12",
+      "scope": "正文第 0–39 行完整产品内容；持续项目、多同事、独立会话、Max/web、iOS soon；非实测。"
+    },
+    {
+      "id": "U151",
+      "title": "Perplexity 新闻目录",
+      "url": "https://www.perplexity.ai/en-GB/hub/blog/category/news",
+      "source_time": "2026-11-04 与 11-03 条目",
+      "accessed_on": "2026-11-12",
+      "scope": "第一页目录；Teammates 日期取此，另读 e-commerce 公告；未遍历所有分页。"
+    },
+    {
+      "id": "U152",
+      "title": "browser-use/browser-use 1.0.0",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
+      "source_time": "2026-11-10T02:04:48Z",
+      "accessed_on": "2026-11-12",
+      "scope": "发行说明架构、迁移和默认值章节；Python REPL/CDP、默认云浏览器、错误/成本；不采用厂商跑分作独立成绩。"
+    },
+    {
+      "id": "U153",
+      "title": "NousResearch/hermes-agent v0.23.0",
+      "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0",
+      "source_time": "2026-11-05T21:32:33Z",
+      "accessed_on": "2026-11-12",
+      "scope": "发行开头及 Highlights；统一 Gateway 会话与 Webapp、组聊；没有逐项审阅长变更。"
+    },
+    {
+      "id": "U154",
+      "title": "NousResearch/hermes-agent v0.23.1",
+      "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1",
+      "source_time": "2026-11-10T01:42:15Z",
+      "accessed_on": "2026-11-12",
+      "scope": "开头、插件目录 2→16 MiB 与发布时间；API 发布为 11 月 10 日 UTC，正文 Release Date 为 11 月 9 日。"
+    },
+    {
+      "id": "U155",
+      "title": "agentscope-ai/QwenPaw v2.3.0",
+      "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0",
+      "source_time": "2026-11-11T12:41:27Z",
+      "accessed_on": "2026-11-12",
+      "scope": "Added 前部：本地决策模型、OpenUI、后台服务；审查/压缩 opt-in，不将全文下载视为全项审计。"
+    },
+    {
+      "id": "U156",
+      "title": "langchain-ai/langgraph 1.2.20",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.20",
+      "source_time": "2026-11-05T02:20:53Z",
+      "accessed_on": "2026-11-12",
+      "scope": "发行说明全文；interrupt ID 与 strict resume；另读 SDK 0.4.14 说明，两包分开。"
+    },
+    {
+      "id": "U157",
+      "title": "HKUDS/nanobot v0.4.1",
+      "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.4.1",
+      "source_time": "2026-11-06T15:55:22Z",
+      "accessed_on": "2026-11-12",
+      "scope": "发行说明全文；迁移保留至 0.4.x、临时 apiType 转换最后版本、升级需原安装路径。"
+    },
+    {
+      "id": "U158",
+      "title": "openclaw/openclaw v2026.11.3",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.3",
+      "source_time": "2026-11-10T18:53:07Z",
+      "accessed_on": "2026-11-12",
+      "scope": "Highlights；私有子任务结果、取消交接与可见失败；同查 beta.2 摘要及旧维护线，非全项代码审计。"
+    },
+    {
+      "id": "U159",
+      "title": "letta-ai/letta-code v0.34.56",
+      "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.56",
+      "source_time": "2026-11-12T06:49:04Z",
+      "accessed_on": "2026-11-12",
+      "scope": "说明全文；连读 0.34.55 的上下文 fork 和路由；未验证 runtime。"
+    },
+    {
+      "id": "U160",
+      "title": "langgenius/dify 1.19.0",
+      "url": "https://github.com/langgenius/dify/releases/tag/1.19.0",
+      "source_time": "2026-11-04T07:36:16Z",
+      "accessed_on": "2026-11-12",
+      "scope": "Highlights 与 Upgrade guide；嵌套 tracing、包格式 v2、Compose 最低版本与 tracing 队列；未重审许可。"
+    },
+    {
+      "id": "U161",
+      "title": "Town 更新页",
+      "url": "https://www.town.com/updates",
+      "source_time": "可读最新条目 2026-10-29",
+      "accessed_on": "2026-11-12",
+      "scope": "读取当前日志；未取得基线之后的新条目，不外推整个服务没有变化。"
+    },
+    {
+      "id": "U162",
+      "title": "nano-muse/nanoMuse 比较",
+      "url": "https://github.com/nano-muse/nanoMuse/compare/b3bf3e940078c735fb9916e8c5ce539a87993e25...c4fda49b802371c464a85e29ab9b5b1697ad09dd",
+      "source_time": "507 commits / 300 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。"
+    },
+    {
+      "id": "U163",
+      "title": "CopilotKit/OpenBot 比较",
+      "url": "https://github.com/CopilotKit/OpenBot/compare/c396a5f68c817043846f1ca3c2b42061ee73ceb5...68fe32774a83689a862d5821a6260e72e5f8fdb9",
+      "source_time": "488 commits / 300 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。"
+    },
+    {
+      "id": "U164",
+      "title": "CopilotKit/OpenDots 比较",
+      "url": "https://github.com/CopilotKit/OpenDots/compare/8091324942b86789ed0da7facbee855145d933b0...46eaf96c9e3802adc972ceafd8f20f99bda34e70",
+      "source_time": "8 commits / 13 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。"
+    },
+    {
+      "id": "U165",
+      "title": "CopilotKit/OpenDuet 比较",
+      "url": "https://github.com/CopilotKit/OpenDuet/compare/f52288fff5ccdbd3de428d573d9f026fce5ff480...edb912666beb113ebeba65b2884faa4af26da8c6",
+      "source_time": "8 commits / 7 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。"
+    },
+    {
+      "id": "U166",
+      "title": "wolfqing/OpenSuperBot 比较",
+      "url": "https://github.com/wolfqing/OpenSuperBot/compare/52a52840e0a559baaf4b280b707a5d9df8b21684...aa551c404009e7b00c3e9e4d1347023a1b394591",
+      "source_time": "72 commits / 214 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。"
+    },
+    {
+      "id": "U167",
+      "title": "Celesto OpenMuse 当前 README",
+      "url": "https://github.com/CelestoAI/celesto/blob/28599cba3f96d7ef36071833b9874d8e319b277a/open-muse/README.md",
+      "source_time": "2026-11-08T01:18:17Z",
+      "accessed_on": "2026-11-12",
+      "scope": "前 160 行；本地 QEMU 预览、云浏览关闭与重启边界；不由父仓云 SDK 改动推断应用已开放。"
+    },
+    {
+      "id": "U168",
+      "title": "CelestoAI/celesto 比较",
+      "url": "https://github.com/CelestoAI/celesto/compare/6e3b3901fac8558bb647bf044a732cf7fbe67ee2...28599cba3f96d7ef36071833b9874d8e319b277a",
+      "source_time": "8 commits / 300 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。"
+    },
+    {
+      "id": "U169",
+      "title": "OpenBot 发行审批说明",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/cca9f609cacf1b53bf5f27fc3ec0465138accb70/docs/approvals.md",
+      "source_time": "v1.0.2",
+      "accessed_on": "2026-11-12",
+      "scope": "前 210 行；动作类别→规则→Auto-review→Extra vigilant、长期授权、管理员收紧和识别缺口。未完整代码审计。"
+    },
+    {
+      "id": "U170",
+      "title": "OpenBot 发行桌面安装说明",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/cca9f609cacf1b53bf5f27fc3ec0465138accb70/docs/desktop-install.md",
+      "source_time": "v1.0.2",
+      "accessed_on": "2026-11-12",
+      "scope": "前 110 行；本地 Intelligence、账号/许可、Intel Mac 先决条件、默认遥测；区别通用源码和团队路径。"
+    },
+    {
+      "id": "U171",
+      "title": "Dots 当前电脑连接说明",
+      "url": "https://learn.chatgpt.com/docs/dots/computers-and-apps",
+      "source_time": "动态页；绝对修改日未标",
+      "accessed_on": "2026-11-12",
+      "scope": "OpenAI Docs 全文；多台个人电脑、每线程同时一台、在线条件与标注；修正上轮同时一台的概括，不推断具体变更日。"
+    },
+    {
+      "id": "U172",
+      "title": "nanoMuse 基线隐私文补读",
+      "url": "https://github.com/nano-muse/nanoMuse/blob/b3bf3e940078c735fb9916e8c5ce539a87993e25/docs/privacy.md",
+      "source_time": "2026-11-02 已交付基线 SHA",
+      "accessed_on": "2026-11-12",
+      "scope": "第 1–45 行与当前正文交叉；showcase 与记住审批已在基线存在，属旧资料补证；未登录自带 key 条件/遥测概括为当前文案修正。"
+    },
+    {
+      "id": "U173",
+      "title": "OpenBot 独立记忆 edition 门槛",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/cca9f609cacf1b53bf5f27fc3ec0465138accb70/server/src/edition.ts",
+      "source_time": "cca9f609cacf1b53bf5f27fc3ec0465138accb70",
+      "accessed_on": "2026-11-12",
+      "scope": "全文静态读取；Personal 能力和 editionHasMemory=false，发行 tag 与 HEAD 都核对；无运行测试。"
+    },
+    {
+      "id": "U174",
+      "title": "OpenBot 独立记忆 edition 门槛",
+      "url": "https://github.com/CopilotKit/OpenBot/blob/68fe32774a83689a862d5821a6260e72e5f8fdb9/server/src/edition.ts",
+      "source_time": "68fe32774a83689a862d5821a6260e72e5f8fdb9",
+      "accessed_on": "2026-11-12",
+      "scope": "全文静态读取；Personal 能力和 editionHasMemory=false，发行 tag 与 HEAD 都核对；无运行测试。"
+    },
+    {
+      "id": "U175",
+      "title": "CopilotKit/OpenBot 相对 11 月 8 日比较",
+      "url": "https://github.com/CopilotKit/OpenBot/compare/bdb3a3df3e79183fce6ec84ae4fb1f911af44154...68fe32774a83689a862d5821a6260e72e5f8fdb9",
+      "source_time": "185 commits / 300 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。"
+    },
+    {
+      "id": "U176",
+      "title": "CopilotKit/OpenDots 相对 11 月 8 日比较",
+      "url": "https://github.com/CopilotKit/OpenDots/compare/d4214aff10f066911f3253cb3cb870764cd51a9f...46eaf96c9e3802adc972ceafd8f20f99bda34e70",
+      "source_time": "1 commits / 2 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。"
+    },
+    {
+      "id": "U177",
+      "title": "CopilotKit/OpenDuet 相对 11 月 8 日比较",
+      "url": "https://github.com/CopilotKit/OpenDuet/compare/f52288fff5ccdbd3de428d573d9f026fce5ff480...edb912666beb113ebeba65b2884faa4af26da8c6",
+      "source_time": "8 commits / 7 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。"
+    },
+    {
+      "id": "U178",
+      "title": "nano-muse/nanoMuse 相对 11 月 8 日比较",
+      "url": "https://github.com/nano-muse/nanoMuse/compare/80d6124872539a4034bc5a057e7f54f79079b518...c4fda49b802371c464a85e29ab9b5b1697ad09dd",
+      "source_time": "120 commits / 240 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。"
+    },
+    {
+      "id": "U179",
+      "title": "wolfqing/OpenSuperBot 相对 11 月 8 日比较",
+      "url": "https://github.com/wolfqing/OpenSuperBot/compare/5b6cdedc0f98ab542c649165f39b8d733485e750...aa551c404009e7b00c3e9e4d1347023a1b394591",
+      "source_time": "33 commits / 113 files returned",
+      "accessed_on": "2026-11-12",
+      "scope": "元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。"
+    }
+  ],
+  "repository_snapshots": [
+    {
+      "repository": "CopilotKit/openmuse",
+      "canonical_repository": "CopilotKit/openmuse",
+      "baseline_head": "a4944f4c471d3dc93b8bfc060b5da309b5216ab2",
+      "current_head": "a4944f4c471d3dc93b8bfc060b5da309b5216ab2",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-26T15:38:10Z",
+      "subject": "fix: keep surrogate numeric character references from failing the mail list (#183)",
+      "releases": []
+    },
+    {
+      "repository": "CopilotKit/OpenBot",
+      "canonical_repository": "CopilotKit/OpenBot",
+      "baseline_head": "bdb3a3df3e79183fce6ec84ae4fb1f911af44154",
+      "current_head": "68fe32774a83689a862d5821a6260e72e5f8fdb9",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T01:17:42Z",
+      "subject": "Bundle Intelligence 0.16.0-rc.12 in the chart and the desktop (#1506)",
+      "releases": [
+        {
+          "tag": "v1.0.2",
+          "published_at": "2026-11-11T08:45:38Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "container-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/container-images.json"
+            },
+            {
+              "name": "desktop-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/desktop-images.json"
+            },
+            {
+              "name": "latest.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/latest.json"
+            },
+            {
+              "name": "openbot-0.2.0.tgz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/openbot-0.2.0.tgz"
+            },
+            {
+              "name": "OpenBot-darwin-aarch64.app.tar.gz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot-darwin-aarch64.app.tar.gz"
+            },
+            {
+              "name": "OpenBot-darwin-aarch64.app.tar.gz.sig",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot-darwin-aarch64.app.tar.gz.sig"
+            },
+            {
+              "name": "OpenBot-darwin-x86_64.app.tar.gz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot-darwin-x86_64.app.tar.gz"
+            },
+            {
+              "name": "OpenBot-darwin-x86_64.app.tar.gz.sig",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot-darwin-x86_64.app.tar.gz.sig"
+            },
+            {
+              "name": "OpenBot-mac-arm64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot-mac-arm64.dmg"
+            },
+            {
+              "name": "OpenBot-mac-x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot-mac-x64.dmg"
+            },
+            {
+              "name": "openbot-source.tar.gz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/openbot-source.tar.gz"
+            },
+            {
+              "name": "OpenBot-windows-x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot-windows-x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.2_aarch64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot_1.0.2_aarch64.dmg"
+            },
+            {
+              "name": "OpenBot_1.0.2_x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot_1.0.2_x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.2_x64-setup.exe.sig",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot_1.0.2_x64-setup.exe.sig"
+            },
+            {
+              "name": "OpenBot_1.0.2_x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/OpenBot_1.0.2_x64.dmg"
+            },
+            {
+              "name": "release-manifest.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/release-manifest.json"
+            },
+            {
+              "name": "release-provenance.sigstore.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2/release-provenance.sigstore.json"
+            }
+          ],
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v1.0.2"
+        },
+        {
+          "tag": "v1.0.2-rc.3",
+          "published_at": "2026-11-11T07:19:03Z",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "container-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/container-images.json"
+            },
+            {
+              "name": "desktop-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/desktop-images.json"
+            },
+            {
+              "name": "openbot-0.2.0.tgz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/openbot-0.2.0.tgz"
+            },
+            {
+              "name": "OpenBot-mac-arm64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/OpenBot-mac-arm64.dmg"
+            },
+            {
+              "name": "OpenBot-mac-x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/OpenBot-mac-x64.dmg"
+            },
+            {
+              "name": "openbot-source.tar.gz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/openbot-source.tar.gz"
+            },
+            {
+              "name": "OpenBot-windows-x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/OpenBot-windows-x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.2-rc.3_aarch64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/OpenBot_1.0.2-rc.3_aarch64.dmg"
+            },
+            {
+              "name": "OpenBot_1.0.2-rc.3_x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/OpenBot_1.0.2-rc.3_x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.2-rc.3_x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/OpenBot_1.0.2-rc.3_x64.dmg"
+            },
+            {
+              "name": "release-manifest.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/release-manifest.json"
+            },
+            {
+              "name": "release-provenance.sigstore.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.3/release-provenance.sigstore.json"
+            }
+          ],
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v1.0.2-rc.3"
+        },
+        {
+          "tag": "v1.0.2-rc.2",
+          "published_at": "2026-11-11T04:00:17Z",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "container-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/container-images.json"
+            },
+            {
+              "name": "desktop-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/desktop-images.json"
+            },
+            {
+              "name": "openbot-0.2.0.tgz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/openbot-0.2.0.tgz"
+            },
+            {
+              "name": "OpenBot-mac-arm64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/OpenBot-mac-arm64.dmg"
+            },
+            {
+              "name": "OpenBot-mac-x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/OpenBot-mac-x64.dmg"
+            },
+            {
+              "name": "openbot-source.tar.gz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/openbot-source.tar.gz"
+            },
+            {
+              "name": "OpenBot-windows-x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/OpenBot-windows-x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.2-rc.2_aarch64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/OpenBot_1.0.2-rc.2_aarch64.dmg"
+            },
+            {
+              "name": "OpenBot_1.0.2-rc.2_x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/OpenBot_1.0.2-rc.2_x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.2-rc.2_x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/OpenBot_1.0.2-rc.2_x64.dmg"
+            },
+            {
+              "name": "release-manifest.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/release-manifest.json"
+            },
+            {
+              "name": "release-provenance.sigstore.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.2/release-provenance.sigstore.json"
+            }
+          ],
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v1.0.2-rc.2"
+        },
+        {
+          "tag": "v1.0.2-rc.1",
+          "published_at": "2026-11-11T01:01:10Z",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "container-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/container-images.json"
+            },
+            {
+              "name": "desktop-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/desktop-images.json"
+            },
+            {
+              "name": "openbot-0.2.0.tgz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/openbot-0.2.0.tgz"
+            },
+            {
+              "name": "OpenBot-mac-arm64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/OpenBot-mac-arm64.dmg"
+            },
+            {
+              "name": "OpenBot-mac-x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/OpenBot-mac-x64.dmg"
+            },
+            {
+              "name": "openbot-source.tar.gz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/openbot-source.tar.gz"
+            },
+            {
+              "name": "OpenBot-windows-x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/OpenBot-windows-x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.2-rc.1_aarch64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/OpenBot_1.0.2-rc.1_aarch64.dmg"
+            },
+            {
+              "name": "OpenBot_1.0.2-rc.1_x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/OpenBot_1.0.2-rc.1_x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.2-rc.1_x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/OpenBot_1.0.2-rc.1_x64.dmg"
+            },
+            {
+              "name": "release-manifest.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/release-manifest.json"
+            },
+            {
+              "name": "release-provenance.sigstore.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.2-rc.1/release-provenance.sigstore.json"
+            }
+          ],
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v1.0.2-rc.1"
+        },
+        {
+          "tag": "v1.0.1",
+          "published_at": "2026-11-10T18:00:32Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "container-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/container-images.json"
+            },
+            {
+              "name": "desktop-images.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/desktop-images.json"
+            },
+            {
+              "name": "latest.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/latest.json"
+            },
+            {
+              "name": "openbot-0.2.0.tgz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/openbot-0.2.0.tgz"
+            },
+            {
+              "name": "OpenBot-darwin-aarch64.app.tar.gz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot-darwin-aarch64.app.tar.gz"
+            },
+            {
+              "name": "OpenBot-darwin-aarch64.app.tar.gz.sig",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot-darwin-aarch64.app.tar.gz.sig"
+            },
+            {
+              "name": "OpenBot-darwin-x86_64.app.tar.gz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot-darwin-x86_64.app.tar.gz"
+            },
+            {
+              "name": "OpenBot-darwin-x86_64.app.tar.gz.sig",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot-darwin-x86_64.app.tar.gz.sig"
+            },
+            {
+              "name": "OpenBot-mac-arm64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot-mac-arm64.dmg"
+            },
+            {
+              "name": "OpenBot-mac-x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot-mac-x64.dmg"
+            },
+            {
+              "name": "openbot-source.tar.gz",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/openbot-source.tar.gz"
+            },
+            {
+              "name": "OpenBot-windows-x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot-windows-x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.1_aarch64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot_1.0.1_aarch64.dmg"
+            },
+            {
+              "name": "OpenBot_1.0.1_x64-setup.exe",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot_1.0.1_x64-setup.exe"
+            },
+            {
+              "name": "OpenBot_1.0.1_x64-setup.exe.sig",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot_1.0.1_x64-setup.exe.sig"
+            },
+            {
+              "name": "OpenBot_1.0.1_x64.dmg",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/OpenBot_1.0.1_x64.dmg"
+            },
+            {
+              "name": "release-manifest.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/release-manifest.json"
+            },
+            {
+              "name": "release-provenance.sigstore.json",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/download/v1.0.1/release-provenance.sigstore.json"
+            }
+          ],
+          "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v1.0.1"
+        }
+      ]
+    },
+    {
+      "repository": "CopilotKit/OpenDots",
+      "canonical_repository": "CopilotKit/OpenDots",
+      "baseline_head": "d4214aff10f066911f3253cb3cb870764cd51a9f",
+      "current_head": "46eaf96c9e3802adc972ceafd8f20f99bda34e70",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-10T08:10:14Z",
+      "subject": "Lead with OpenDots as a skin in OpenBot, and show it (#186)",
+      "releases": []
+    },
+    {
+      "repository": "wolfqing/OpenGrokBot",
+      "canonical_repository": "wolfqing/OpenSuperBot",
+      "baseline_head": "5b6cdedc0f98ab542c649165f39b8d733485e750",
+      "current_head": "aa551c404009e7b00c3e9e4d1347023a1b394591",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-11T03:45:53Z",
+      "subject": "Merge pull request #29 from wolfqing/feat/attachments-web",
+      "releases": [
+        {
+          "tag": "v0.5.0",
+          "published_at": "2026-11-08T09:14:00Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/wolfqing/OpenSuperBot/releases/tag/v0.5.0"
+        },
+        {
+          "tag": "v0.4.0",
+          "published_at": "2026-10-30T23:17:48Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/wolfqing/OpenSuperBot/releases/tag/v0.4.0"
+        },
+        {
+          "tag": "v0.3.1",
+          "published_at": "2026-10-30T13:28:11Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/wolfqing/OpenSuperBot/releases/tag/v0.3.1"
+        },
+        {
+          "tag": "v0.3.0",
+          "published_at": "2026-10-22T13:27:04Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/wolfqing/OpenSuperBot/releases/tag/v0.3.0"
+        }
+      ]
+    },
+    {
+      "repository": "nano-muse/nanoMuse",
+      "canonical_repository": "nano-muse/nanoMuse",
+      "baseline_head": "80d6124872539a4034bc5a057e7f54f79079b518",
+      "current_head": "c4fda49b802371c464a85e29ab9b5b1697ad09dd",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T01:39:25Z",
+      "subject": "Merge pull request #903 from nano-muse/chore/readme-contributors",
+      "releases": [
+        {
+          "tag": "v1.0.9",
+          "published_at": "2026-10-29T15:07:55Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "dsh-nanomuse-1.0.9.tgz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/dsh-nanomuse-1.0.9.tgz"
+            },
+            {
+              "name": "latest.yml",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/latest.yml"
+            },
+            {
+              "name": "nanoMuse-1.0.9-arm64.apk",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-1.0.9-arm64.apk"
+            },
+            {
+              "name": "nanoMuse-1.0.9-arm64.apk.sha256",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-1.0.9-arm64.apk.sha256"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.9-linux-x64.AppImage",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-Desktop-1.0.9-linux-x64.AppImage"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.9-linux-x64.deb",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-Desktop-1.0.9-linux-x64.deb"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.9-linux-x64.tar.gz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-Desktop-1.0.9-linux-x64.tar.gz"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.9-mac-arm64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-Desktop-1.0.9-mac-arm64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.9-mac-arm64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-Desktop-1.0.9-mac-arm64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.9-mac-x64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-Desktop-1.0.9-mac-x64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.9-mac-x64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-Desktop-1.0.9-mac-x64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.9-win-x64.exe",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-Desktop-1.0.9-win-x64.exe"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.9-win-x64.exe.blockmap",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/nanoMuse-Desktop-1.0.9-win-x64.exe.blockmap"
+            },
+            {
+              "name": "SHA256SUMS-desktop.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/SHA256SUMS-desktop.txt"
+            },
+            {
+              "name": "SHA256SUMS-harness.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.9/SHA256SUMS-harness.txt"
+            }
+          ],
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.9"
+        },
+        {
+          "tag": "v1.0.8",
+          "published_at": "2026-10-29T06:31:54Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "dsh-nanomuse-1.0.8.tgz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/dsh-nanomuse-1.0.8.tgz"
+            },
+            {
+              "name": "latest.yml",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/latest.yml"
+            },
+            {
+              "name": "nanoMuse-1.0.8-arm64.apk",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-1.0.8-arm64.apk"
+            },
+            {
+              "name": "nanoMuse-1.0.8-arm64.apk.sha256",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-1.0.8-arm64.apk.sha256"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.8-linux-x64.AppImage",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-Desktop-1.0.8-linux-x64.AppImage"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.8-linux-x64.deb",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-Desktop-1.0.8-linux-x64.deb"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.8-linux-x64.tar.gz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-Desktop-1.0.8-linux-x64.tar.gz"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.8-mac-arm64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-Desktop-1.0.8-mac-arm64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.8-mac-arm64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-Desktop-1.0.8-mac-arm64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.8-mac-x64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-Desktop-1.0.8-mac-x64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.8-mac-x64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-Desktop-1.0.8-mac-x64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.8-win-x64.exe",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-Desktop-1.0.8-win-x64.exe"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.8-win-x64.exe.blockmap",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/nanoMuse-Desktop-1.0.8-win-x64.exe.blockmap"
+            },
+            {
+              "name": "SHA256SUMS-desktop.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/SHA256SUMS-desktop.txt"
+            },
+            {
+              "name": "SHA256SUMS-harness.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.8/SHA256SUMS-harness.txt"
+            }
+          ],
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.8"
+        },
+        {
+          "tag": "v1.0.7",
+          "published_at": "2026-10-25T05:27:50Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "dsh-nanomuse-1.0.7.tgz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/dsh-nanomuse-1.0.7.tgz"
+            },
+            {
+              "name": "latest.yml",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/latest.yml"
+            },
+            {
+              "name": "nanoMuse-1.0.7-arm64.apk",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-1.0.7-arm64.apk"
+            },
+            {
+              "name": "nanoMuse-1.0.7-arm64.apk.sha256",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-1.0.7-arm64.apk.sha256"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.7-linux-x64.AppImage",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-Desktop-1.0.7-linux-x64.AppImage"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.7-linux-x64.deb",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-Desktop-1.0.7-linux-x64.deb"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.7-linux-x64.tar.gz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-Desktop-1.0.7-linux-x64.tar.gz"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.7-mac-arm64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-Desktop-1.0.7-mac-arm64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.7-mac-arm64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-Desktop-1.0.7-mac-arm64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.7-mac-x64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-Desktop-1.0.7-mac-x64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.7-mac-x64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-Desktop-1.0.7-mac-x64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.7-win-x64.exe",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-Desktop-1.0.7-win-x64.exe"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.7-win-x64.exe.blockmap",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/nanoMuse-Desktop-1.0.7-win-x64.exe.blockmap"
+            },
+            {
+              "name": "SHA256SUMS-desktop.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/SHA256SUMS-desktop.txt"
+            },
+            {
+              "name": "SHA256SUMS-harness.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.7/SHA256SUMS-harness.txt"
+            }
+          ],
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.7"
+        },
+        {
+          "tag": "v1.0.6",
+          "published_at": "2026-10-24T08:02:04Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "dsh-nanomuse-1.0.6.tgz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/dsh-nanomuse-1.0.6.tgz"
+            },
+            {
+              "name": "latest.yml",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/latest.yml"
+            },
+            {
+              "name": "nanoMuse-1.0.6-arm64.apk",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-1.0.6-arm64.apk"
+            },
+            {
+              "name": "nanoMuse-1.0.6-arm64.apk.sha256",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-1.0.6-arm64.apk.sha256"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.6-linux-x64.AppImage",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-Desktop-1.0.6-linux-x64.AppImage"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.6-linux-x64.deb",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-Desktop-1.0.6-linux-x64.deb"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.6-linux-x64.tar.gz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-Desktop-1.0.6-linux-x64.tar.gz"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.6-mac-arm64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-Desktop-1.0.6-mac-arm64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.6-mac-arm64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-Desktop-1.0.6-mac-arm64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.6-mac-x64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-Desktop-1.0.6-mac-x64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.6-mac-x64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-Desktop-1.0.6-mac-x64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.6-win-x64.exe",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-Desktop-1.0.6-win-x64.exe"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.6-win-x64.exe.blockmap",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/nanoMuse-Desktop-1.0.6-win-x64.exe.blockmap"
+            },
+            {
+              "name": "SHA256SUMS-desktop.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/SHA256SUMS-desktop.txt"
+            },
+            {
+              "name": "SHA256SUMS-harness.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.6/SHA256SUMS-harness.txt"
+            }
+          ],
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.6"
+        },
+        {
+          "tag": "v1.0.5",
+          "published_at": "2026-10-13T18:10:38Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "dsh-nanomuse-1.0.5.tgz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/dsh-nanomuse-1.0.5.tgz"
+            },
+            {
+              "name": "latest.yml",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/latest.yml"
+            },
+            {
+              "name": "nanoMuse-1.0.5-arm64.apk",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-1.0.5-arm64.apk"
+            },
+            {
+              "name": "nanoMuse-1.0.5-arm64.apk.sha256",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-1.0.5-arm64.apk.sha256"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.5-linux-x64.AppImage",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-Desktop-1.0.5-linux-x64.AppImage"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.5-linux-x64.deb",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-Desktop-1.0.5-linux-x64.deb"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.5-linux-x64.tar.gz",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-Desktop-1.0.5-linux-x64.tar.gz"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.5-mac-arm64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-Desktop-1.0.5-mac-arm64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.5-mac-arm64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-Desktop-1.0.5-mac-arm64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.5-mac-x64.dmg",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-Desktop-1.0.5-mac-x64.dmg"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.5-mac-x64.zip",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-Desktop-1.0.5-mac-x64.zip"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.5-win-x64.exe",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-Desktop-1.0.5-win-x64.exe"
+            },
+            {
+              "name": "nanoMuse-Desktop-1.0.5-win-x64.exe.blockmap",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/nanoMuse-Desktop-1.0.5-win-x64.exe.blockmap"
+            },
+            {
+              "name": "SHA256SUMS-desktop.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/SHA256SUMS-desktop.txt"
+            },
+            {
+              "name": "SHA256SUMS-harness.txt",
+              "url": "https://github.com/nano-muse/nanoMuse/releases/download/v1.0.5/SHA256SUMS-harness.txt"
+            }
+          ],
+          "url": "https://github.com/nano-muse/nanoMuse/releases/tag/v1.0.5"
+        }
+      ]
+    },
+    {
+      "repository": "chyroc/open-muse",
+      "canonical_repository": "chyroc/open-muse",
+      "baseline_head": "e5860df79f76d41562bbde91484bbf3df075389b",
+      "current_head": "e5860df79f76d41562bbde91484bbf3df075389b",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-30T17:21:15Z",
+      "subject": "fix(windows): end dictation cleanly when stopped or without a microphone",
+      "releases": []
+    },
+    {
+      "repository": "mariagorskikh/open-instinct",
+      "canonical_repository": "mariagorskikh/open-instinct",
+      "baseline_head": "2e5e71b72622d1262e212da7deb0e785bd95facd",
+      "current_head": "2e5e71b72622d1262e212da7deb0e785bd95facd",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-30T05:38:58Z",
+      "subject": "Merge pull request #47 from tb-ship-it/feat/whatsapp-channel",
+      "releases": []
+    },
+    {
+      "repository": "CopilotKit/OpenDuet",
+      "canonical_repository": "CopilotKit/OpenDuet",
+      "baseline_head": "f52288fff5ccdbd3de428d573d9f026fce5ff480",
+      "current_head": "edb912666beb113ebeba65b2884faa4af26da8c6",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-10T17:02:16Z",
+      "subject": "Merge pull request #98 from CopilotKit/jerel/readme-point-to-openbot",
+      "releases": []
+    },
+    {
+      "repository": "Anil-matcha/open-grok-bot",
+      "canonical_repository": "Anil-matcha/open-grok-bot",
+      "baseline_head": "6ea54a988b0b09d09f6abf4ea7edae3e3fd62699",
+      "current_head": "6ea54a988b0b09d09f6abf4ea7edae3e3fd62699",
+      "head_changed": false,
+      "committer_time_utc": "2026-09-20T05:10:01Z",
+      "subject": "Update renamed Muse repository link",
+      "releases": null
+    },
+    {
+      "repository": "diggerhq/openmuse",
+      "canonical_repository": "diggerhq/openmuse",
+      "baseline_head": "2fff664dac90f8d24b67b754912485106660c034",
+      "current_head": "2fff664dac90f8d24b67b754912485106660c034",
+      "head_changed": false,
+      "committer_time_utc": "2026-09-11T01:33:11Z",
+      "subject": "Weave personal ownership into the README",
+      "releases": null
+    },
+    {
+      "repository": "aeiouvcode/open-muse",
+      "canonical_repository": "aeiouvcode/open-muse",
+      "baseline_head": "62f658012569c0cb7692562977b0f7fe17ad396e",
+      "current_head": "62f658012569c0cb7692562977b0f7fe17ad396e",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-01T11:24:27Z",
+      "subject": "gen45 private Workforce reviewed UI patch and focus-safe removal",
+      "releases": null
+    },
+    {
+      "repository": "SiliconLabAI/OpenMuse",
+      "canonical_repository": "SiliconLabAI/OpenMuse",
+      "baseline_head": "f05feb468418c489e17b8fc52df2afae8d3c9b74",
+      "current_head": "f05feb468418c489e17b8fc52df2afae8d3c9b74",
+      "head_changed": false,
+      "committer_time_utc": "2026-09-26T18:28:16Z",
+      "subject": "update license",
+      "releases": null
+    },
+    {
+      "repository": "CelestoAI/celesto",
+      "canonical_repository": "CelestoAI/celesto",
+      "baseline_head": "28599cba3f96d7ef36071833b9874d8e319b277a",
+      "current_head": "28599cba3f96d7ef36071833b9874d8e319b277a",
+      "head_changed": false,
+      "committer_time_utc": "2026-11-08T01:18:17Z",
+      "subject": "fix: align cloud computer clients with backend contracts (#707)",
+      "releases": null
+    },
+    {
+      "repository": "OpenMuseAgent/OpenMuse",
+      "canonical_repository": "OpenMuseAgent/OpenMuse",
+      "baseline_head": "76b71309f49e5055d216cc57e41a68ae660e3190",
+      "current_head": "76b71309f49e5055d216cc57e41a68ae660e3190",
+      "head_changed": false,
+      "committer_time_utc": "2026-09-23T08:38:20Z",
+      "subject": "docs: this repository moved to nano-muse/nanoMuse",
+      "releases": null
+    },
+    {
+      "repository": "Shashankss1205/OpenDots",
+      "canonical_repository": "Shashankss1205/OpenDots",
+      "baseline_head": "de37e7445418ace9862daf33b7ac7014064790de",
+      "current_head": "de37e7445418ace9862daf33b7ac7014064790de",
+      "head_changed": false,
+      "committer_time_utc": "2026-10-15T13:53:41Z",
+      "subject": "Merge pull request #71 from Shashankss1205/fix/jsonl-generation-ids",
+      "releases": null
+    },
+    {
+      "repository": "openclaw/openclaw",
+      "canonical_repository": "openclaw/openclaw",
+      "baseline_head": "6c983bb8022904eb8ede66691341522943d3f61e",
+      "current_head": "7ea57a8cba1aa8ada672ef967956bd87ea316558",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T08:11:58Z",
+      "subject": "fix: Code Mode rejects division after optional property access (#196785)",
+      "releases": [
+        {
+          "tag": "v2026.11.5-beta.2",
+          "published_at": "2026-11-12T00:43:25Z",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "openclaw-2026.11.5-beta.2-dependency-evidence.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.5-beta.2/openclaw-2026.11.5-beta.2-dependency-evidence.zip"
+            },
+            {
+              "name": "openclaw-2026.11.5-beta.2-postpublish-evidence.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.5-beta.2/openclaw-2026.11.5-beta.2-postpublish-evidence.json"
+            },
+            {
+              "name": "openclaw-2026.11.5-beta.2-postpublish-evidence.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.5-beta.2/openclaw-2026.11.5-beta.2-postpublish-evidence.json.sha256"
+            },
+            {
+              "name": "openclaw-2026.11.5-beta.2-release-manifest.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.5-beta.2/openclaw-2026.11.5-beta.2-release-manifest.json"
+            },
+            {
+              "name": "openclaw-2026.11.5-beta.2-release-manifest.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.5-beta.2/openclaw-2026.11.5-beta.2-release-manifest.json.sha256"
+            }
+          ],
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2"
+        },
+        {
+          "tag": "v2026.11.3",
+          "published_at": "2026-11-10T18:53:07Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "latest.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/latest.json"
+            },
+            {
+              "name": "OpenClaw-2026.11.3-arm64.dmg",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/OpenClaw-2026.11.3-arm64.dmg"
+            },
+            {
+              "name": "OpenClaw-2026.11.3-arm64.dSYM.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/OpenClaw-2026.11.3-arm64.dSYM.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.3-arm64.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/OpenClaw-2026.11.3-arm64.zip"
+            },
+            {
+              "name": "openclaw-2026.11.3-dependency-evidence.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/openclaw-2026.11.3-dependency-evidence.zip"
+            },
+            {
+              "name": "openclaw-2026.11.3-postpublish-evidence.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/openclaw-2026.11.3-postpublish-evidence.json"
+            },
+            {
+              "name": "openclaw-2026.11.3-postpublish-evidence.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/openclaw-2026.11.3-postpublish-evidence.json.sha256"
+            },
+            {
+              "name": "openclaw-2026.11.3-release-manifest.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/openclaw-2026.11.3-release-manifest.json"
+            },
+            {
+              "name": "openclaw-2026.11.3-release-manifest.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/openclaw-2026.11.3-release-manifest.json.sha256"
+            },
+            {
+              "name": "openclaw-2026.11.3-stable-main-closeout.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/openclaw-2026.11.3-stable-main-closeout.json"
+            },
+            {
+              "name": "openclaw-2026.11.3-stable-main-closeout.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/openclaw-2026.11.3-stable-main-closeout.json.sha256"
+            },
+            {
+              "name": "OpenClaw-2026.11.3-x86_64.dmg",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/OpenClaw-2026.11.3-x86_64.dmg"
+            },
+            {
+              "name": "OpenClaw-2026.11.3-x86_64.dSYM.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/OpenClaw-2026.11.3-x86_64.dSYM.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.3-x86_64.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/OpenClaw-2026.11.3-x86_64.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.3.dmg",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/OpenClaw-2026.11.3.dmg"
+            },
+            {
+              "name": "OpenClaw-2026.11.3.dSYM.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/OpenClaw-2026.11.3.dSYM.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.3.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.3/OpenClaw-2026.11.3.zip"
+            }
+          ],
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.3"
+        },
+        {
+          "tag": "v2026.9.37",
+          "published_at": "2026-11-10T20:42:54Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "openclaw-2026.9.37-dependency-evidence.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.9.37/openclaw-2026.9.37-dependency-evidence.zip"
+            },
+            {
+              "name": "openclaw-2026.9.37-postpublish-evidence.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.9.37/openclaw-2026.9.37-postpublish-evidence.json"
+            },
+            {
+              "name": "openclaw-2026.9.37-postpublish-evidence.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.9.37/openclaw-2026.9.37-postpublish-evidence.json.sha256"
+            },
+            {
+              "name": "openclaw-2026.9.37-release-manifest.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.9.37/openclaw-2026.9.37-release-manifest.json"
+            },
+            {
+              "name": "openclaw-2026.9.37-release-manifest.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.9.37/openclaw-2026.9.37-release-manifest.json.sha256"
+            }
+          ],
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.37"
+        },
+        {
+          "tag": "v2026.11.2",
+          "published_at": "2026-11-08T19:31:04Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "latest.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/latest.json"
+            },
+            {
+              "name": "OpenClaw-2026.11.2-amd64.AppImage",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2-amd64.AppImage"
+            },
+            {
+              "name": "OpenClaw-2026.11.2-amd64.deb",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2-amd64.deb"
+            },
+            {
+              "name": "OpenClaw-2026.11.2-arm64.dmg",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2-arm64.dmg"
+            },
+            {
+              "name": "OpenClaw-2026.11.2-arm64.dSYM.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2-arm64.dSYM.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.2-arm64.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2-arm64.zip"
+            },
+            {
+              "name": "openclaw-2026.11.2-dependency-evidence.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/openclaw-2026.11.2-dependency-evidence.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.2-linux.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2-linux.json"
+            },
+            {
+              "name": "openclaw-2026.11.2-postpublish-evidence.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/openclaw-2026.11.2-postpublish-evidence.json"
+            },
+            {
+              "name": "openclaw-2026.11.2-postpublish-evidence.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/openclaw-2026.11.2-postpublish-evidence.json.sha256"
+            },
+            {
+              "name": "openclaw-2026.11.2-release-manifest.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/openclaw-2026.11.2-release-manifest.json"
+            },
+            {
+              "name": "openclaw-2026.11.2-release-manifest.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/openclaw-2026.11.2-release-manifest.json.sha256"
+            },
+            {
+              "name": "openclaw-2026.11.2-stable-main-closeout.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/openclaw-2026.11.2-stable-main-closeout.json"
+            },
+            {
+              "name": "openclaw-2026.11.2-stable-main-closeout.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/openclaw-2026.11.2-stable-main-closeout.json.sha256"
+            },
+            {
+              "name": "OpenClaw-2026.11.2-x86_64.dmg",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2-x86_64.dmg"
+            },
+            {
+              "name": "OpenClaw-2026.11.2-x86_64.dSYM.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2-x86_64.dSYM.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.2-x86_64.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2-x86_64.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.2.dmg",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2.dmg"
+            },
+            {
+              "name": "OpenClaw-2026.11.2.dSYM.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2.dSYM.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.2.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/OpenClaw-2026.11.2.zip"
+            },
+            {
+              "name": "SHA256SUMS.linux-app.txt",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.2/SHA256SUMS.linux-app.txt"
+            }
+          ],
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.2"
+        },
+        {
+          "tag": "v2026.11.1",
+          "published_at": "2026-11-05T09:48:37Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "latest.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/latest.json"
+            },
+            {
+              "name": "OpenClaw-2026.11.1-amd64.AppImage",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1-amd64.AppImage"
+            },
+            {
+              "name": "OpenClaw-2026.11.1-amd64.deb",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1-amd64.deb"
+            },
+            {
+              "name": "OpenClaw-2026.11.1-arm64.dmg",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1-arm64.dmg"
+            },
+            {
+              "name": "OpenClaw-2026.11.1-arm64.dSYM.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1-arm64.dSYM.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.1-arm64.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1-arm64.zip"
+            },
+            {
+              "name": "openclaw-2026.11.1-dependency-evidence.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/openclaw-2026.11.1-dependency-evidence.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.1-linux.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1-linux.json"
+            },
+            {
+              "name": "openclaw-2026.11.1-postpublish-evidence.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/openclaw-2026.11.1-postpublish-evidence.json"
+            },
+            {
+              "name": "openclaw-2026.11.1-postpublish-evidence.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/openclaw-2026.11.1-postpublish-evidence.json.sha256"
+            },
+            {
+              "name": "openclaw-2026.11.1-release-manifest.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/openclaw-2026.11.1-release-manifest.json"
+            },
+            {
+              "name": "openclaw-2026.11.1-release-manifest.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/openclaw-2026.11.1-release-manifest.json.sha256"
+            },
+            {
+              "name": "openclaw-2026.11.1-stable-main-closeout.json",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/openclaw-2026.11.1-stable-main-closeout.json"
+            },
+            {
+              "name": "openclaw-2026.11.1-stable-main-closeout.json.sha256",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/openclaw-2026.11.1-stable-main-closeout.json.sha256"
+            },
+            {
+              "name": "OpenClaw-2026.11.1-x86_64.dmg",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1-x86_64.dmg"
+            },
+            {
+              "name": "OpenClaw-2026.11.1-x86_64.dSYM.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1-x86_64.dSYM.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.1-x86_64.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1-x86_64.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.1.dmg",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1.dmg"
+            },
+            {
+              "name": "OpenClaw-2026.11.1.dSYM.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1.dSYM.zip"
+            },
+            {
+              "name": "OpenClaw-2026.11.1.zip",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/OpenClaw-2026.11.1.zip"
+            },
+            {
+              "name": "SHA256SUMS.linux-app.txt",
+              "url": "https://github.com/openclaw/openclaw/releases/download/v2026.11.1/SHA256SUMS.linux-app.txt"
+            }
+          ],
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.1"
+        }
+      ]
+    },
+    {
+      "repository": "NousResearch/hermes-agent",
+      "canonical_repository": "NousResearch/hermes-agent",
+      "baseline_head": "8422e54df36f42371f31b8fbee653e7c801edcbd",
+      "current_head": "8144b2ae3a3435e7e0a5fe052aef3a64f0999136",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T08:12:09Z",
+      "subject": "chore: map contributor email for Xuefeng-Zhu",
+      "releases": [
+        {
+          "tag": "v0.23.1",
+          "published_at": "2026-11-10T01:42:15Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1"
+        },
+        {
+          "tag": "v0.23.0",
+          "published_at": "2026-11-05T21:32:33Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0"
+        },
+        {
+          "tag": "v0.22.7",
+          "published_at": "2026-11-03T21:53:16Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.7"
+        },
+        {
+          "tag": "v0.22.6",
+          "published_at": "2026-11-02T17:18:36Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.6"
+        },
+        {
+          "tag": "v0.22.5",
+          "published_at": "2026-10-23T05:28:45Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5"
+        }
+      ]
+    },
+    {
+      "repository": "nanocoai/nanoclaw",
+      "canonical_repository": "nanocoai/nanoclaw",
+      "baseline_head": "dd19240d9036bab13491953513cb88ec7a2980e6",
+      "current_head": "62dc09057b792291c887df5caac059f57347849b",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-11T18:36:13Z",
+      "subject": "fix(router): stop holding sticky follow-ups behind a pending command gate (#4335)",
+      "releases": [
+        {
+          "tag": "v2026.11.0-beta.1",
+          "published_at": "2026-11-09T12:00:44Z",
+          "prerelease": true,
+          "assets": [],
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.11.0-beta.1"
+        },
+        {
+          "tag": "v2026.10.1-rc.2",
+          "published_at": "2026-10-22T15:48:44Z",
+          "prerelease": true,
+          "assets": [],
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.1-rc.2"
+        },
+        {
+          "tag": "v2026.10.1-rc.1",
+          "published_at": "2026-10-20T16:50:09Z",
+          "prerelease": true,
+          "assets": [],
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.1-rc.1"
+        },
+        {
+          "tag": "v2026.10.0",
+          "published_at": "2026-10-09T11:26:13Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.0"
+        },
+        {
+          "tag": "v2026.10.0-rc.2",
+          "published_at": "2026-10-05T11:05:40Z",
+          "prerelease": true,
+          "assets": [],
+          "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.0-rc.2"
+        }
+      ]
+    },
+    {
+      "repository": "HKUDS/nanobot",
+      "canonical_repository": "HKUDS/nanobot",
+      "baseline_head": "1e2dc02fa228b6c5c62b8fc84de2a2d77dd925f3",
+      "current_head": "0ce10533d364607f1e75bb061577272e4ba80a11",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T08:08:48Z",
+      "subject": "fix(webui): preserve session caches during history revalidation (#6636)",
+      "releases": [
+        {
+          "tag": "v0.4.1",
+          "published_at": "2026-11-06T15:55:22Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "nanobot-tui-darwin-arm64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-darwin-arm64.zip"
+            },
+            {
+              "name": "nanobot-tui-darwin-arm64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-darwin-arm64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-darwin-x64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-darwin-x64.zip"
+            },
+            {
+              "name": "nanobot-tui-darwin-x64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-darwin-x64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-linux-arm64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-linux-arm64.zip"
+            },
+            {
+              "name": "nanobot-tui-linux-arm64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-linux-arm64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-linux-x64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-linux-x64.zip"
+            },
+            {
+              "name": "nanobot-tui-linux-x64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-linux-x64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-win32-x64.exe.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-win32-x64.exe.zip"
+            },
+            {
+              "name": "nanobot-tui-win32-x64.exe.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot-tui-win32-x64.exe.zip.sha256"
+            },
+            {
+              "name": "nanobot_ai-0.4.1-py3-none-macosx_13_0_arm64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot_ai-0.4.1-py3-none-macosx_13_0_arm64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.1-py3-none-macosx_13_0_x86_64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot_ai-0.4.1-py3-none-macosx_13_0_x86_64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.1-py3-none-manylinux_2_17_aarch64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot_ai-0.4.1-py3-none-manylinux_2_17_aarch64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.1-py3-none-manylinux_2_17_x86_64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot_ai-0.4.1-py3-none-manylinux_2_17_x86_64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.1-py3-none-win_amd64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot_ai-0.4.1-py3-none-win_amd64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.1.tar.gz",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/nanobot_ai-0.4.1.tar.gz"
+            },
+            {
+              "name": "release-manifest.json",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.1/release-manifest.json"
+            }
+          ],
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.4.1"
+        },
+        {
+          "tag": "v0.4.0",
+          "published_at": "2026-10-28T10:50:17Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "nanobot-tui-darwin-arm64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-darwin-arm64.zip"
+            },
+            {
+              "name": "nanobot-tui-darwin-arm64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-darwin-arm64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-darwin-x64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-darwin-x64.zip"
+            },
+            {
+              "name": "nanobot-tui-darwin-x64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-darwin-x64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-linux-arm64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-linux-arm64.zip"
+            },
+            {
+              "name": "nanobot-tui-linux-arm64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-linux-arm64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-linux-x64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-linux-x64.zip"
+            },
+            {
+              "name": "nanobot-tui-linux-x64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-linux-x64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-win32-x64.exe.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-win32-x64.exe.zip"
+            },
+            {
+              "name": "nanobot-tui-win32-x64.exe.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot-tui-win32-x64.exe.zip.sha256"
+            },
+            {
+              "name": "nanobot_ai-0.4.0-py3-none-macosx_13_0_arm64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot_ai-0.4.0-py3-none-macosx_13_0_arm64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.0-py3-none-macosx_13_0_x86_64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot_ai-0.4.0-py3-none-macosx_13_0_x86_64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.0-py3-none-manylinux_2_17_aarch64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot_ai-0.4.0-py3-none-manylinux_2_17_aarch64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.0-py3-none-manylinux_2_17_x86_64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot_ai-0.4.0-py3-none-manylinux_2_17_x86_64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.0-py3-none-win_amd64.whl",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot_ai-0.4.0-py3-none-win_amd64.whl"
+            },
+            {
+              "name": "nanobot_ai-0.4.0.tar.gz",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/nanobot_ai-0.4.0.tar.gz"
+            },
+            {
+              "name": "release-manifest.json",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.4.0/release-manifest.json"
+            }
+          ],
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.4.0"
+        },
+        {
+          "tag": "v0.3.5",
+          "published_at": "2026-09-15T19:05:37Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "nanobot-tui-darwin-arm64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-darwin-arm64.zip"
+            },
+            {
+              "name": "nanobot-tui-darwin-arm64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-darwin-arm64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-darwin-x64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-darwin-x64.zip"
+            },
+            {
+              "name": "nanobot-tui-darwin-x64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-darwin-x64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-linux-arm64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-linux-arm64.zip"
+            },
+            {
+              "name": "nanobot-tui-linux-arm64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-linux-arm64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-linux-x64.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-linux-x64.zip"
+            },
+            {
+              "name": "nanobot-tui-linux-x64.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-linux-x64.zip.sha256"
+            },
+            {
+              "name": "nanobot-tui-win32-x64.exe.zip",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-win32-x64.exe.zip"
+            },
+            {
+              "name": "nanobot-tui-win32-x64.exe.zip.sha256",
+              "url": "https://github.com/HKUDS/nanobot/releases/download/v0.3.5/nanobot-tui-win32-x64.exe.zip.sha256"
+            }
+          ],
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.5"
+        },
+        {
+          "tag": "v0.3.0",
+          "published_at": "2026-07-25T08:08:47Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0"
+        },
+        {
+          "tag": "v0.2.2",
+          "published_at": "2026-06-23T01:37:26Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.2.2"
+        }
+      ]
+    },
+    {
+      "repository": "agentscope-ai/QwenPaw",
+      "canonical_repository": "agentscope-ai/QwenPaw",
+      "baseline_head": "2cf28d14a20c9f9c769cce2a9c0568ccf84e459c",
+      "current_head": "dfb10114e6d81b67751188f7d24a49870b7b0959",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T04:06:00Z",
+      "subject": "docs: fix 5 dead external links in docs, e2e README and terraform skill references (#8606)",
+      "releases": [
+        {
+          "tag": "v2.3.0",
+          "published_at": "2026-11-11T12:41:27Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "QwenPaw-Tauri-2.3.0-macOS.zip",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0/QwenPaw-Tauri-2.3.0-macOS.zip"
+            },
+            {
+              "name": "QwenPaw-Tauri-2.3.0-Windows-setup.exe",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0/QwenPaw-Tauri-2.3.0-Windows-setup.exe"
+            }
+          ],
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0"
+        },
+        {
+          "tag": "v2.3.0-beta.4",
+          "published_at": "2026-11-10T14:46:45Z",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "QwenPaw-Tauri-2.3.0b4-macOS.zip",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0-beta.4/QwenPaw-Tauri-2.3.0b4-macOS.zip"
+            },
+            {
+              "name": "QwenPaw-Tauri-2.3.0b4-Windows-setup.exe",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0-beta.4/QwenPaw-Tauri-2.3.0b4-Windows-setup.exe"
+            }
+          ],
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0-beta.4"
+        },
+        {
+          "tag": "v2.3.0-beta.3",
+          "published_at": "2026-11-09T11:44:40Z",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "QwenPaw-Tauri-2.3.0b3-macOS.zip",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0-beta.3/QwenPaw-Tauri-2.3.0b3-macOS.zip"
+            },
+            {
+              "name": "QwenPaw-Tauri-2.3.0b3-Windows-setup.exe",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0-beta.3/QwenPaw-Tauri-2.3.0b3-Windows-setup.exe"
+            }
+          ],
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0-beta.3"
+        },
+        {
+          "tag": "v2.3.0-beta.2",
+          "published_at": "2026-11-02T06:08:12Z",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "QwenPaw-Tauri-2.3.0b2-macOS.zip",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0-beta.2/QwenPaw-Tauri-2.3.0b2-macOS.zip"
+            },
+            {
+              "name": "QwenPaw-Tauri-2.3.0b2-Windows-setup.exe",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0-beta.2/QwenPaw-Tauri-2.3.0b2-Windows-setup.exe"
+            }
+          ],
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0-beta.2"
+        },
+        {
+          "tag": "v2.3.0-beta.1",
+          "published_at": "2026-10-27T12:42:16Z",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "QwenPaw-Tauri-2.3.0b1-macOS.zip",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0-beta.1/QwenPaw-Tauri-2.3.0b1-macOS.zip"
+            },
+            {
+              "name": "QwenPaw-Tauri-2.3.0b1-Windows-setup.exe",
+              "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v2.3.0-beta.1/QwenPaw-Tauri-2.3.0b1-Windows-setup.exe"
+            }
+          ],
+          "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0-beta.1"
+        }
+      ]
+    },
+    {
+      "repository": "letta-ai/letta-code",
+      "canonical_repository": "letta-ai/letta-code",
+      "baseline_head": "64fdf5999441094a6f43f7a38a6d356519fea029",
+      "current_head": "ed08ddcb8e109f5e64076073294a832955ffc23e",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T06:55:46Z",
+      "subject": "feat(models): adopt pi-ai 1.5.2 for OpenCode Muse (#5678)",
+      "releases": [
+        {
+          "tag": "v0.34.56",
+          "published_at": "2026-11-12T06:49:04Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "letta.js",
+              "url": "https://github.com/letta-ai/letta-code/releases/download/v0.34.56/letta.js"
+            }
+          ],
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.56"
+        },
+        {
+          "tag": "v0.34.55",
+          "published_at": "2026-11-12T05:22:39Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "letta.js",
+              "url": "https://github.com/letta-ai/letta-code/releases/download/v0.34.55/letta.js"
+            }
+          ],
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.55"
+        },
+        {
+          "tag": "v0.34.54",
+          "published_at": "2026-11-12T00:56:13Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "letta.js",
+              "url": "https://github.com/letta-ai/letta-code/releases/download/v0.34.54/letta.js"
+            }
+          ],
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.54"
+        },
+        {
+          "tag": "v0.34.53",
+          "published_at": "2026-11-11T22:20:50Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "letta.js",
+              "url": "https://github.com/letta-ai/letta-code/releases/download/v0.34.53/letta.js"
+            }
+          ],
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.53"
+        },
+        {
+          "tag": "v0.34.52",
+          "published_at": "2026-11-11T18:40:57Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "letta.js",
+              "url": "https://github.com/letta-ai/letta-code/releases/download/v0.34.52/letta.js"
+            }
+          ],
+          "url": "https://github.com/letta-ai/letta-code/releases/tag/v0.34.52"
+        }
+      ]
+    },
+    {
+      "repository": "langchain-ai/langgraph",
+      "canonical_repository": "langchain-ai/langgraph",
+      "baseline_head": "e5e37b5d70dbfd93c7006bd90a658c6179a95946",
+      "current_head": "b4cb0f19e3d8984e8a57f85667b8d1bec018f0ab",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T01:43:53Z",
+      "subject": "fix(cli): remove discontinued local debugger image (#8543)",
+      "releases": [
+        {
+          "tag": "sdk==0.4.14",
+          "published_at": "2026-11-06T03:03:34Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.14"
+        },
+        {
+          "tag": "cli==0.4.42",
+          "published_at": "2026-11-06T03:04:13Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.42"
+        },
+        {
+          "tag": "1.2.20",
+          "published_at": "2026-11-05T02:20:53Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.20"
+        },
+        {
+          "tag": "sdk==0.4.13",
+          "published_at": "2026-11-05T02:16:06Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.13"
+        },
+        {
+          "tag": "cli==0.4.41",
+          "published_at": "2026-11-05T02:30:54Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.41"
+        }
+      ]
+    },
+    {
+      "repository": "mem0ai/mem0",
+      "canonical_repository": "mem0ai/mem0",
+      "baseline_head": "f1791daa86d469249c9b002f62644d58a1eb96a0",
+      "current_head": "f1791daa86d469249c9b002f62644d58a1eb96a0",
+      "head_changed": false,
+      "committer_time_utc": "2026-11-06T16:53:06Z",
+      "subject": "fix(security): upgrade @azure/msal-node to 7.x via @azure/identity 4.14.1 (CVE-2026-109461) (#7850)",
+      "releases": [
+        {
+          "tag": "v2.2.1",
+          "published_at": "2026-09-25T17:35:20Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/mem0ai/mem0/releases/tag/v2.2.1"
+        },
+        {
+          "tag": "ts-v3.3.1",
+          "published_at": "2026-09-25T17:36:35Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.1"
+        },
+        {
+          "tag": "v2.2.0",
+          "published_at": "2026-09-23T19:03:48Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/mem0ai/mem0/releases/tag/v2.2.0"
+        },
+        {
+          "tag": "ts-v3.3.0",
+          "published_at": "2026-09-23T19:05:42Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/mem0ai/mem0/releases/tag/ts-v3.3.0"
+        },
+        {
+          "tag": "pi-agent-v0.3.2",
+          "published_at": "2026-09-23T19:12:34Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/mem0ai/mem0/releases/tag/pi-agent-v0.3.2"
+        }
+      ]
+    },
+    {
+      "repository": "browser-use/browser-use",
+      "canonical_repository": "browser-use/browser-use",
+      "baseline_head": "b49a68e4060acb226da8f784194fef301c53a6d7",
+      "current_head": "7fdd63c03fd342aab4fe44507c77c3221ffd43c6",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-11T00:05:55Z",
+      "subject": "One CLI: say browser-use everywhere (#6377)",
+      "releases": [
+        {
+          "tag": "1.0.3rc1",
+          "published_at": "2026-11-12T02:11:28Z",
+          "prerelease": true,
+          "assets": [],
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1"
+        },
+        {
+          "tag": "1.0.2",
+          "published_at": "2026-11-11T04:00:00Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.2"
+        },
+        {
+          "tag": "1.0.2rc1",
+          "published_at": "2026-11-10T22:56:31Z",
+          "prerelease": true,
+          "assets": [],
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.2rc1"
+        },
+        {
+          "tag": "1.0.1",
+          "published_at": "2026-11-10T09:27:28Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.1"
+        },
+        {
+          "tag": "1.0.0",
+          "published_at": "2026-11-10T02:04:48Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "browser-use-1.0-vs-0.x-bench.png",
+              "url": "https://github.com/browser-use/browser-use/releases/download/1.0.0/browser-use-1.0-vs-0.x-bench.png"
+            }
+          ],
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0"
+        }
+      ]
+    },
+    {
+      "repository": "n8n-io/n8n",
+      "canonical_repository": "n8n-io/n8n",
+      "baseline_head": "01bd57cddf11e8173b16adce1b22a8eb94598672",
+      "current_head": "dd098f08ff16a1beb0223777ef37588f98ab4a91",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T07:55:13Z",
+      "subject": "ci: Scope a runtime dependency change to the packages whose resolution changed (#43376)",
+      "releases": [
+        {
+          "tag": "stable",
+          "published_at": "2026-11-11T08:40:18Z",
+          "prerelease": false,
+          "assets": [],
+          "url": "https://github.com/n8n-io/n8n/releases/tag/stable"
+        },
+        {
+          "tag": "n8n@2.47.4",
+          "published_at": "2026-11-11T08:40:16Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "sbom-source.cdx.json",
+              "url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.47.4/sbom-source.cdx.json"
+            },
+            {
+              "name": "THIRD_PARTY_LICENSES.md",
+              "url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.47.4/THIRD_PARTY_LICENSES.md"
+            },
+            {
+              "name": "vex.openvex.json",
+              "url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.47.4/vex.openvex.json"
+            }
+          ],
+          "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.47.4"
+        },
+        {
+          "tag": "n8n@1.123.94",
+          "published_at": "2026-11-11T09:11:40Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "sbom-source.cdx.json",
+              "url": "https://github.com/n8n-io/n8n/releases/download/n8n%401.123.94/sbom-source.cdx.json"
+            },
+            {
+              "name": "vex.openvex.json",
+              "url": "https://github.com/n8n-io/n8n/releases/download/n8n%401.123.94/vex.openvex.json"
+            }
+          ],
+          "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.94"
+        },
+        {
+          "tag": "n8n@2.48.1",
+          "published_at": "2026-11-11T08:40:17Z",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "sbom-source.cdx.json",
+              "url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.48.1/sbom-source.cdx.json"
+            },
+            {
+              "name": "THIRD_PARTY_LICENSES.md",
+              "url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.48.1/THIRD_PARTY_LICENSES.md"
+            },
+            {
+              "name": "vex.openvex.json",
+              "url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.48.1/vex.openvex.json"
+            }
+          ],
+          "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.1"
+        },
+        {
+          "tag": "beta",
+          "published_at": "2026-11-11T08:40:20Z",
+          "prerelease": true,
+          "assets": [],
+          "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
+        }
+      ]
+    },
+    {
+      "repository": "langgenius/dify",
+      "canonical_repository": "langgenius/dify",
+      "baseline_head": "208a2489f05f688afd701ba262a42d08289996a7",
+      "current_head": "cc906be6f80eb9c260455b42b04ceada7415423c",
+      "head_changed": true,
+      "committer_time_utc": "2026-11-12T07:42:47Z",
+      "subject": "feat(web): move Contact support to paid sidebar (#46058)",
+      "releases": [
+        {
+          "tag": "1.19.0",
+          "published_at": "2026-11-04T07:36:16Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "difyctl-v1.19.0-checksums.txt",
+              "url": "https://github.com/langgenius/dify/releases/download/1.19.0/difyctl-v1.19.0-checksums.txt"
+            },
+            {
+              "name": "difyctl-v1.19.0-darwin-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.19.0/difyctl-v1.19.0-darwin-arm64"
+            },
+            {
+              "name": "difyctl-v1.19.0-darwin-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.19.0/difyctl-v1.19.0-darwin-x64"
+            },
+            {
+              "name": "difyctl-v1.19.0-linux-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.19.0/difyctl-v1.19.0-linux-arm64"
+            },
+            {
+              "name": "difyctl-v1.19.0-linux-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.19.0/difyctl-v1.19.0-linux-x64"
+            },
+            {
+              "name": "difyctl-v1.19.0-windows-x64.exe",
+              "url": "https://github.com/langgenius/dify/releases/download/1.19.0/difyctl-v1.19.0-windows-x64.exe"
+            }
+          ],
+          "url": "https://github.com/langgenius/dify/releases/tag/1.19.0"
+        },
+        {
+          "tag": "1.18.0",
+          "published_at": "2026-10-23T06:33:50Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "difyctl-v1.18.0-checksums.txt",
+              "url": "https://github.com/langgenius/dify/releases/download/1.18.0/difyctl-v1.18.0-checksums.txt"
+            },
+            {
+              "name": "difyctl-v1.18.0-darwin-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.18.0/difyctl-v1.18.0-darwin-arm64"
+            },
+            {
+              "name": "difyctl-v1.18.0-darwin-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.18.0/difyctl-v1.18.0-darwin-x64"
+            },
+            {
+              "name": "difyctl-v1.18.0-linux-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.18.0/difyctl-v1.18.0-linux-arm64"
+            },
+            {
+              "name": "difyctl-v1.18.0-linux-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.18.0/difyctl-v1.18.0-linux-x64"
+            },
+            {
+              "name": "difyctl-v1.18.0-windows-x64.exe",
+              "url": "https://github.com/langgenius/dify/releases/download/1.18.0/difyctl-v1.18.0-windows-x64.exe"
+            }
+          ],
+          "url": "https://github.com/langgenius/dify/releases/tag/1.18.0"
+        },
+        {
+          "tag": "1.17.1",
+          "published_at": "2026-09-10T10:04:06Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "difyctl-v1.17.1-checksums.txt",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.1/difyctl-v1.17.1-checksums.txt"
+            },
+            {
+              "name": "difyctl-v1.17.1-darwin-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.1/difyctl-v1.17.1-darwin-arm64"
+            },
+            {
+              "name": "difyctl-v1.17.1-darwin-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.1/difyctl-v1.17.1-darwin-x64"
+            },
+            {
+              "name": "difyctl-v1.17.1-linux-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.1/difyctl-v1.17.1-linux-arm64"
+            },
+            {
+              "name": "difyctl-v1.17.1-linux-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.1/difyctl-v1.17.1-linux-x64"
+            },
+            {
+              "name": "difyctl-v1.17.1-windows-x64.exe",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.1/difyctl-v1.17.1-windows-x64.exe"
+            }
+          ],
+          "url": "https://github.com/langgenius/dify/releases/tag/1.17.1"
+        },
+        {
+          "tag": "1.17.0",
+          "published_at": "2026-08-25T11:28:25Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "difyctl-v0.2.0-alpha-checksums.txt",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.0/difyctl-v0.2.0-alpha-checksums.txt"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-darwin-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.0/difyctl-v0.2.0-alpha-darwin-arm64"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-darwin-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.0/difyctl-v0.2.0-alpha-darwin-x64"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-linux-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.0/difyctl-v0.2.0-alpha-linux-arm64"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-linux-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.0/difyctl-v0.2.0-alpha-linux-x64"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-windows-x64.exe",
+              "url": "https://github.com/langgenius/dify/releases/download/1.17.0/difyctl-v0.2.0-alpha-windows-x64.exe"
+            }
+          ],
+          "url": "https://github.com/langgenius/dify/releases/tag/1.17.0"
+        },
+        {
+          "tag": "1.16.1",
+          "published_at": "2026-07-28T03:43:51Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "difyctl-v0.2.0-alpha-checksums.txt",
+              "url": "https://github.com/langgenius/dify/releases/download/1.16.1/difyctl-v0.2.0-alpha-checksums.txt"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-darwin-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.16.1/difyctl-v0.2.0-alpha-darwin-arm64"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-darwin-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.16.1/difyctl-v0.2.0-alpha-darwin-x64"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-linux-arm64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.16.1/difyctl-v0.2.0-alpha-linux-arm64"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-linux-x64",
+              "url": "https://github.com/langgenius/dify/releases/download/1.16.1/difyctl-v0.2.0-alpha-linux-x64"
+            },
+            {
+              "name": "difyctl-v0.2.0-alpha-windows-x64.exe",
+              "url": "https://github.com/langgenius/dify/releases/download/1.16.1/difyctl-v0.2.0-alpha-windows-x64.exe"
+            }
+          ],
+          "url": "https://github.com/langgenius/dify/releases/tag/1.16.1"
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "id": "G01",
+      "type": "本期新增、旧资料补证",
+      "object": "Grok Bot",
+      "before": "上轮日志只录到 10 月 27 日",
+      "after": "11 月 11 日会议/团队治理；5–6 日条目补证",
+      "impact": "新发布与旧遗漏分开，按套餐/管理员验收",
+      "sources": [
+        "U122"
+      ]
+    },
+    {
+      "id": "G02",
+      "type": "本期发版、结论调整",
+      "object": "OpenBot",
+      "before": "0.3.3 桌面和较新 HEAD，Personal 无独立记忆",
+      "after": "v1.0.2、许可与审批升级；tag/HEAD 都仍禁用 Personal 独立记忆",
+      "impact": "更新部署/升级门槛，长期记忆不外推桌面 Personal",
+      "sources": [
+        "U133",
+        "U134",
+        "U135",
+        "U136",
+        "U169",
+        "U170",
+        "U173",
+        "U174",
+        "U175"
+      ]
+    },
+    {
+      "id": "G03",
+      "type": "本期维护、结论调整",
+      "object": "OpenDots / OpenDuet",
+      "before": "独立模板及上轮恢复补证",
+      "after": "社区 starter，团队入口转 OpenBot skin",
+      "impact": "平台和专用流程分开，保留原恢复证据和实验编号",
+      "sources": [
+        "U137",
+        "U138",
+        "U176",
+        "U177"
+      ]
+    },
+    {
+      "id": "G04",
+      "type": "当前页变化、事件日期未标",
+      "object": "Dots 多电脑",
+      "before": "一台个人电脑",
+      "after": "多台已授权电脑，每线程同时一台",
+      "impact": "同步主表、正文和多线程实验，不猜修改日",
+      "sources": [
+        "U171"
+      ]
+    },
+    {
+      "id": "G05",
+      "type": "本期源码、旧资料补证、复核未变",
+      "object": "OpenSuperBot / nanoMuse",
+      "before": "0.5.0 更名/隔离修正；1.0.9 与 Skills/隐私补证",
+      "after": "分别 33 / 120 commits；原生协议补读、隐私/预算复核",
+      "impact": "不重复计算既有发布，源码/tag/包和运行验证分开",
+      "sources": [
+        "U141",
+        "U142",
+        "U143",
+        "U144",
+        "U145",
+        "U146",
+        "U147",
+        "U148",
+        "U149",
+        "U178",
+        "U179"
+      ]
+    },
+    {
+      "id": "G06",
+      "type": "本期发版、结论调整、复核未变",
+      "object": "构建组件",
+      "before": "0.x Browser Use、Hermes0.23、QwenPaw beta",
+      "after": "Browser Use1.0、Hermes0.23.1、QwenPaw2.3稳定及近期发行",
+      "impact": "迁移默认流量、会话和稳定渠道；上轮已有发行仅复核",
+      "sources": [
+        "U152",
+        "U153",
+        "U154",
+        "U155",
+        "U156",
+        "U157",
+        "U158",
+        "U159",
+        "U160"
+      ]
+    },
+    {
+      "id": "G07",
+      "type": "复核未变、研究分类调整",
+      "object": "Muse / Dots / Duet / Teammates",
+      "before": "语音/Spaces/Terra/企业预览/重置/Teammates 已收录",
+      "after": "当前正文重读，Teammates统一第七主样本",
+      "impact": "不称本期新增，历史模型/资格/计费结论保留",
+      "sources": [
+        "U123",
+        "U124",
+        "U125",
+        "U126",
+        "U127",
+        "U128",
+        "U150",
+        "U151"
+      ]
+    },
+    {
+      "id": "G08",
+      "type": "复核未变、未能核验",
+      "object": "Today / Instinct / 旧样本",
+      "before": "账号/权限/安装仍有缺口",
+      "after": "当前正文和15变/11同仓库快照",
+      "impact": "保留实际资格、费用和端到端缺口，不更改旧许可日期",
+      "sources": [
+        "U129",
+        "U130",
+        "U131",
+        "U132",
+        "U167"
+      ]
+    },
+    {
+      "id": "G09",
+      "type": "流程修正",
+      "object": "仓库与报告基线",
+      "before": "本地未同步，误以11月2日作最近交付",
+      "after": "先取得并校验11月8日远端，累计引用/实验身份和差异重建",
+      "impact": "AGENTS/流程加入先同步再读取基线、提交前再检查远端",
+      "sources": []
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checked_on": "2026-11-12",
+    "checks": {
+      "source_references": {
+        "status": "passed",
+        "definitions": 259,
+        "new_evidence": 58,
+        "scope": "All definitions unique and all used numeric source IDs resolved; external sources checked only to documented reading scope, not every historical URL re-requested."
+      },
+      "markdown_links_anchors_fences_tables": {
+        "status": "passed",
+        "markdown_files": 9,
+        "local_links": 73
+      },
+      "manifest_hashes_counts_and_diff_reconstruction": {
+        "status": "passed",
+        "method": "Applied each complete unified diff to explicit temporary baseline and output paths with system patch; compared exact bytes.",
+        "reconstructed": [
+          {
+            "kind": "report",
+            "sha256": "694f36a5bbcc7328bede8d9145a9b2617a59e3ff1f7bd551f2a6cbda528a6fe2"
+          },
+          {
+            "kind": "sources",
+            "sha256": "09e956852bbad028db97dd8097d5379166307025ced4ce8eaeec0729eee9bcfc"
+          },
+          {
+            "kind": "building_blocks",
+            "sha256": "4e3d69898be595cdf5357551fa9e62bf594bcb8bcef5b46eed62fd350f6617c2"
+          }
+        ]
+      },
+      "repository_snapshots_and_coverage": {
+        "status": "passed",
+        "repositories": 26,
+        "baseline_changed": 15,
+        "baseline_unchanged": 11,
+        "new_candidates": 0
+      },
+      "historical_integrity_and_task_scope": {
+        "status": "passed",
+        "immutable_existing_research_files": 30,
+        "tracked_changes": [
+          "AGENTS.md",
+          "README.md",
+          "docs/research/UPDATE-WORKFLOW.md",
+          "docs/research/gaps/README.md"
+        ]
+      },
+      "whitespace_and_cache_exclusion": {
+        "status": "passed",
+        "git_diff_check": "passed",
+        "cache_ignored": true,
+        "archived_diff_policy": "Only .diff blank-at-eol exempt; unified context markers retained."
+      }
+    },
+    "product_test_claims": "not_performed",
+    "staged_scope": {
+      "status": "passed",
+      "files": [
+        "AGENTS.md",
+        "README.md",
+        "docs/research/UPDATE-WORKFLOW.md",
+        "docs/research/agent-building-blocks-2026-11-12.md",
+        "docs/research/gaps/2026-11-12/01/README.md",
+        "docs/research/gaps/2026-11-12/01/building-blocks.diff",
+        "docs/research/gaps/2026-11-12/01/manifest.json",
+        "docs/research/gaps/2026-11-12/01/report.diff",
+        "docs/research/gaps/2026-11-12/01/sources.diff",
+        "docs/research/gaps/2026-11-12/README.md",
+        "docs/research/gaps/README.md",
+        "docs/research/personal-agent-landscape-2026-11-12.md",
+        "docs/research/sources-2026-11-12.md"
+      ],
+      "file_count": 13,
+      "cache_and_private_account_data": "excluded",
+      "unrelated_changes": "none; exact task paths only"
+    },
+    "git_staged_diff_check": "passed",
+    "historical_source_identities": {
+      "status": "passed",
+      "baseline_count": 201,
+      "preserved_unchanged": 201
+    },
+    "remote_baseline_sync": {
+      "status": "passed",
+      "revision": "09e8b1e0607af28d435c3e427dc8db31726c26ce",
+      "blob_tree_commit_identity": "exact match; fast-forwarded in isolated checkout",
+      "original_git_metadata": "read-only; not updated"
+    }
+  },
+  "initial_local_revision": "5918655bf47c3dd49fe973654c4bac216474cf04",
+  "delivery": {
+    "local_checkout": "/tmp/personal-work-agent-20261112",
+    "original_checkout_git_metadata": "read-only; original working files copied, Git metadata not updated",
+    "push_status": "blocked",
+    "github_connector_write": "HTTP 403 Resource not accessible by integration from create-tree; branch ref not modified",
+    "shell_network": "git fetch returned Could not resolve host github.com",
+    "remote_last_verified": "09e8b1e0607af28d435c3e427dc8db31726c26ce",
+    "local_revision_note": "Not embedded in own commit; actual local commit delivered separately"
+  }
+}

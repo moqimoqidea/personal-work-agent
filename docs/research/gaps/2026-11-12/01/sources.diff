@@ -1,0 +1,344 @@
+--- a/docs/research/sources-2026-11-08.md
++++ b/docs/research/sources-2026-11-12.md
+@@ -1,191 +1,186 @@
+ # Personal Agent 调研来源与核验记录
+ 
+-核验日为 **2026-11-08（Asia/Shanghai）**，本轮记录生成时间为 **2026-11-08T20:30:02+08:00**。对应[主报告](personal-agent-landscape-2026-11-08.md)、[构建附录](agent-building-blocks-2026-11-08.md)与[本轮 gap](gaps/2026-11-08/01/README.md)。
++核验日：**2026-11-12（Asia/Shanghai，查询时）**。对应 [主报告](personal-agent-landscape-2026-11-12.md)、[构建附录](agent-building-blocks-2026-11-12.md)、[本轮 gap](gaps/2026-11-12/01/README.md)。
+ 
+-基线采用 [2026-11-02 来源索引](sources-2026-11-02.md)和报告提交 `5918655bf47c3dd49fe973654c4bac216474cf04`，任务开始 HEAD 与基线相同。新版本独立保存。网页访问日、事件日期、源时区、默认分支与发行标签分别记录。
++基线报告与同步后的工作 HEAD 为 `09e8b1e0607af28d435c3e427dc8db31726c26ce`；任务初始本地 HEAD 为 `5918655bf47c3dd49fe973654c4bac216474cf04`。原 [11 月 8 日来源索引](sources-2026-11-08.md)与更早记录保留原样；S01–S48、R01–R32、U01–U121 的身份与原访问日期不变。
+ 
+-## 1. 本轮范围与读法
++## 1. 本次实际覆盖
+ 
+-- 复核六个核心商业产品的动态官方资料，补充 Muse 三篇 11 月新文、Dots 11 月 4 日周页及工作区安排，新增 Perplexity Teammates 与电商工作流正文。Teammates 作为新的直接商业参照，本文的账号与源码深度分别说明。
+-- 重新取得原 26 个仓库 metadata 与默认分支 HEAD，15 个前进、11 个相同。OpenGrokBot 按相同 repository id 跟到 OpenSuperBot，新旧地址只算一个样本。
+-- 取得八个主应用固定 HEAD README，阅读定位、依赖、交付和验证边界。五组 compare 涵盖四个变化主应用与 Celesto。OpenBot 303、nanoMuse 387 个提交的分页元数据取全，标题按发布、部署、安全与恢复主题抽查，未遍历所有补丁。
+-- OpenBot、nanoMuse、Celesto 的文件清单均达到 300 上限。关键结论追加固定文件读取。Celesto 通过根 Git tree 的相同 OpenMuse 子树 SHA 判断应用目录未变，覆盖范围独立于被截断清单。
+-- 八个主应用及十一个组件共 19 份 Releases 列表各取前五项，说明全文/主题节选/仅元数据分别标记。列表顺序、稳定渠道、预发行和多包标签分别保留。
+-- 取证和文档检查属于公开研究。产品登录、安装包下载与验签、部署、真实模型、支付、隔离探针和端到端实验均未执行。
++- 复核原六个商业产品的相关官方正文，将上轮已有的 Perplexity Teammates 统一列为第七个主样本；不是统一登录体验。
++- 26 个原有仓库均重新查询默认分支最新提交；15 个前进、11 个相同。OpenGrokBot 迁移为 OpenSuperBot，同一仓库 ID，不新增计数。未对所有仓库另查完整 metadata 或许可。
++- 八个直接应用 + 十一个组件的 Releases 各取前五项，共 19 份列表。没有穷尽所有 tag、包管理器、商店或维护线；空列表不等于没有其他下载方式。
++- 按新基线取得五组 compare：OpenBot 185 commits / 300 files（达上限），nanoMuse 120 / 240，OpenDots 1 / 2，OpenDuet 8 / 7，OpenSuperBot 33 / 113。较早从 11 月 2 日出发的六组扩展比较继续作为本轮读取记录，不能当成本期增量；不据此声称逐文件/逐提交审计，亦不由“清单未出现”判断整段路径未变。
++- 重点正文包括 OpenBot/OpenDots/OpenDuet/nanoMuse/OpenSuperBot README 相关章节；Celesto OpenMuse 另取前 160 行。当前预算文本与基线做复核；静态代码包括 OpenSuperBot sandbox 与原生协议、nanoMuse budget。其余旧 README 不刷新日期。
++- **未安装、部署、登录或运行产品；未接账号、发消息、支付、验签、验证许可续期或执行隔离探针。** 文档校验与产品实测分开。
+ 
+-## 2. 本轮新证据 U72–U121
++## 2. 新证据 U122–U179
+ 
+-以下均访问于 **2026-11-08**。记录生成时间与来源发布时间分开。动态页的实际更新时间缺少绝对日期时明确保留缺口，仓库时间采用 UTC。U72–U121 是本轮 50 条新增观察身份，旧编号继续指向原来的历史来源。
++全部访问于 **2026-11-12**。原厂未标绝对修改时间的页面不从相对日期或 URL 推断发布日。每条证据记录实际阅读范围，下载到的长正文不代表全项审核。
+ 
+-| 编号 | 原始来源 | 源站时间 / 固定版本 | 实际读取范围与限制 |
++| 编号 | 原始来源 | 源站时间 / 版本 | 实际读取范围与限制 |
+ | --- | --- | --- | --- |
+-| U72 | [Dots 11 月 2–6 日更新](https://learn.chatgpt.com/docs/whats-new/november-2-6-2026) | 2026-11-04，源站未标时区 | 全文。iOS 通知回复、分享、桌面批注渐进开放、Windows 修复、Terra 与工作区预览。 |
+-| U73 | [Dots 当前产品与资格](https://learn.chatgpt.com/docs/dots) | 动态页，未标修改日 | 模型家族、任务协调、Access 全节。Pro 地区、Business、Enterprise/Edu/Healthcare、UAE residency 排除与 11 月 18 日安排。HTML 后取官方 Markdown。 |
+-| U74 | [Dots 企业管理与计费](https://learn.chatgpt.com/docs/enterprise/dots-admin-guide) | 动态页，未标修改日 | Enterprise preview and billing、角色权限、暂停/删除、委派工作与审计相关章节。预览免费，11 月 18 日起计费，未取得具体报价。 |
+-| U75 | [Dots 电脑与批注](https://learn.chatgpt.com/docs/dots/computers-and-apps) | 动态页，未标修改日 | 全文 Markdown。批注的 Pro/Business Premium/Enterprise 范围、一台个人电脑、在线、会话与插件权限。 |
+-| U76 | [Muse 语音与头像](https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/) | 2026-11-05 发布 / 2026-11-06 更新，未标时区 | 正文。mobile/web/Mac、美国先行；眼镜与 Charm 为 coming soon。 |
+-| U77 | [Muse 专用模型](https://research.meta.ai/blog/specialized-models-for-muse-and-metaai) | 2026-11-06，未标时区 | 正文全文。Wonder 训练出的专用模型，Active Memory/Active Focus。文中成绩为厂商评测，未当作独立产品结果。 |
+-| U78 | [Muse Spaces](https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/) | 2026-11-06，未标时区 | 正文。自然语言构建、持续编辑、后台更新、侧栏/主标签与定时显示；已在 Muse 可用地区提供，共享仍为探索。 |
+-| U79 | [Duet 当前资格与重置](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) | 动态页，仅 Updated this week | 正文。美国 Pro/Max/Ultra 候补、Opus 5.5、M365/电话/接管限制、Personal Finance 排除；Pro 三次、Max/Ultra 一次重置，未用的到 12 月 15 日过期。修改发生的绝对日未标。 |
+-| U80 | [Perplexity Teammates](https://www.perplexity.ai/en-GB/hub/blog/teammates-are-agents-for-complex-ongoing-work) | 官方新闻目录列 2026-11-04，正文未重列绝对日期 | 正文全文。跨轮责任、协调 Computer 与其他 teammate、独立环境及浏览器会话、现有权限、Max web 首发、iOS soon。 |
+-| U81 | [Perplexity 电商工作流](https://www.perplexity.ai/en-GB/hub/blog/computer-for-e-commerce-is-built-for-brand-growth) | 官方新闻目录列 2026-11-03，正文未重列绝对日期 | 正文全文。Shopify、Meta、Klaviyo、品牌 Skills、预算与发布前审核；未推导独立新套餐。 |
+-| U82 | [OpenBot 当前 README](https://github.com/CopilotKit/OpenBot/blob/bdb3a3df3e79183fce6ec84ae4fb1f911af44154/README.md) | 默认分支 / bdb3a3df3e79183fce6ec84ae4fb1f911af44154 | 定位、三种交付方式、Personal Edition、本地 Intelligence、源码模板依赖与安装入口段落。 |
+-| U83 | [OpenBot 本轮比较](https://github.com/CopilotKit/OpenBot/compare/c396a5f68c817043846f1ca3c2b42061ee73ceb5...bdb3a3df3e79183fce6ec84ae4fb1f911af44154) | 2026-11-08T12:10:02Z | 303 个提交元数据与标题，4 页均取得，SHA 去重为 303。文件清单 300 达上限，未审计全部补丁。 |
+-| U84 | [OpenBot v0.3.0](https://github.com/CopilotKit/OpenBot/releases/tag/v0.3.0) | 2026-11-06T00:44:04Z / v0.3.0 | Before upgrading、Personal edition、本地 Intelligence、Recorder 和审批相关段落。长说明按主题节选。 |
+-| U85 | [OpenBot v0.3.3](https://github.com/CopilotKit/OpenBot/releases/tag/v0.3.3) | 2026-11-08T01:51:05Z / v0.3.3 | 升级说明、归档/destructive 审批、goals/routines、桌面与 Personal 段落；assets 全部元数据。另读 0.3.1/0.3.2 的桌面升级段落。 |
+-| U86 | [OpenBot 当前变更说明](https://github.com/CopilotKit/OpenBot/blob/bdb3a3df3e79183fce6ec84ae4fb1f911af44154/CHANGELOG.md) | 默认分支 / bdb3a3df3e79183fce6ec84ae4fb1f911af44154 | Unreleased 1–60 行、0.3.3 的升级/审批/目标段落、0.3.2 桌面迁移、0.3.0 部署和 Recorder 主题段落。共 6988 行，非全文阅读。 |
+-| U87 | [OpenBot 发行版 Personal 文档](https://github.com/CopilotKit/OpenBot/blob/8df6fe1cb4aaeb9c276bc995e4abad1e996d2751/docs/personal-edition.md) | v0.3.3 / 8df6fe1cb4aaeb9c276bc995e4abad1e996d2751 | 全文 225 行。单人共享电脑、全部 Bot 工具授权、本机文件逐次审批、默认搜索及外部依赖。与主分支文档分别记录。 |
+-| U88 | [OpenBot 发行版审批说明](https://github.com/CopilotKit/OpenBot/blob/8df6fe1cb4aaeb9c276bc995e4abad1e996d2751/docs/approvals.md) | v0.3.3 / 8df6fe1cb4aaeb9c276bc995e4abad1e996d2751 | 全文 76 行。规则优先级、强制询问、Bot 工作电脑与宿主文件夹差别、名称/标签识别缺口。 |
+-| U89 | [OpenBot 发行版电脑归属](https://github.com/CopilotKit/OpenBot/blob/8df6fe1cb4aaeb9c276bc995e4abad1e996d2751/server/src/computer/computer-key.ts) | v0.3.3 / 8df6fe1cb4aaeb9c276bc995e4abad1e996d2751 | 全文 186 行静态读取。person/bot seat、共享电脑不能隔离、公开 Isolated Bot 登录共享条件。 |
+-| U90 | [OpenBot Personal 默认授权](https://github.com/CopilotKit/OpenBot/blob/8df6fe1cb4aaeb9c276bc995e4abad1e996d2751/server/src/plugins/personal-defaults.ts) | v0.3.3 / 8df6fe1cb4aaeb9c276bc995e4abad1e996d2751 | 502 行文件的默认 apps、grantEveryTool、everyBotApps、skills 一次授权与 Routines 常开相关段落，非全文审计。 |
+-| U91 | [OpenBot Personal 记忆关闭提交](https://github.com/CopilotKit/OpenBot/commit/0aecb2b98c11c08494765e7230c837c887c7a9c6) | 2026-11-08 06:51:37 UTC | 提交说明、文件清单、edition.ts、memory/runtime.ts、memory/tools.ts、defaults 与 route gate 补丁。晚于 v0.3.3 tag。 |
+-| U92 | [OpenGrokBot 迁移身份](https://api.github.com/repos/wolfqing/OpenGrokBot) | 2026-11-08 访问，迁移绝对日未从该响应确认 | 旧接口返回 Moved Permanently 和 repository id 1331719870；按同一 id 取得 wolfqing/OpenSuperBot/main。保留旧名且只计一个仓库。 |
+-| U93 | [OpenSuperBot v0.5.0](https://github.com/wolfqing/OpenSuperBot/releases/tag/v0.5.0) | 2026-11-08T09:14:00Z / v0.5.0 | 发行说明全文。更名、家目录遮蔽/自检、screen token、Windows、本地电脑、模型连接与录制首阶段。assets 为空。 |
+-| U94 | [OpenSuperBot 当前 README](https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/README.md) | 默认分支 / 5b6cdedc0f98ab542c649165f39b8d733485e750 | 正文。每 Bot 模型、Windows 本地浏览器和目录、命令限制、录制 API 首阶段与迁移定位。竞品价格表未采用。 |
+-| U95 | [OpenSuperBot 当前安全说明](https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/docs/security.md) | 默认分支 / 5b6cdedc0f98ab542c649165f39b8d733485e750 | 全文 118 行。家目录/工具链例外、网络与系统服务可达、Windows 无命令、普通浏览器审批仍为约定。Where secrets live 的仅环境变量说法与新 models 文档有差异。 |
+-| U96 | [OpenSuperBot 当前命令隔离](https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/gateway/src/sandbox.ts) | 默认分支 / 5b6cdedc0f98ab542c649165f39b8d733485e750 | 全文 283 行静态读取。Seatbelt 整家目录 deny、bubblewrap tmpfs home、只读工具链白名单、homeLeaks 与伪文件探针；未运行隔离实验。 |
+-| U97 | [OpenSuperBot 模型说明](https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/docs/models.md) | 默认分支 / 5b6cdedc0f98ab542c649165f39b8d733485e750 | 全文 75 行。连接与协议、持久密钥路径、API key/订阅限制为维护者说法。本研究未逐家重新审阅供应商订阅条款。 |
+-| U98 | [OpenSuperBot 工作流录制](https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/docs/workflows.md) | 默认分支 / 5b6cdedc0f98ab542c649165f39b8d733485e750 | 全文 126 行。start/stop/review/save、敏感字段屏蔽、trace 格式与上限；API-only，重放/调度尚未交付。 |
+-| U99 | [OpenSuperBot 本轮比较](https://github.com/wolfqing/OpenSuperBot/compare/52a52840e0a559baaf4b280b707a5d9df8b21684...5b6cdedc0f98ab542c649165f39b8d733485e750) | 2026-11-08T09:12:52Z | 39 commits / 147 files 元数据和标题，文件清单完整返回。按关键文档与 sandbox 源码核对，未逐补丁审计。 |
+-| U100 | [OpenSuperBot 迁移与常驻](https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/docs/always-on.md) | 默认分支 / 5b6cdedc0f98ab542c649165f39b8d733485e750 | 配置、Coming from OpenGrokBot 与备份段落。旧环境变量、DB、cookie、header、workflow 与 Docker 名兼容，不代表实机迁移已完成。 |
+-| U101 | [nanoMuse 本轮比较](https://github.com/nano-muse/nanoMuse/compare/b3bf3e940078c735fb9916e8c5ce539a87993e25...80d6124872539a4034bc5a057e7f54f79079b518) | 2026-11-07T16:26:38Z | 387 个提交元数据与标题，4 页取得且去重为 387；300 文件到上限。部分分支作者提交日期早于基线，不将区间全部作为本周首创。 |
+-| U102 | [nanoMuse 当前变更说明](https://github.com/nano-muse/nanoMuse/blob/80d6124872539a4034bc5a057e7f54f79079b518/CHANGELOG.md) | 默认分支 / 80d6124872539a4034bc5a057e7f54f79079b518 | Unreleased 的 Cloud/Runtime/Desktop/Android 相关段落。Skills、记忆导入、账号/同步、导出、Windows 恢复与 CJK 估算；2501 行长文未全文审计。 |
+-| U103 | [nanoMuse 当前隐私](https://github.com/nano-muse/nanoMuse/blob/80d6124872539a4034bc5a057e7f54f79079b518/docs/privacy.md) | 默认分支 / 80d6124872539a4034bc5a057e7f54f79079b518 | 全文 44 个长行，并核对与基线 privacy 的 4 行变更。修正 no telemetry 及自带密钥不适用 relay 的笼统句，完整记录/训练条件保留。 |
+-| U104 | [nanoMuse 当前 README](https://github.com/nano-muse/nanoMuse/blob/80d6124872539a4034bc5a057e7f54f79079b518/README.md) | 默认分支 / 80d6124872539a4034bc5a057e7f54f79079b518 | 定位、GPL 声明、平台/发行/依赖与 TestFlight 段落。维护者现称 beta 已过审，未以用户账号核验 build。 |
+-| U105 | [nanoMuse Skills 偏好](https://github.com/nano-muse/nanoMuse/blob/80d6124872539a4034bc5a057e7f54f79079b518/harness/dsh-nanomuse/src/skills-policy.ts) | 默认分支 / 80d6124872539a4034bc5a057e7f54f79079b518 | 全文 111 行静态读取。全局优先、workspace Git root、损坏设置拒绝、串行原子写入；未运行。 |
+-| U106 | [nanoMuse Skills 注册与读取](https://github.com/nano-muse/nanoMuse/blob/80d6124872539a4034bc5a057e7f54f79079b518/harness/dsh-nanomuse/src/skills.ts) | 默认分支 / 80d6124872539a4034bc5a057e7f54f79079b518 | 全文 178 行静态读取。list/get/provider 双重检查与 managed/complete/cold session 边界；未实测即时失效。 |
+-| U107 | [OpenDots 本轮比较](https://github.com/CopilotKit/OpenDots/compare/8091324942b86789ed0da7facbee855145d933b0...d4214aff10f066911f3253cb3cb870764cd51a9f) | 2026-11-03T18:41:41Z | 7 commits / 11 files 的元数据、标题与相关补丁，审批恢复、Page 删除竞态、活动降噪。依赖更新单列。 |
+-| U108 | [OpenDots 审批回执状态](https://github.com/CopilotKit/OpenDots/blob/d4214aff10f066911f3253cb3cb870764cd51a9f/src/server/connection-store.ts) | 默认分支 / d4214aff10f066911f3253cb3cb870764cd51a9f | 全文 235 行。5 分钟 stale claim、claimedAt 旧行兼容、approval ID 绑定与条件 reclaim，未实测外部副作用去重。 |
+-| U109 | [OpenDots 重试确认卡](https://github.com/CopilotKit/OpenDots/blob/d4214aff10f066911f3253cb3cb870764cd51a9f/src/client/ConnectionActionCard.tsx) | 默认分支 / d4214aff10f066911f3253cb3cb870764cd51a9f | 审批恢复、显式 Retry & run 和可能重复动作提示段落，并联读 connection-routes 补丁。未运行 UI。 |
+-| U110 | [Celesto 本轮比较](https://github.com/CelestoAI/celesto/compare/6e3b3901fac8558bb647bf044a732cf7fbe67ee2...28599cba3f96d7ef36071833b9874d8e319b277a) | 2026-11-08T01:18:17Z | 8 commits / 300 files，清单达到上限。另取基线/当前根 Git tree，open-muse 子树 SHA 均为 ca34b1f064eeb9a85a01ef50e3b540620b34f99b，补足应用目录未变的依据。 |
+-| U111 | [Celesto OpenMuse 当前说明](https://github.com/CelestoAI/celesto/blob/28599cba3f96d7ef36071833b9874d8e319b277a/open-muse/README.md) | 默认分支 / 28599cba3f96d7ef36071833b9874d8e319b277a | 定位、QEMU 与镜像条件、结构化操作、unknown outcome、云浏览关闭及公共出站边界段落。 |
+-| U112 | [OpenClaw v2026.11.1](https://github.com/openclaw/openclaw/releases/tag/v2026.11.1) | 2026-11-05T09:48:37Z / v2026.11.1 | Highlights 全部与开头 Changes。稳定发布 11 月 5 日，另有列表中的 beta.1；未覆盖长说明全部修复或运行验收。 |
+-| U113 | [Hermes v0.23.0](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0) | 2026-11-05T21:32:33Z / v0.23.0 | 开头与 Highlights 中 Webapp、单 Gateway session、客户端协作主题。长说明包含 0.22.x 汇总，不全算本期新增。 |
+-| U114 | [nanobot v0.4.1](https://github.com/HKUDS/nanobot/releases/tag/v0.4.1) | 2026-11-06T15:55:22Z / v0.4.1 | Changes、Upgrade notes、Packages 全文。0.3.5 直接升级、迁移保留期、临时 apiType 最后一版、应用内自动安装未启用。 |
+-| U115 | [Letta Code v0.34.45](https://github.com/letta-ai/letta-code/releases/tag/v0.34.45) | 2026-11-08T07:49:26Z / v0.34.45 | 说明全文。退役默认模型改为需密钥/额度、父 vault 更新和 MemFS 路径修复。 |
+-| U116 | [LangGraph 1.2.20](https://github.com/langchain-ai/langgraph/releases/tag/1.2.20) | 2026-11-05T02:20:53Z / 1.2.20 | 说明全文 8 行。interrupt 独立 ID、strict resume 拒绝过期回答；多包标签分别记录。 |
+-| U117 | [Dify 1.19.0](https://github.com/langgenius/dify/releases/tag/1.19.0) | 2026-11-04T07:36:16Z / 1.19.0 | 开头、Nested workflow tracing 与 package v2 相关 Highlights。新 tracing 不回填历史，未读全部升级/变更清单。 |
+-| U118 | [n8n 2.46.6](https://github.com/n8n-io/n8n/releases/tag/n8n%402.46.6) | 2026-11-04T13:10:07Z / n8n@2.46.6 | 发行说明正文全文。npm 跨平台安装修复；2.47.x 预发行及 stable 别名分开记录，未验收 npm 分发。 |
+-| U119 | [OpenBot 当前记忆运行时](https://github.com/CopilotKit/OpenBot/blob/bdb3a3df3e79183fce6ec84ae4fb1f911af44154/server/src/memory/runtime.ts) | 默认分支 / bdb3a3df3e79183fce6ec84ae4fb1f911af44154 | 全文 58 行，并读当前 edition.ts 97 行的 editionHasMemory。Personal 返回空 sweep 且无 loadForActor；当前 personal 文档部分 Memory 行尚未同步。 |
+-| U120 | [OpenBot v0.3.3 审批策略](https://github.com/CopilotKit/OpenBot/blob/8df6fe1cb4aaeb9c276bc995e4abad1e996d2751/server/src/approvals/policy.ts) | v0.3.3 / 8df6fe1cb4aaeb9c276bc995e4abad1e996d2751 | 867 行的 safetyRequirement、action name/metadata 判定与 decideApproval 先 safety 后 rules 路径。未审计每种 tool adapter 或执行 UI。 |
+-| U121 | [Today 国际下载目录](https://today.ai/downloads) | 动态目录，未标日期 | 全文 34 行。Mac/Windows/Linux/iOS/Android，国际 Android 链到 Play Store；中国页原入口超时，末尾斜杠替代和同页原始 HTML 成功，12:21:45 UTC 重取中国目录正文及 APK 链接。未下载安装包。 |
++| U122 | [Grok Bot 更新日志](https://x.ai/changelog/bot) | 2026-11-05、06、11 / v0.79.2–v1.0.1 | 读取本期三条日志的新增和相关修复；会议、共享连接器、学习审批、附件与团队权限；非账号实测。 |
++| U123 | [Muse 语音与头像](https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/) | 2026-11-05；页面另列 11-06 | 公告正文；首批美国、mobile/web/Mac，眼镜和 Charm 仍为后续计划。 |
++| U124 | [Muse Spaces](https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/) | 2026-11-06 | 公告正文；持久交互空间、后台更新、入口布局；分享仍属探索，不等于可协作。 |
++| U125 | [Dots 11 月首周更新](https://learn.chatgpt.com/docs/whats-new/november-2-6-2026) | 2026-11-04 | OpenAI Docs 全文；Terra、iOS 通知/分享、桌面标注、Windows、企业开放。 |
++| U126 | [Dots 当前概览](https://learn.chatgpt.com/docs/dots) | 动态页，未标绝对修改日 | OpenAI Docs 正文；模型家族、资格、委派和计量；不再将主 dot 固定成单一 Astra。 |
++| U127 | [Dots 企业管理](https://learn.chatgpt.com/docs/enterprise/dots-admin-guide) | 动态页；2026-11-18 为未来默认开放/计费节点 | OpenAI Docs 管理、权限与 preview/billing 章节；未登录管理员控制台；不是已到 11 月 18 日。 |
++| U128 | [Duet 当前资格与配额](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) | 动态页 Updated yesterday，绝对修改日未标 | 正文；美国 Pro/Max/Ultra、用户邀请、重置次数及 12 月 15 日到期；保留 M365/接管限制。 |
++| U129 | [Today 中国首页](https://todayai.cn/) | 未标 | 首页正文；注册权益、记忆、Skills 与云电脑；没有登录领取。 |
++| U130 | [Today 下载目录](https://todayai.cn/downloads) | 未标 | 完整目录；Mac/Windows/Linux/iOS/Android，未下载、验签或运行。 |
++| U131 | [Instinct 首页](https://instinct.com/) | 未标 | 首页全文；短信/电话定位；不据此填充价格和完整审批矩阵。 |
++| U132 | [Instinct 隐私](https://instinct.com/privacy-policy) | 2026-08-26 修订 | 读取隐私正文；数据用途、Workspace 数据及断连/删除条件；未发现修订日期改变。 |
++| U133 | [OpenBot HEAD README](https://github.com/CopilotKit/OpenBot/blob/68fe32774a83689a862d5821a6260e72e5f8fdb9/README.md) | 2026-11-12T01:17:42Z | 定位、桌面、AG-UI、部署与许可章节；源码运行和桌面产品分开。 |
++| U134 | [OpenBot v1.0.2](https://github.com/CopilotKit/OpenBot/releases/tag/v1.0.2) | 2026-11-11T08:45:38Z | 发行说明开头、桌面升级/数据与依赖段落、18 项 assets 元数据；长清单未逐项审计，未下载包。 |
++| U135 | [OpenBot 发行版 README](https://github.com/CopilotKit/OpenBot/blob/cca9f609cacf1b53bf5f27fc3ec0465138accb70/README.md) | v1.0.2 → cca9f609cacf1b53bf5f27fc3ec0465138accb70 | 前 150 行，确认本地 Intelligence、免费本地/试用与生产许可分界，不把 HEAD 自动归入发行。 |
++| U136 | [OpenBot HEAD changelog](https://github.com/CopilotKit/OpenBot/blob/68fe32774a83689a862d5821a6260e72e5f8fdb9/CHANGELOG.md) | 2026-11-12T01:17:42Z | 前 310 行；Unreleased 0089/0090 与 rc.12 对比发行版 0088/rc.11；不是完整 changelog 审阅。 |
++| U137 | [OpenDots 当前 README](https://github.com/CopilotKit/OpenDots/blob/46eaf96c9e3802adc972ceafd8f20f99bda34e70/README.md) | 2026-11-10T08:10:14Z | 维护归属、OpenBot skin、Spaces 和依赖章节；社区 starter 与团队维护平台分开。 |
++| U138 | [OpenDuet 当前 README](https://github.com/CopilotKit/OpenDuet/blob/edb912666beb113ebeba65b2884faa4af26da8c6/README.md) | 2026-11-10T17:02:16Z | 维护归属、skin、原有晨报/Tasks 和部署边界；不推断 skin 获得专用功能。 |
++| U139 | [OpenGrokBot 重定向后的规范仓库](https://github.com/wolfqing/OpenSuperBot) | 2026-11-12 查询；更名绝对日未单独确定 | 旧 URL 官方跳转 + GitHub 元数据 ID 1331719870，确认同一仓，不新增候选计数。 |
++| U140 | [OpenSuperBot v0.5.0](https://github.com/wolfqing/OpenSuperBot/releases/tag/v0.5.0) | 2026-11-08T09:14:00Z | 安全/多模型/更名/Windows/Recorder 段落；tag 对象解引用到 5b6cdedc0f98ab542c649165f39b8d733485e750。 |
++| U141 | [OpenSuperBot 安全文](https://github.com/wolfqing/OpenSuperBot/blob/aa551c404009e7b00c3e9e4d1347023a1b394591/docs/security.md) | 2026-11-11T03:45:53Z | 命令隔离、上传与普通浏览器审批约定等章节；维护者的边界说明，未实测。 |
++| U142 | [OpenSuperBot 当前 sandbox](https://github.com/wolfqing/OpenSuperBot/blob/aa551c404009e7b00c3e9e4d1347023a1b394591/gateway/src/sandbox.ts) | aa551c404009e7b00c3e9e4d1347023a1b394591 | 全文 286 行静态读取；home tmpfs、工具链只读回绑、Seatbelt 与 self-check；未执行探针。 |
++| U143 | [OpenSuperBot 发行 sandbox](https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/gateway/src/sandbox.ts) | v0.5.0 | 第 100–160 行交叉确认两平台家目录遮蔽已在 tag；不把 HEAD 专有变化全部纳入。 |
++| U144 | [OpenSuperBot Responses 适配](https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/gateway/src/llm-responses.ts) | v0.5.0 | 全文静态读取；store=false、encrypted reasoning、工具项与不完整输出处理。仅说明该项目实现，不外推官方 API 通用限制。 |
++| U145 | [OpenSuperBot Anthropic 适配](https://github.com/wolfqing/OpenSuperBot/blob/5b6cdedc0f98ab542c649165f39b8d733485e750/gateway/src/llm-anthropic.ts) | v0.5.0 | 前 120 行；原生思考块、专用连接 key、清除环境自定义头；没有验证所有后续转换分支。 |
++| U146 | [nanoMuse HEAD README](https://github.com/nano-muse/nanoMuse/blob/c4fda49b802371c464a85e29ab9b5b1697ad09dd/README.md) | 2026-11-12T01:39:25Z | 定位、完整自托管、demo 与仍标 1.0.9 的发行入口；未部署 demo。 |
++| U147 | [nanoMuse HEAD 隐私](https://github.com/nano-muse/nanoMuse/blob/c4fda49b802371c464a85e29ab9b5b1697ad09dd/docs/privacy.md) | 2026-11-12T01:39:25Z | 全文正文；账号记录/训练、无登录自带 key、showcase 记录、Windows 更新与记住审批的条件；未审相应全部代码。 |
++| U148 | [nanoMuse 当前预算](https://github.com/nano-muse/nanoMuse/blob/c4fda49b802371c464a85e29ab9b5b1697ad09dd/docs/runtime-budgets.md) | 2026-11-12T01:39:25Z | 全文；另读基线 b3bf3e9 的同文件，文本相同；上下文估算不算本期新增，Python 范围不变。 |
++| U149 | [nanoMuse 当前预算代码](https://github.com/nano-muse/nanoMuse/blob/c4fda49b802371c464a85e29ab9b5b1697ad09dd/nanomuse/llm/budget.py) | 2026-11-12T01:39:25Z | 全文静态读取；估算/报告 usage、共享预算、取消与费用排除；不外推实际账单。 |
++| U150 | [Perplexity Teammates 公告](https://www.perplexity.ai/en-GB/hub/blog/teammates-are-agents-for-complex-ongoing-work) | 目录标 2026-11-04，正文未重列日期 | 正文第 0–39 行完整产品内容；持续项目、多同事、独立会话、Max/web、iOS soon；非实测。 |
++| U151 | [Perplexity 新闻目录](https://www.perplexity.ai/en-GB/hub/blog/category/news) | 2026-11-04 与 11-03 条目 | 第一页目录；Teammates 日期取此，另读 e-commerce 公告；未遍历所有分页。 |
++| U152 | [browser-use/browser-use 1.0.0](https://github.com/browser-use/browser-use/releases/tag/1.0.0) | 2026-11-10T02:04:48Z | 发行说明架构、迁移和默认值章节；Python REPL/CDP、默认云浏览器、错误/成本；不采用厂商跑分作独立成绩。 |
++| U153 | [NousResearch/hermes-agent v0.23.0](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0) | 2026-11-05T21:32:33Z | 发行开头及 Highlights；统一 Gateway 会话与 Webapp、组聊；没有逐项审阅长变更。 |
++| U154 | [NousResearch/hermes-agent v0.23.1](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1) | 2026-11-10T01:42:15Z | 开头、插件目录 2→16 MiB 与发布时间；API 发布为 11 月 10 日 UTC，正文 Release Date 为 11 月 9 日。 |
++| U155 | [agentscope-ai/QwenPaw v2.3.0](https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.3.0) | 2026-11-11T12:41:27Z | Added 前部：本地决策模型、OpenUI、后台服务；审查/压缩 opt-in，不将全文下载视为全项审计。 |
++| U156 | [langchain-ai/langgraph 1.2.20](https://github.com/langchain-ai/langgraph/releases/tag/1.2.20) | 2026-11-05T02:20:53Z | 发行说明全文；interrupt ID 与 strict resume；另读 SDK 0.4.14 说明，两包分开。 |
++| U157 | [HKUDS/nanobot v0.4.1](https://github.com/HKUDS/nanobot/releases/tag/v0.4.1) | 2026-11-06T15:55:22Z | 发行说明全文；迁移保留至 0.4.x、临时 apiType 转换最后版本、升级需原安装路径。 |
++| U158 | [openclaw/openclaw v2026.11.3](https://github.com/openclaw/openclaw/releases/tag/v2026.11.3) | 2026-11-10T18:53:07Z | Highlights；私有子任务结果、取消交接与可见失败；同查 beta.2 摘要及旧维护线，非全项代码审计。 |
++| U159 | [letta-ai/letta-code v0.34.56](https://github.com/letta-ai/letta-code/releases/tag/v0.34.56) | 2026-11-12T06:49:04Z | 说明全文；连读 0.34.55 的上下文 fork 和路由；未验证 runtime。 |
++| U160 | [langgenius/dify 1.19.0](https://github.com/langgenius/dify/releases/tag/1.19.0) | 2026-11-04T07:36:16Z | Highlights 与 Upgrade guide；嵌套 tracing、包格式 v2、Compose 最低版本与 tracing 队列；未重审许可。 |
++| U161 | [Town 更新页](https://www.town.com/updates) | 可读最新条目 2026-10-29 | 读取当前日志；未取得基线之后的新条目，不外推整个服务没有变化。 |
++| U162 | [nano-muse/nanoMuse 比较](https://github.com/nano-muse/nanoMuse/compare/b3bf3e940078c735fb9916e8c5ce539a87993e25...c4fda49b802371c464a85e29ab9b5b1697ad09dd) | 507 commits / 300 files returned | 比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。 |
++| U163 | [CopilotKit/OpenBot 比较](https://github.com/CopilotKit/OpenBot/compare/c396a5f68c817043846f1ca3c2b42061ee73ceb5...68fe32774a83689a862d5821a6260e72e5f8fdb9) | 488 commits / 300 files returned | 比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。 |
++| U164 | [CopilotKit/OpenDots 比较](https://github.com/CopilotKit/OpenDots/compare/8091324942b86789ed0da7facbee855145d933b0...46eaf96c9e3802adc972ceafd8f20f99bda34e70) | 8 commits / 13 files returned | 比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。 |
++| U165 | [CopilotKit/OpenDuet 比较](https://github.com/CopilotKit/OpenDuet/compare/f52288fff5ccdbd3de428d573d9f026fce5ff480...edb912666beb113ebeba65b2884faa4af26da8c6) | 8 commits / 7 files returned | 比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。 |
++| U166 | [wolfqing/OpenSuperBot 比较](https://github.com/wolfqing/OpenSuperBot/compare/52a52840e0a559baaf4b280b707a5d9df8b21684...aa551c404009e7b00c3e9e4d1347023a1b394591) | 72 commits / 214 files returned | 比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。 |
++| U167 | [Celesto OpenMuse 当前 README](https://github.com/CelestoAI/celesto/blob/28599cba3f96d7ef36071833b9874d8e319b277a/open-muse/README.md) | 2026-11-08T01:18:17Z | 前 160 行；本地 QEMU 预览、云浏览关闭与重启边界；不由父仓云 SDK 改动推断应用已开放。 |
++| U168 | [CelestoAI/celesto 比较](https://github.com/CelestoAI/celesto/compare/6e3b3901fac8558bb647bf044a732cf7fbe67ee2...28599cba3f96d7ef36071833b9874d8e319b277a) | 8 commits / 300 files returned | 比较元数据与返回文件清单；300 文件是 API 上限；不声称已阅读全量提交补丁。 |
++| U169 | [OpenBot 发行审批说明](https://github.com/CopilotKit/OpenBot/blob/cca9f609cacf1b53bf5f27fc3ec0465138accb70/docs/approvals.md) | v1.0.2 | 前 210 行；动作类别→规则→Auto-review→Extra vigilant、长期授权、管理员收紧和识别缺口。未完整代码审计。 |
++| U170 | [OpenBot 发行桌面安装说明](https://github.com/CopilotKit/OpenBot/blob/cca9f609cacf1b53bf5f27fc3ec0465138accb70/docs/desktop-install.md) | v1.0.2 | 前 110 行；本地 Intelligence、账号/许可、Intel Mac 先决条件、默认遥测；区别通用源码和团队路径。 |
++| U171 | [Dots 当前电脑连接说明](https://learn.chatgpt.com/docs/dots/computers-and-apps) | 动态页；绝对修改日未标 | OpenAI Docs 全文；多台个人电脑、每线程同时一台、在线条件与标注；修正上轮同时一台的概括，不推断具体变更日。 |
++| U172 | [nanoMuse 基线隐私文补读](https://github.com/nano-muse/nanoMuse/blob/b3bf3e940078c735fb9916e8c5ce539a87993e25/docs/privacy.md) | 2026-11-02 已交付基线 SHA | 第 1–45 行与当前正文交叉；showcase 与记住审批已在基线存在，属旧资料补证；未登录自带 key 条件/遥测概括为当前文案修正。 |
++| U173 | [OpenBot 独立记忆 edition 门槛](https://github.com/CopilotKit/OpenBot/blob/cca9f609cacf1b53bf5f27fc3ec0465138accb70/server/src/edition.ts) | cca9f609cacf1b53bf5f27fc3ec0465138accb70 | 全文静态读取；Personal 能力和 editionHasMemory=false，发行 tag 与 HEAD 都核对；无运行测试。 |
++| U174 | [OpenBot 独立记忆 edition 门槛](https://github.com/CopilotKit/OpenBot/blob/68fe32774a83689a862d5821a6260e72e5f8fdb9/server/src/edition.ts) | 68fe32774a83689a862d5821a6260e72e5f8fdb9 | 全文静态读取；Personal 能力和 editionHasMemory=false，发行 tag 与 HEAD 都核对；无运行测试。 |
++| U175 | [CopilotKit/OpenBot 相对 11 月 8 日比较](https://github.com/CopilotKit/OpenBot/compare/bdb3a3df3e79183fce6ec84ae4fb1f911af44154...68fe32774a83689a862d5821a6260e72e5f8fdb9) | 185 commits / 300 files returned | 元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。 |
++| U176 | [CopilotKit/OpenDots 相对 11 月 8 日比较](https://github.com/CopilotKit/OpenDots/compare/d4214aff10f066911f3253cb3cb870764cd51a9f...46eaf96c9e3802adc972ceafd8f20f99bda34e70) | 1 commits / 2 files returned | 元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。 |
++| U177 | [CopilotKit/OpenDuet 相对 11 月 8 日比较](https://github.com/CopilotKit/OpenDuet/compare/f52288fff5ccdbd3de428d573d9f026fce5ff480...edb912666beb113ebeba65b2884faa4af26da8c6) | 8 commits / 7 files returned | 元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。 |
++| U178 | [nano-muse/nanoMuse 相对 11 月 8 日比较](https://github.com/nano-muse/nanoMuse/compare/80d6124872539a4034bc5a057e7f54f79079b518...c4fda49b802371c464a85e29ab9b5b1697ad09dd) | 120 commits / 240 files returned | 元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。 |
++| U179 | [wolfqing/OpenSuperBot 相对 11 月 8 日比较](https://github.com/wolfqing/OpenSuperBot/compare/5b6cdedc0f98ab542c649165f39b8d733485e750...aa551c404009e7b00c3e9e4d1347023a1b394591) | 33 commits / 113 files returned | 元数据与文件清单；OpenBot 为 300 文件上限；不声称逐补丁完整审计。 |
+ 
+-## 3. 历史来源本轮复核与保留范围
++## 3. 旧来源重读和未重读
+ 
+-| 来源 | 11 月 8 日实际读取范围 | 采用方式 |
++| 来源 / 入口 | 本轮范围 | 采用边界 |
+ | --- | --- | --- |
+-| S01、S03–S05 / U30 | Grok Bot 概览、计划矩阵、价格正文与日志首项 | 共享电脑、$30/$100/$200、共享周池继续可读；首项仍 10 月 27 日。概览旧套餐文案由专门计费页补全 |
+-| S10 | Muse 订阅正文 | 当前名称写 Max，$100/3B，Power $20/500M；源站只标相对更新时间，不认定本周改名或调价 |
+-| U02、U31 | 新加坡及日本官方正文的开放/连接器段落 | 新加坡正文已重新取得，上轮导航缺口缩小；地区功能仍渐进，不推导全地区全量 |
+-| S12–S16、U33 | Dots 官方 HTML 后取同站 Markdown，读取任务/记忆、电脑、控制、渠道及管理相关章节 | Terra、工作区资格与本期更新分别用 U72–U75；旧有受限研究、停止、本机与短信边界复核 |
+-| U03、U34 | Duet 安全设计与帮助正文 | 安全文仍是 10 月 23 日，1Password 为 soon；帮助新观察 U79 支持重置日期和次数，资格/共享配额和 Personal Finance 排除按当前正文 |
+-| U35、U36、U05、S21、S22 | Today 中国首页、下载目录、国际能力、条款和支持正文 | 下载目录先失败后通过官方替代及原始 HTML 成功，新增国际目录 U121；支持页仍较窄，条款有账号/渠道差异 |
+-| S23、S24 | Instinct 官网，隐私的训练、Google Workspace、断连与删除段落 | 隐私页仍列 8 月 26 日；价格与完整权限未建立。未逐项重审全部法律文本 |
+-| U37、U22 | Town 日志首项、Lindy 当前主页定位与工作示例 | Town 首项仍 10 月 29 日，Lindy 当前强调 AI employee/持续客户工作；未标绝对改版日 |
+-| U38 | Gemini 10 月 29 日文件编辑正文 | 作为既有成果编辑参照，未确认 Spark 本期新功能 |
+-| U26、U39、U40 | Perplexity 新闻目录第一页、本地模式和 Automations 正文 | 目录确认新文 11 月 3/4 日，本地与 Automations 保持旧事件身份；未遍历新闻目录所有分页 |
+-| U20 | Manus 2.0 的 Automations、本机、Cue 相关段落 | 沿用 9 月 28 日事件，Cue 现行官网无正文，历史身份与当前资格分开 |
+-| 旧 R / U 的源码固定引用 | 仅按本轮清单重读的文件和 compare 声明新访问 | 其他架构、许可、验证记录保持历史身份；同 HEAD 的 README 重读不等于所有能力逐项重测 |
+-| S02、S06–S09、S11、S17/S18、S20、S25/S26、S29–S31、S39、S46–S48 及其他未列项 | 未逐页重读 | 保留原核验日期和历史用途，当前动态结论由本轮已读取的正文支持 |
++| S01 | Grok Bot 官方概览正文 | 平台、账号共享云电脑、每 Bot 独立上下文复核未变，商业矩阵仍优先专门计费页 |
++| S03 / S04 / S10 | 官方计费、X 价格与 Muse 订阅正文 | 月价和周池与上轮相同；网页金额非结账/地区账号测试 |
++| S12 / S13 / S16 | OpenAI Docs 搜索后读取 dots、任务记忆、企业管理正文 | 新模型和资格采用 U125–U127；电脑连接全文另见 U171；未给未重读的 controls/安全页换日期 |
++| U33 | 通过 OpenAI Docs 重读 channels 全文 | 新增通知回复/分享的证据由 U125 定时公告支持；短信仍为美国 Pro beta |
++| U34 / U35 / U36 / S23 / S24 | 当前原厂正文 | 以 U128–U132 表示新观察；保留旧编号历史含义 |
++| S27 / U37 | Town 当前日志正文 | 可读最新仍 10 月 29 日；不外推整个平台没有更新 |
++| S28 / U22 | Lindy 当前首页产品段落 | 持续工作与现有工具入口，未确定改版日，未读所有价格/安全页 |
++| Manus 博客目录 | 第一页目录正文，含 11 月 6 日 data agent 文章线索 | 未读该文正文，不据标题认定新产品能力；U20 继续是历史证据 |
++| Perplexity 旧本地模式 / Automations、Gemini / Spark、Cue、旧安全/许可 | 本轮未逐页重读 | 保留 11 月 2 日或更早访问日；不称为本期发布或当前资格核验 |
+ 
+ ## 4. 固定仓库快照
+ 
+-时间为 GitHub committer 时间 **UTC**。基线列来自 11 月 2 日 manifest。本轮观察日期为 11 月 8 日，逐次请求时间及实际范围见本批 manifest。相同 HEAD 只能约束该仓库快照；外部服务、账号和分发另核。
++以下均为 **committer UTC**，不是抓取时间或作者时间。旧 SHA 取 11 月 8 日远端已交付快照，HEAD 相同不证明外部依赖、安装包或运行结果未变化。旧许可未统一重审。
+ 
+ ### 4.1 八个直接应用样本
+ 
+-| 仓库 | 基线固定 SHA | 本次固定 SHA | committer 时间（UTC） | 实际范围 |
++| 仓库 | 11 月 8 日 SHA | 本次固定 SHA | committer 时间（UTC） | 实际读取范围 |
+ | --- | --- | --- | --- | --- |
+-| CopilotKit/openmuse | [a4944f4c471d](https://github.com/CopilotKit/openmuse/tree/a4944f4c471d3dc93b8bfc060b5da309b5216ab2) | [a4944f4c471d](https://github.com/CopilotKit/openmuse/tree/a4944f4c471d3dc93b8bfc060b5da309b5216ab2) | 2026-10-26 15:38:10 | HEAD 相同；README 定位、依赖与验证边界；Releases 为空 |
+-| CopilotKit/OpenBot | [c396a5f68c81](https://github.com/CopilotKit/OpenBot/tree/c396a5f68c817043846f1ca3c2b42061ee73ceb5) | [bdb3a3df3e79](https://github.com/CopilotKit/OpenBot/tree/bdb3a3df3e79183fce6ec84ae4fb1f911af44154) | 2026-11-08 12:10:02 | 303 提交元数据取全 / 300 文件到上限；README、分版文档、审批/电脑/记忆源码 |
+-| CopilotKit/OpenDots | [8091324942b8](https://github.com/CopilotKit/OpenDots/tree/8091324942b86789ed0da7facbee855145d933b0) | [d4214aff10f0](https://github.com/CopilotKit/OpenDots/tree/d4214aff10f066911f3253cb3cb870764cd51a9f) | 2026-11-03 18:41:41 | 7 提交 / 11 文件；README、审批恢复源码与页面竞态补丁 |
+-| wolfqing/OpenGrokBot → wolfqing/OpenSuperBot | [52a52840e0a5](https://github.com/wolfqing/OpenSuperBot/tree/52a52840e0a559baaf4b280b707a5d9df8b21684) | [5b6cdedc0f98](https://github.com/wolfqing/OpenSuperBot/tree/5b6cdedc0f98ab542c649165f39b8d733485e750) | 2026-11-08 09:12:52 | 迁移为 OpenSuperBot；39 提交 / 147 文件；0.5.0 安全文、sandbox、模型/录制/迁移文档 |
+-| nano-muse/nanoMuse | [b3bf3e940078](https://github.com/nano-muse/nanoMuse/tree/b3bf3e940078c735fb9916e8c5ce539a87993e25) | [80d612487253](https://github.com/nano-muse/nanoMuse/tree/80d6124872539a4034bc5a057e7f54f79079b518) | 2026-11-07 16:26:38 | 387 提交元数据取全 / 300 文件到上限；README、Unreleased、隐私/预算、Skills 代码 |
+-| chyroc/open-muse | [e5860df79f76](https://github.com/chyroc/open-muse/tree/e5860df79f76d41562bbde91484bbf3df075389b) | [e5860df79f76](https://github.com/chyroc/open-muse/tree/e5860df79f76d41562bbde91484bbf3df075389b) | 2026-10-30 17:21:15 | HEAD 相同；README 依赖与平台边界；Releases 为空 |
+-| mariagorskikh/open-instinct | [2e5e71b72622](https://github.com/mariagorskikh/open-instinct/tree/2e5e71b72622d1262e212da7deb0e785bd95facd) | [2e5e71b72622](https://github.com/mariagorskikh/open-instinct/tree/2e5e71b72622d1262e212da7deb0e785bd95facd) | 2026-10-30 05:38:58 | HEAD 相同；README 定位、依赖与 beta 边界；Releases 为空 |
+-| CopilotKit/OpenDuet | [f52288fff5cc](https://github.com/CopilotKit/OpenDuet/tree/f52288fff5ccdbd3de428d573d9f026fce5ff480) | [f52288fff5cc](https://github.com/CopilotKit/OpenDuet/tree/f52288fff5ccdbd3de428d573d9f026fce5ff480) | 2026-10-31 21:26:41 | HEAD 相同；README 晨报/分拣/依赖及部署边界；Releases 为空 |
++| CopilotKit/openmuse | [a4944f4c471d](https://github.com/CopilotKit/openmuse/tree/a4944f4c471d3dc93b8bfc060b5da309b5216ab2) | [a4944f4c471d](https://github.com/CopilotKit/openmuse/tree/a4944f4c471d3dc93b8bfc060b5da309b5216ab2) | 2026-10-26T15:38:10Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| CopilotKit/OpenBot | [bdb3a3df3e79](https://github.com/CopilotKit/OpenBot/tree/bdb3a3df3e79183fce6ec84ae4fb1f911af44154) | [68fe32774a83](https://github.com/CopilotKit/OpenBot/tree/68fe32774a83689a862d5821a6260e72e5f8fdb9) | 2026-11-12T01:17:42Z | 比较 185 commits / 300 files；达 300 上限；文档/代码范围见证据表 |
++| CopilotKit/OpenDots | [d4214aff10f0](https://github.com/CopilotKit/OpenDots/tree/d4214aff10f066911f3253cb3cb870764cd51a9f) | [46eaf96c9e38](https://github.com/CopilotKit/OpenDots/tree/46eaf96c9e3802adc972ceafd8f20f99bda34e70) | 2026-11-10T08:10:14Z | 比较 1 commits / 2 files；文档/代码范围见证据表 |
++| wolfqing/OpenSuperBot | [5b6cdedc0f98](https://github.com/wolfqing/OpenSuperBot/tree/5b6cdedc0f98ab542c649165f39b8d733485e750) | [aa551c404009](https://github.com/wolfqing/OpenSuperBot/tree/aa551c404009e7b00c3e9e4d1347023a1b394591) | 2026-11-11T03:45:53Z | 比较 33 commits / 113 files；文档/代码范围见证据表 |
++| nano-muse/nanoMuse | [80d612487253](https://github.com/nano-muse/nanoMuse/tree/80d6124872539a4034bc5a057e7f54f79079b518) | [c4fda49b8023](https://github.com/nano-muse/nanoMuse/tree/c4fda49b802371c464a85e29ab9b5b1697ad09dd) | 2026-11-12T01:39:25Z | 比较 120 commits / 240 files；文档/代码范围见证据表 |
++| chyroc/open-muse | [e5860df79f76](https://github.com/chyroc/open-muse/tree/e5860df79f76d41562bbde91484bbf3df075389b) | [e5860df79f76](https://github.com/chyroc/open-muse/tree/e5860df79f76d41562bbde91484bbf3df075389b) | 2026-10-30T17:21:15Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| mariagorskikh/open-instinct | [2e5e71b72622](https://github.com/mariagorskikh/open-instinct/tree/2e5e71b72622d1262e212da7deb0e785bd95facd) | [2e5e71b72622](https://github.com/mariagorskikh/open-instinct/tree/2e5e71b72622d1262e212da7deb0e785bd95facd) | 2026-10-30T05:38:58Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| CopilotKit/OpenDuet | [f52288fff5cc](https://github.com/CopilotKit/OpenDuet/tree/f52288fff5ccdbd3de428d573d9f026fce5ff480) | [edb912666beb](https://github.com/CopilotKit/OpenDuet/tree/edb912666beb113ebeba65b2884faa4af26da8c6) | 2026-11-10T17:02:16Z | 比较 8 commits / 7 files；文档/代码范围见证据表 |
+ 
+-### 4.2 补充应用、原型和历史迁移入口
++### 4.2 补充应用与迁移入口
+ 
+-| 仓库 | 基线固定 SHA | 本次固定 SHA | committer 时间（UTC） | 实际范围 |
++| 仓库 | 11 月 8 日 SHA | 本次固定 SHA | committer 时间（UTC） | 实际读取范围 |
+ | --- | --- | --- | --- | --- |
+-| Anil-matcha/open-grok-bot | [6ea54a988b0b](https://github.com/Anil-matcha/open-grok-bot/tree/6ea54a988b0b09d09f6abf4ea7edae3e3fd62699) | [6ea54a988b0b](https://github.com/Anil-matcha/open-grok-bot/tree/6ea54a988b0b09d09f6abf4ea7edae3e3fd62699) | 2026-09-20 05:10:01 | HEAD 相同；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| diggerhq/openmuse | [2fff664dac90](https://github.com/diggerhq/openmuse/tree/2fff664dac90f8d24b67b754912485106660c034) | [2fff664dac90](https://github.com/diggerhq/openmuse/tree/2fff664dac90f8d24b67b754912485106660c034) | 2026-09-11 01:33:11 | HEAD 相同；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| aeiouvcode/open-muse | [62f658012569](https://github.com/aeiouvcode/open-muse/tree/62f658012569c0cb7692562977b0f7fe17ad396e) | [62f658012569](https://github.com/aeiouvcode/open-muse/tree/62f658012569c0cb7692562977b0f7fe17ad396e) | 2026-10-01 11:24:27 | HEAD 相同；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| SiliconLabAI/OpenMuse | [f05feb468418](https://github.com/SiliconLabAI/OpenMuse/tree/f05feb468418c489e17b8fc52df2afae8d3c9b74) | [f05feb468418](https://github.com/SiliconLabAI/OpenMuse/tree/f05feb468418c489e17b8fc52df2afae8d3c9b74) | 2026-09-26 18:28:16 | HEAD 相同；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| CelestoAI/celesto | [6e3b3901fac8](https://github.com/CelestoAI/celesto/tree/6e3b3901fac8558bb647bf044a732cf7fbe67ee2) | [28599cba3f96](https://github.com/CelestoAI/celesto/tree/28599cba3f96d7ef36071833b9874d8e319b277a) | 2026-11-08 01:18:17 | 8 提交 / 300 文件到上限；根 tree 的 open-muse 子树 SHA 相同；重读应用 README |
+-| OpenMuseAgent/OpenMuse | [76b71309f49e](https://github.com/OpenMuseAgent/OpenMuse/tree/76b71309f49e5055d216cc57e41a68ae660e3190) | [76b71309f49e](https://github.com/OpenMuseAgent/OpenMuse/tree/76b71309f49e5055d216cc57e41a68ae660e3190) | 2026-09-23 08:38:20 | HEAD 相同；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| Shashankss1205/OpenDots | [de37e7445418](https://github.com/Shashankss1205/OpenDots/tree/de37e7445418ace9862daf33b7ac7014064790de) | [de37e7445418](https://github.com/Shashankss1205/OpenDots/tree/de37e7445418ace9862daf33b7ac7014064790de) | 2026-10-15 13:53:41 | HEAD 相同；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| Anil-matcha/open-grok-bot | [6ea54a988b0b](https://github.com/Anil-matcha/open-grok-bot/tree/6ea54a988b0b09d09f6abf4ea7edae3e3fd62699) | [6ea54a988b0b](https://github.com/Anil-matcha/open-grok-bot/tree/6ea54a988b0b09d09f6abf4ea7edae3e3fd62699) | 2026-09-20T05:10:01Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| diggerhq/openmuse | [2fff664dac90](https://github.com/diggerhq/openmuse/tree/2fff664dac90f8d24b67b754912485106660c034) | [2fff664dac90](https://github.com/diggerhq/openmuse/tree/2fff664dac90f8d24b67b754912485106660c034) | 2026-09-11T01:33:11Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| aeiouvcode/open-muse | [62f658012569](https://github.com/aeiouvcode/open-muse/tree/62f658012569c0cb7692562977b0f7fe17ad396e) | [62f658012569](https://github.com/aeiouvcode/open-muse/tree/62f658012569c0cb7692562977b0f7fe17ad396e) | 2026-10-01T11:24:27Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| SiliconLabAI/OpenMuse | [f05feb468418](https://github.com/SiliconLabAI/OpenMuse/tree/f05feb468418c489e17b8fc52df2afae8d3c9b74) | [f05feb468418](https://github.com/SiliconLabAI/OpenMuse/tree/f05feb468418c489e17b8fc52df2afae8d3c9b74) | 2026-09-26T18:28:16Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| CelestoAI/celesto | [28599cba3f96](https://github.com/CelestoAI/celesto/tree/28599cba3f96d7ef36071833b9874d8e319b277a) | [28599cba3f96](https://github.com/CelestoAI/celesto/tree/28599cba3f96d7ef36071833b9874d8e319b277a) | 2026-11-08T01:18:17Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| OpenMuseAgent/OpenMuse | [76b71309f49e](https://github.com/OpenMuseAgent/OpenMuse/tree/76b71309f49e5055d216cc57e41a68ae660e3190) | [76b71309f49e](https://github.com/OpenMuseAgent/OpenMuse/tree/76b71309f49e5055d216cc57e41a68ae660e3190) | 2026-09-23T08:38:20Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| Shashankss1205/OpenDots | [de37e7445418](https://github.com/Shashankss1205/OpenDots/tree/de37e7445418ace9862daf33b7ac7014064790de) | [de37e7445418](https://github.com/Shashankss1205/OpenDots/tree/de37e7445418ace9862daf33b7ac7014064790de) | 2026-10-15T13:53:41Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
+ 
+ ### 4.3 十一个构建组件
+ 
+-| 仓库 | 基线固定 SHA | 本次固定 SHA | committer 时间（UTC） | 实际范围 |
++| 仓库 | 11 月 8 日 SHA | 本次固定 SHA | committer 时间（UTC） | 实际读取范围 |
+ | --- | --- | --- | --- | --- |
+-| openclaw/openclaw | [2777468d26e5](https://github.com/openclaw/openclaw/tree/2777468d26e5f21455b67591a045a40c770aee13) | [6c983bb80229](https://github.com/openclaw/openclaw/tree/6c983bb8022904eb8ede66691341522943d3f61e) | 2026-11-08 12:10:51 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| NousResearch/hermes-agent | [b425edd28617](https://github.com/NousResearch/hermes-agent/tree/b425edd286179eaa2419ca13f9cbf6706845e8ab) | [8422e54df36f](https://github.com/NousResearch/hermes-agent/tree/8422e54df36f42371f31b8fbee653e7c801edcbd) | 2026-11-08 12:05:12 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| nanocoai/nanoclaw | [acc2b1c8f52a](https://github.com/nanocoai/nanoclaw/tree/acc2b1c8f52a954368cfaf04b61c32f9a1efc280) | [dd19240d9036](https://github.com/nanocoai/nanoclaw/tree/dd19240d9036bab13491953513cb88ec7a2980e6) | 2026-11-08 10:55:12 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| HKUDS/nanobot | [8b37976d36c2](https://github.com/HKUDS/nanobot/tree/8b37976d36c2812c62b464321e729a88872b60f9) | [1e2dc02fa228](https://github.com/HKUDS/nanobot/tree/1e2dc02fa228b6c5c62b8fc84de2a2d77dd925f3) | 2026-11-08 08:32:20 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| agentscope-ai/QwenPaw | [d09c34f6c4be](https://github.com/agentscope-ai/QwenPaw/tree/d09c34f6c4be3939931c90f2623ae3cbc93c6cc4) | [2cf28d14a20c](https://github.com/agentscope-ai/QwenPaw/tree/2cf28d14a20c9f9c769cce2a9c0568ccf84e459c) | 2026-11-06 10:38:59 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| letta-ai/letta-code | [6155d9f562f1](https://github.com/letta-ai/letta-code/tree/6155d9f562f13eb1f352240a7fd07a87933ac76a) | [64fdf5999441](https://github.com/letta-ai/letta-code/tree/64fdf5999441094a6f43f7a38a6d356519fea029) | 2026-11-08 07:40:05 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| langchain-ai/langgraph | [ee3c043bddcc](https://github.com/langchain-ai/langgraph/tree/ee3c043bddcc514012885167dd5916b15d6e4731) | [e5e37b5d70db](https://github.com/langchain-ai/langgraph/tree/e5e37b5d70dbfd93c7006bd90a658c6179a95946) | 2026-11-06 16:08:12 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| mem0ai/mem0 | [753496cf1435](https://github.com/mem0ai/mem0/tree/753496cf1435d76c3a711f3af51303f7fdcb6420) | [f1791daa86d4](https://github.com/mem0ai/mem0/tree/f1791daa86d469249c9b002f62644d58a1eb96a0) | 2026-11-06 16:53:06 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| browser-use/browser-use | [b49a68e4060a](https://github.com/browser-use/browser-use/tree/b49a68e4060acb226da8f784194fef301c53a6d7) | [b49a68e4060a](https://github.com/browser-use/browser-use/tree/b49a68e4060acb226da8f784194fef301c53a6d7) | 2026-10-30 04:28:48 | HEAD 相同；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| n8n-io/n8n | [db28d8b94db4](https://github.com/n8n-io/n8n/tree/db28d8b94db48cc0b2c137fb94a76c592b8a3047) | [01bd57cddf11](https://github.com/n8n-io/n8n/tree/01bd57cddf11e8173b16adce1b22a8eb94598672) | 2026-11-08 02:29:38 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
+-| langgenius/dify | [8c5e2efb9966](https://github.com/langgenius/dify/tree/8c5e2efb996617da715677cd6d621b5ba15c250e) | [208a2489f05f](https://github.com/langgenius/dify/tree/208a2489f05f688afd701ba262a42d08289996a7) | 2026-11-08 09:39:21 | HEAD 前进；metadata、HEAD、Releases 前五项；能力/许可沿用历史 |
++| openclaw/openclaw | [6c983bb80229](https://github.com/openclaw/openclaw/tree/6c983bb8022904eb8ede66691341522943d3f61e) | [7ea57a8cba1a](https://github.com/openclaw/openclaw/tree/7ea57a8cba1aa8ada672ef967956bd87ea316558) | 2026-11-12T08:11:58Z | HEAD/发行监测；不代表全功能/许可复验 |
++| NousResearch/hermes-agent | [8422e54df36f](https://github.com/NousResearch/hermes-agent/tree/8422e54df36f42371f31b8fbee653e7c801edcbd) | [8144b2ae3a34](https://github.com/NousResearch/hermes-agent/tree/8144b2ae3a3435e7e0a5fe052aef3a64f0999136) | 2026-11-12T08:12:09Z | HEAD/发行监测；不代表全功能/许可复验 |
++| nanocoai/nanoclaw | [dd19240d9036](https://github.com/nanocoai/nanoclaw/tree/dd19240d9036bab13491953513cb88ec7a2980e6) | [62dc09057b79](https://github.com/nanocoai/nanoclaw/tree/62dc09057b792291c887df5caac059f57347849b) | 2026-11-11T18:36:13Z | HEAD/发行监测；不代表全功能/许可复验 |
++| HKUDS/nanobot | [1e2dc02fa228](https://github.com/HKUDS/nanobot/tree/1e2dc02fa228b6c5c62b8fc84de2a2d77dd925f3) | [0ce10533d364](https://github.com/HKUDS/nanobot/tree/0ce10533d364607f1e75bb061577272e4ba80a11) | 2026-11-12T08:08:48Z | HEAD/发行监测；不代表全功能/许可复验 |
++| agentscope-ai/QwenPaw | [2cf28d14a20c](https://github.com/agentscope-ai/QwenPaw/tree/2cf28d14a20c9f9c769cce2a9c0568ccf84e459c) | [dfb10114e6d8](https://github.com/agentscope-ai/QwenPaw/tree/dfb10114e6d81b67751188f7d24a49870b7b0959) | 2026-11-12T04:06:00Z | HEAD/发行监测；不代表全功能/许可复验 |
++| letta-ai/letta-code | [64fdf5999441](https://github.com/letta-ai/letta-code/tree/64fdf5999441094a6f43f7a38a6d356519fea029) | [ed08ddcb8e10](https://github.com/letta-ai/letta-code/tree/ed08ddcb8e109f5e64076073294a832955ffc23e) | 2026-11-12T06:55:46Z | HEAD/发行监测；不代表全功能/许可复验 |
++| langchain-ai/langgraph | [e5e37b5d70db](https://github.com/langchain-ai/langgraph/tree/e5e37b5d70dbfd93c7006bd90a658c6179a95946) | [b4cb0f19e3d8](https://github.com/langchain-ai/langgraph/tree/b4cb0f19e3d8984e8a57f85667b8d1bec018f0ab) | 2026-11-12T01:43:53Z | HEAD/发行监测；不代表全功能/许可复验 |
++| mem0ai/mem0 | [f1791daa86d4](https://github.com/mem0ai/mem0/tree/f1791daa86d469249c9b002f62644d58a1eb96a0) | [f1791daa86d4](https://github.com/mem0ai/mem0/tree/f1791daa86d469249c9b002f62644d58a1eb96a0) | 2026-11-06T16:53:06Z | HEAD 相同；本轮文档重读按证据表，旧功能/许可不重审 |
++| browser-use/browser-use | [b49a68e4060a](https://github.com/browser-use/browser-use/tree/b49a68e4060acb226da8f784194fef301c53a6d7) | [7fdd63c03fd3](https://github.com/browser-use/browser-use/tree/7fdd63c03fd342aab4fe44507c77c3221ffd43c6) | 2026-11-11T00:05:55Z | HEAD/发行监测；不代表全功能/许可复验 |
++| n8n-io/n8n | [01bd57cddf11](https://github.com/n8n-io/n8n/tree/01bd57cddf11e8173b16adce1b22a8eb94598672) | [dd098f08ff16](https://github.com/n8n-io/n8n/tree/dd098f08ff16a1beb0223777ef37588f98ab4a91) | 2026-11-12T07:55:13Z | HEAD/发行监测；不代表全功能/许可复验 |
++| langgenius/dify | [208a2489f05f](https://github.com/langgenius/dify/tree/208a2489f05f688afd701ba262a42d08289996a7) | [cc906be6f80e](https://github.com/langgenius/dify/tree/cc906be6f80eb9c260455b42b04ceada7415423c) | 2026-11-12T07:42:47Z | HEAD/发行监测；不代表全功能/许可复验 |
+ 
+-## 5. 发行标签、资产目录与默认分支
++## 5. 发行渠道与分发边界
+ 
+-下面列出实际取得的前五项。完整 published_at、prerelease 和资产名称保存于 manifest。发行目录没有替代下载、验签或运行验证。
++首五项按 API 返回顺序，不是全渠道语义版本总排序。表内时间均为 UTC，未下载或验证 assets。
+ 
+-| 项目 | API 前五项（pre 表示预发行） | 采用边界 |
++| 仓库 | 首五项快照：tag / 发布时间 / prerelease | 本轮边界 |
+ | --- | --- | --- |
+-| CopilotKit/openmuse | 空 | 列表为空，部署与其他分发渠道按 README 另核 |
+-| CopilotKit/OpenBot | v0.3.3、v0.3.2、v0.3.1、v0.3.0、v0.2.0 | 0.3.3 tag 为 8df6fe1cb4aaeb9c276bc995e4abad1e996d2751，17 assets；Mac/Windows、更新/签名/manifest 元数据；尚未下载验签。资产名仍有 openbot-0.2.0.tgz，其内容身份需核对 manifest |
+-| CopilotKit/OpenDots | 空 | 列表为空；新审批恢复是默认分支能力 |
+-| wolfqing/OpenSuperBot | v0.5.0、v0.4.0、v0.3.1、v0.3.0 | 0.5.0 tag 与 HEAD 相同，5b6cdedc0f98ab542c649165f39b8d733485e750；assets 为空 |
+-| nano-muse/nanoMuse | v1.0.9、v1.0.8、v1.0.7、v1.0.6、v1.0.5 | 首项仍 1.0.9，tag b47448bebc6dd592b2502fcdea3ba0ad8240373f；15 assets，新主分支维护不自动进入旧包 |
+-| chyroc/open-muse | 空 | 列表为空；未核验 TestFlight 或其他安装渠道 |
+-| mariagorskikh/open-instinct | 空 | 列表为空；不影响源码运行形态判断 |
+-| CopilotKit/OpenDuet | 空 | 列表为空；README 仍以源码 Quick start 为支持入口 |
+-| openclaw/openclaw | v2026.11.1、v2026.11.5-beta.1 (pre)、v2026.10.10、v2026.10.10-beta.5 (pre)、v2026.10.9 | v2026.11.1 为 11 月 5 日稳定发行；列表另含 v2026.11.5-beta.1 与 v2026.10.10，发布时间和版本数字分别保留 |
+-| NousResearch/hermes-agent | v0.23.0、v0.22.7、v0.22.6、v0.22.5、v0.22.4 | v0.23.0 为 11 月 5 日稳定发行；说明汇总 0.22.1–0.22.7，未把全部内容计为本周新增 |
+-| nanocoai/nanoclaw | v2026.10.1-rc.2 (pre)、v2026.10.1-rc.1 (pre)、v2026.10.0、v2026.10.0-rc.2 (pre)、v2026.10.0-rc.1 (pre) | 首项仍 rc.2；列表含 v2026.10.0 稳定标签，主分支前进 |
+-| HKUDS/nanobot | v0.4.1、v0.4.0、v0.3.5、v0.3.0、v0.2.2 | v0.4.1，11 月 6 日 15:55:22 UTC，17 assets；说明指出应用内自动安装未启用 |
+-| agentscope-ai/QwenPaw | v2.3.0-beta.2 (pre)、v2.3.0-beta.1 (pre)、v2.2.2.post1、v2.2.2、v2.2.2-beta.6 (pre) | 首项仍 beta.2，稳定项含 v2.2.2.post1；本轮只做元数据观察 |
+-| letta-ai/letta-code | v0.34.45、v0.34.44、v0.34.43、v0.34.42、v0.34.41 | v0.34.45，11 月 8 日 07:49:26 UTC，含 letta.js；说明全文已读 |
+-| langchain-ai/langgraph | sdk==0.4.14、cli==0.4.42、1.2.20、sdk==0.4.13、cli==0.4.41 | 本体 1.2.20；前五项还含 sdk==0.4.14 与 cli==0.4.42 等子包，分别计版本 |
+-| mem0ai/mem0 | v2.2.1、ts-v3.3.1、v2.2.0、ts-v3.3.0、pi-agent-v0.3.2 | 首项仍 v2.2.1；同列表含 ts-v3.3.1 等独立发行线 |
+-| browser-use/browser-use | 0.13.14、0.13.13、0.13.12、0.13.11、0.13.10 | 首项仍 0.13.14，HEAD 也相同；未重审 Python/Pi 分发 |
+-| n8n-io/n8n | stable、n8n@2.46.6、n8n@2.46.5、n8n@2.47.2 (pre)、n8n@2.47.1 (pre) | 列表含 stable、非预发行 2.46.6/2.46.5 与 2.47.2/2.47.1 预发行；只读 2.46.6 说明 |
+-| langgenius/dify | 1.19.0、1.18.0、1.17.1、1.17.0、1.16.1 | 1.19.0，11 月 4 日 07:36:16 UTC，6 assets；Highlights 节选，许可沿用历史 |
++| CopilotKit/openmuse | 空列表 | 不等于无 tags、不可部署或无其他分发 |
++| CopilotKit/OpenBot | v1.0.2 / 2026-11-11T08:45:38Z / false；v1.0.2-rc.3 / 2026-11-11T07:19:03Z / true；v1.0.2-rc.2 / 2026-11-11T04:00:17Z / true；v1.0.2-rc.1 / 2026-11-11T01:01:10Z / true；v1.0.1 / 2026-11-10T18:00:32Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| CopilotKit/OpenDots | 空列表 | 不等于无 tags、不可部署或无其他分发 |
++| wolfqing/OpenSuperBot | v0.5.0 / 2026-11-08T09:14:00Z / false；v0.4.0 / 2026-10-30T23:17:48Z / false；v0.3.1 / 2026-10-30T13:28:11Z / false；v0.3.0 / 2026-10-22T13:27:04Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| nano-muse/nanoMuse | v1.0.9 / 2026-10-29T15:07:55Z / false；v1.0.8 / 2026-10-29T06:31:54Z / false；v1.0.7 / 2026-10-25T05:27:50Z / false；v1.0.6 / 2026-10-24T08:02:04Z / false；v1.0.5 / 2026-10-13T18:10:38Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| chyroc/open-muse | 空列表 | 不等于无 tags、不可部署或无其他分发 |
++| mariagorskikh/open-instinct | 空列表 | 不等于无 tags、不可部署或无其他分发 |
++| CopilotKit/OpenDuet | 空列表 | 不等于无 tags、不可部署或无其他分发 |
++| openclaw/openclaw | v2026.11.5-beta.2 / 2026-11-12T00:43:25Z / true；v2026.11.3 / 2026-11-10T18:53:07Z / false；v2026.9.37 / 2026-11-10T20:42:54Z / false；v2026.11.2 / 2026-11-08T19:31:04Z / false；v2026.11.1 / 2026-11-05T09:48:37Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| NousResearch/hermes-agent | v0.23.1 / 2026-11-10T01:42:15Z / false；v0.23.0 / 2026-11-05T21:32:33Z / false；v0.22.7 / 2026-11-03T21:53:16Z / false；v0.22.6 / 2026-11-02T17:18:36Z / false；v0.22.5 / 2026-10-23T05:28:45Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| nanocoai/nanoclaw | v2026.11.0-beta.1 / 2026-11-09T12:00:44Z / true；v2026.10.1-rc.2 / 2026-10-22T15:48:44Z / true；v2026.10.1-rc.1 / 2026-10-20T16:50:09Z / true；v2026.10.0 / 2026-10-09T11:26:13Z / false；v2026.10.0-rc.2 / 2026-10-05T11:05:40Z / true | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| HKUDS/nanobot | v0.4.1 / 2026-11-06T15:55:22Z / false；v0.4.0 / 2026-10-28T10:50:17Z / false；v0.3.5 / 2026-09-15T19:05:37Z / false；v0.3.0 / 2026-07-25T08:08:47Z / false；v0.2.2 / 2026-06-23T01:37:26Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| agentscope-ai/QwenPaw | v2.3.0 / 2026-11-11T12:41:27Z / false；v2.3.0-beta.4 / 2026-11-10T14:46:45Z / true；v2.3.0-beta.3 / 2026-11-09T11:44:40Z / true；v2.3.0-beta.2 / 2026-11-02T06:08:12Z / true；v2.3.0-beta.1 / 2026-10-27T12:42:16Z / true | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| letta-ai/letta-code | v0.34.56 / 2026-11-12T06:49:04Z / false；v0.34.55 / 2026-11-12T05:22:39Z / false；v0.34.54 / 2026-11-12T00:56:13Z / false；v0.34.53 / 2026-11-11T22:20:50Z / false；v0.34.52 / 2026-11-11T18:40:57Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| langchain-ai/langgraph | sdk==0.4.14 / 2026-11-06T03:03:34Z / false；cli==0.4.42 / 2026-11-06T03:04:13Z / false；1.2.20 / 2026-11-05T02:20:53Z / false；sdk==0.4.13 / 2026-11-05T02:16:06Z / false；cli==0.4.41 / 2026-11-05T02:30:54Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| mem0ai/mem0 | v2.2.1 / 2026-09-25T17:35:20Z / false；ts-v3.3.1 / 2026-09-25T17:36:35Z / false；v2.2.0 / 2026-09-23T19:03:48Z / false；ts-v3.3.0 / 2026-09-23T19:05:42Z / false；pi-agent-v0.3.2 / 2026-09-23T19:12:34Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| browser-use/browser-use | 1.0.3rc1 / 2026-11-12T02:11:28Z / true；1.0.2 / 2026-11-11T04:00:00Z / false；1.0.2rc1 / 2026-11-10T22:56:31Z / true；1.0.1 / 2026-11-10T09:27:28Z / false；1.0.0 / 2026-11-10T02:04:48Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| n8n-io/n8n | stable / 2026-11-11T08:40:18Z / false；n8n@2.47.4 / 2026-11-11T08:40:16Z / false；n8n@1.123.94 / 2026-11-11T09:11:40Z / false；n8n@2.48.1 / 2026-11-11T08:40:17Z / true；beta / 2026-11-11T08:40:20Z / true | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
++| langgenius/dify | 1.19.0 / 2026-11-04T07:36:16Z / false；1.18.0 / 2026-10-23T06:33:50Z / false；1.17.1 / 2026-09-10T10:04:06Z / false；1.17.0 / 2026-08-25T11:28:25Z / false；1.16.1 / 2026-07-28T03:43:51Z / false | 读取说明范围见证据表；主分支/稳定/预发行分别记录 |
+ 
+-## 6. 直接影响判断的证据差异
++OpenBot v1.0.2 tag 为 `cca9f609cacf1b53bf5f27fc3ec0465138accb70`；18 项资产含桌面包、镜像清单与 provenance，目录存在不等于签名已验证。其发行数据库 0088 / Intelligence rc.11 与 HEAD 的 Unreleased 0089/0090 / rc.12 分开。OpenSuperBot v0.5.0 注释 tag `737a15c9e774e15b91720a4ddf8198b5d7e4e525` 解引用为 `5b6cdedc0f98ab542c649165f39b8d733485e750`；sandbox 修复在 tag 中可读，其他 HEAD 附件变化不自动归入该 tag。nanoMuse 仍以 v1.0.9 为发行列表首项。
+ 
+-| 对象 | 旧认识或新冲突 | 本轮处理与影响 |
+-| --- | --- | --- |
+-| OpenBot 交付 | 上版尚以 v0.2.0 和 Beta 模板描述 | 已有 v0.3.3 安装资产与 Personal/Team，源码模板、本地 Intelligence 评估许可和模型/连接服务各自记账 |
+-| OpenBot Personal 记忆 | v0.3.3 文档列 Memory，之后主分支关闭独立记忆；当前 personal 文档仍有相关行 | 固定 U91/U119 代码支持关闭来源、工具、同步与 loader；长期记忆按 edition/tag 验收，文档差异继续保留 |
+-| OpenBot 审批 | 新固定审批可被误读为覆盖任意工具和按钮 | 以 U88/U120 记录名称/metadata 识别与例外，宿主目录和 Bot 工作电脑分别验收 |
+-| OpenSuperBot home | 上版 bubblewrap 没有同样遮蔽宿主秘密目录 | v0.5.0 改为两平台整 home 遮蔽与工具链例外、自检探针；旧差异已有静态修复，网络与系统服务仍另核 |
+-| OpenSuperBot 密钥 | security 表仍写只在环境变量，models/发行说明已允许保存多个连接密钥 | 采用具体路径和权限说明，记录文档待同步；未据“本地”推导秘密不落盘 |
+-| nanoMuse 隐私 | 上版 no telemetry / 自带密钥不适用 relay 的笼统句有矛盾 | 当前文字修正，现有记录/同步/训练规则继续按账号与开关处理，不据文档修正认定全新上传行为 |
+-| nanoMuse 新能力 | 387 个提交区间但最新发行仍 1.0.9 | Skills 与恢复维护写为主分支，README 的 TestFlight 过审为维护者声明，实际 build 待核 |
+-| OpenDots 恢复 | 新 interrupted/reclaim 容易被视为外部动作严格只发生一次 | 状态锁与显式重试已见源码，回执丢失仍可能重复动作，E14 检验外部去重与结果回读 |
+-| Dots 模型 | 上版只能确认 Work/Codex 的 Terra | 11 月 4 日官方 Dots 更新与主页形成直接证据，模型家族判断调整 |
+-| Duet 用量 | 上版重置安排写到 11 月 30 日 | 当前帮助列 Pro 三次、Max/Ultra 一次，未用重置到 12 月 15 日过期；修改绝对日未标 |
+-| Muse 与 Teammates | 上版主要以对话、目标、Computer 作为参照 | Spaces 的持续交互成果与 Teammates 的长期协调进入比较；按地区/Max web 等条件验收 |
+-| Celesto | compare 文件清单被 300 上限截断 | 用两个 root tree 中相同 open-muse 子树 SHA 确认该应用目录未变，SDK/CLI 维护单列 |
++## 6. 结论差异与未解决项
+ 
+-## 7. 获取失败、替代入口与未完成项
++- OpenBot 从只有源码模板更新为有桌面发行的工作平台；MIT 应用、免费本地许可、生产 Intelligence 许可分开，未验证实际授权。远程 Agent 自有工具不必经平台审批，不能只看 UI 宣称权限完整覆盖。
++- OpenDots/OpenDuet 的维护归属变更影响平台优先级，但 skin 不自动替代独立仓的 Spaces 或晨报。OpenMuse 未因另外两仓的 README 改动被当成已重新核验维护状态。
++- OpenSuperBot 旧 URL 返回 301；专用 fetch 不接受按 repository ID 的重定向终点，改用 GitHub 仓库元数据和官方网页取得规范名称后，重新按新地址查询成功。旧/新仓同 ID，不重复计数。
++- 前轮 Linux 家目录差异已在 v0.5.0 文档和代码修正；修正有效性仍待探针。普通浏览器发送审批仍为约定，不随隔离修复一并宣布解决。
++- nanoMuse 当前预算文与旧基线相同，属于复核未变；对照基线隐私全文，未登录直连条件和遥测概括已修正文案；showcase 和记住审批为基线已有，本轮补证，不据此认定所有旧安装包已同步。实际流量/训练/原生审批未测试。
++- Dots 有直接产品证据支持 Terra 加入模型家族；多电脑/每线程一台由 U171 当前页确认，确切修改日未标；11 月 18 日默认开放/计费仍为未来，不能提前写成今天已生效。Duet 重置日期按动态当前页更新，绝对修改日不明。
++- Perplexity 公告正文取得完整产品段落，事件日由官方目录 11 月 4 日交叉支持；不从第三方报道日推断首发，不将旧 fully local Mac 能力外推 Teammates。
++- 一次查询不存在的 OpenBot `docs/desktop.md` 返回 404；通过固定 tag 的文档索引找到 `docs/desktop-install.md` 并读取，最终证据采用 U170，错误路径不作为功能缺失。
++- Today 注册/安装/地区资格、Instinct 价格/完整权限、Cue 当前状态、所有产品成功率与真实成本仍未核验；旧资料保留原始日期。
+ 
+-- 本机 GitHub CLI REST 调用返回 401，未认证公开 API 返回 403 rate limit。改用已连接 GitHub 读取，26 仓 HEAD、19 份发行列表及五组比较最终均取得。Git 本身读取远端成功，认证故障没有被当作仓库停止维护。
+-- OpenGrokBot 旧 API 返回 Moved Permanently，使用响应内 repository id 经连接器确认 OpenSuperBot，随后从规范地址取得 HEAD、发行和源码，迁移不增加候选数量。
+-- OpenAI Markdown 在网页工具中返回 unsupported content-type，先读 HTML 正文，后从官方同页 .md 成功取得，原始地址和章节范围保留。
+-- Today 中国下载原路径在网页读取中超时，末尾斜杠替代、同页原始 HTML 和国际下载页成功。中国 HTML 重取时间为 2026-11-08 12:21:45 UTC。网页读取中的旧缓存日期没有当作源站发布日期。
+-- 部分目录链接跨次解析没有取得目标，未采用误落页面；改用标题确认的原厂直链，最终读到 Muse Spaces 和 Perplexity 新正文。
+-- Cue 官网仍返回零行正文，Manus 原厂公告只补历史身份。Instinct 当前统一价格、完整授权与跨人协作、各商业账号资格和实际付费条件仍有缺口。
+-- 本轮没有进行产品账号登录、下载安装、签名校验、部署、隔离探针、真实账单或端到端任务。E01–E16 都是未执行的验收方案。
++## 7. 远端同步、基线修正与本期归属
+ 
+-## 8. 历史身份与后续更新
++本轮最初本地报告落在 11 月 2 日，GitHub 远端 main 为 11 月 8 日提交 `09e8b1e0607af28d435c3e427dc8db31726c26ce`。发现后先读三份报告、gap 与 manifest，保留 U72–U121，重建当前增量；此前读取的网页继续记录为本次复核，不再把已存在的语音/Spaces/Terra/Teammates、Duet 重置或 0.5.0 修复当成本期发布。新增 U122–U179 为观察身份，不代表 58 项新功能。
+ 
+-[10 月 22 日](sources-2026-10-22.md)、[10 月 28 日](sources-2026-10-28.md)及[11 月 2 日](sources-2026-11-02.md)索引分别保存早期 S/R、U01–U29、U30–U71 的历史观察。新版主报告继续保留这些定义。未来更新从本轮三份完整文件和 gap 的提交/哈希出发；被忽略的缓存只作本轮工作材料，原始链接、固定提交与实际读取范围已写入交付文件。
++原目录 .git 创建 index.lock 被沙箱拒绝；临时克隆的标准 fetch 又遇 DNS 不可用。使用已连接 GitHub 取得远端 11 个变更文件和 Git commit 元数据，在临时克隆重建对象，逐一校验全部 blob、根 tree 与完整 commit SHA 与原远端一致，再 `merge --ff-only` 到同一 main 提交。从此快照工作，未用近似内容或假 SHA 替代远端。
++
++OpenBot v1.0.2 与当前 HEAD 都明确 Personal 无独立记忆（U173/U174），是上轮结论的当前版本复核；README 的 Intelligence 总能力不覆盖这条 edition 限制。OpenDots 上轮的审批中断重试、nanoMuse Skills 和 Muse 专用模型保留历史引用，未重读的旧代码不更改核验日。

@@ -2,18 +2,14 @@
 
 个人 AI Agent 产品、开源方案和实现路径的研究项目。
 
-## 最新调研 2026-11-08
+## 最新调研：2026-11-12
 
-本轮记录生成时间为 **2026-11-08T20:30:02+08:00（Asia/Shanghai）**。
+- [Personal Agent 深度调研](docs/research/personal-agent-landscape-2026-11-12.md)
+- [构建附录](docs/research/agent-building-blocks-2026-11-12.md)
+- [来源、仓库快照与读取范围](docs/research/sources-2026-11-12.md)
+- [相对 11 月 8 日版的 gap 与完整 diff](docs/research/gaps/2026-11-12/01/README.md)
 
-- [Personal Agent 深度调研](docs/research/personal-agent-landscape-2026-11-08.md)
-- [构建附录](docs/research/agent-building-blocks-2026-11-08.md)
-- [来源、仓库快照与核验范围](docs/research/sources-2026-11-08.md)
-- [相对 11 月 2 日版的变化与完整 diff](docs/research/gaps/2026-11-08/01/README.md)
-
-复核六个核心商业产品、26 个仓库与八个直接应用样本，新增 Perplexity Teammates 商业参照。补入 Muse 语音/Spaces/专用模型、Dots Terra 与工作区预览、Duet 用量重置变化；更新 OpenBot v0.3.3 与最新 Personal 记忆关闭边界、OpenSuperBot 更名及 v0.5.0、nanoMuse/OpenDots 恢复与 Skills，以及组件发行。
-
-新增 U72–U121 共 50 条证据。15 个仓库 HEAD 前进、11 个相同。主报告、比较表、选型和 E01–E16 验收方案同步，默认分支、发行标签、安装资产、许可和账号状态分别记录，产品端到端仍待实测。
+本轮先同步远端11月8日交付，再更新OpenBot v1.0.2、OpenDots/OpenDuet维护归属、Dots多电脑，以及Browser Use1.0等发行。Personal无独立记忆的限制在发行tag与HEAD均复核保留。七个商业主样本、26仓、八个直接应用；15个HEAD前进、11个相同。U122–U179为58条本次观察，不代表58项新功能；账号和端到端仍未实测。
 
 ## 更新与变更记录
 
@@ -24,6 +20,8 @@
 - [按日期保存的 gap 记录](docs/research/gaps/README.md)
 
 ## 历史版本
+
+上一轮2026-11-08：[主报告](docs/research/personal-agent-landscape-2026-11-08.md)、[来源](docs/research/sources-2026-11-08.md)、[构建附录](docs/research/agent-building-blocks-2026-11-08.md)。
 
 上一轮 2026-11-02：[主报告](docs/research/personal-agent-landscape-2026-11-02.md)、[构建附录](docs/research/agent-building-blocks-2026-11-02.md)、[来源索引](docs/research/sources-2026-11-02.md)。
 
